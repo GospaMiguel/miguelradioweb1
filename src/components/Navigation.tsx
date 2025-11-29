@@ -27,19 +27,15 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <div className="font-display text-xl md:text-2xl font-bold text-primary">
-            ACR
-          </div>
-
+        <div className="flex items-center justify-center h-24">
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center justify-center space-x-2 flex-wrap">
             {navItems.map((item) => (
               <Button
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors font-sans"
+                className="text-foreground hover:text-primary transition-colors font-sans text-lg px-4 py-2"
               >
                 {item.label}
               </Button>
@@ -50,7 +46,7 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -65,7 +61,7 @@ export const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="w-full justify-start text-foreground hover:text-primary transition-colors font-sans"
+                className="w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg"
               >
                 {item.label}
               </Button>
