@@ -90,7 +90,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Cuándo</h4>
-              <p className="text-muted-foreground">Primer sábado de cada mes a las 18:00h</p>
+              <p className="text-muted-foreground">Segundos viernes de cada mes a las 19:00h</p>
             </div>
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Dónde</h4>
