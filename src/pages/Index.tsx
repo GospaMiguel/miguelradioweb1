@@ -17,7 +17,7 @@ const Index = () => {
             <Users className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Nuestra Comunidad</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 La Asociación Cantabra de Radioaficionados es una comunidad apasionada por la radioafición y las telecomunicaciones. 
                 Desde nuestra fundación, hemos trabajado para promover el hobby de la radio y conectar a entusiastas de toda Cantabria 
                 y más allá.
@@ -29,7 +29,7 @@ const Index = () => {
             <Radio className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Nuestra Misión</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 Fomentar el desarrollo técnico y social de la radioafición, proporcionar formación continua a nuestros miembros, 
                 y servir como punto de encuentro para compartir experiencias y conocimientos en el fascinante mundo de las 
                 comunicaciones por radio.
@@ -45,7 +45,7 @@ const Index = () => {
             <Antenna className="w-8 h-8 text-success flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">SOTA y POTA</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 Participa en nuestras activaciones de cumbres (SOTA - Summits On The Air) y parques (POTA - Parks On The Air). 
                 Organizamos salidas regulares donde combinamos la pasión por la naturaleza con las comunicaciones de radio 
                 desde ubicaciones privilegiadas de Cantabria.
@@ -55,7 +55,7 @@ const Index = () => {
 
           <div className="bg-muted p-6 rounded-lg">
             <h4 className="font-display text-lg font-bold text-foreground mb-3">Próximas Activaciones</h4>
-            <ul className="space-y-2 text-foreground/80">
+            <ul className="space-y-2 text-foreground">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                 Activación SOTA - Pico Tres Mares
@@ -79,7 +79,7 @@ const Index = () => {
             <Calendar className="w-8 h-8 text-warning flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Encuentros Mensuales</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 Celebramos reuniones mensuales donde compartimos experiencias, aprendemos sobre nuevas tecnologías, 
                 discutimos proyectos y planificamos actividades. Un espacio ideal para conocer a otros radioaficionados 
                 y fortalecer los lazos de nuestra comunidad.
@@ -90,11 +90,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Cuándo</h4>
-              <p className="text-foreground/80">Segundos viernes de cada mes a las 19:00h</p>
+              <p className="text-foreground">Segundos viernes de cada mes a las 19:00h</p>
             </div>
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Dónde</h4>
-              <p className="text-foreground/80">Sede de la asociación - Consulta ubicación</p>
+              <p className="text-foreground">Sede de la asociación - Consulta ubicación</p>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Index = () => {
             <Wrench className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Equipamiento y Tecnología</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 Información sobre equipos de radio, antenas, accesorios y tecnología utilizada por nuestros miembros. 
                 Compartimos experiencias sobre configuraciones, mantenimiento y optimización de equipos para diferentes 
                 modos y bandas de operación.
@@ -117,15 +117,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-muted p-6 rounded-lg text-center">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">HF</h4>
-              <p className="text-sm text-foreground/70">Bandas decamétricas</p>
+              <p className="text-sm text-foreground">Bandas decamétricas</p>
             </div>
             <div className="bg-muted p-6 rounded-lg text-center">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">VHF/UHF</h4>
-              <p className="text-sm text-foreground/70">Comunicaciones locales</p>
+              <p className="text-sm text-foreground">Comunicaciones locales</p>
             </div>
             <div className="bg-muted p-6 rounded-lg text-center">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Digital</h4>
-              <p className="text-sm text-foreground/70">Modos digitales modernos</p>
+              <p className="text-sm text-foreground">Modos digitales modernos</p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const Index = () => {
             <Radio className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">¿Qué es la Radioafición?</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 La radioafición es un hobby técnico que permite la comunicación por radio con personas de todo el mundo. 
                 Es una actividad que combina tecnología, ciencia, deporte y amistad. Los radioaficionados experimentan con 
                 equipos de telecomunicaciones, aprenden sobre propagación de ondas, y participan en actividades de servicio público.
@@ -175,7 +175,7 @@ const Index = () => {
             <GraduationCap className="w-8 h-8 text-success flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Obtén tu Licencia</h3>
-              <p className="text-foreground/90 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 Para practicar la radioafición es necesario obtener una licencia que acredite los conocimientos técnicos 
                 y normativos necesarios. Te ayudamos a prepararte para los exámenes oficiales y te guiamos en el proceso 
                 de obtención de tu indicativo de llamada.
@@ -186,11 +186,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-3">Preparación</h4>
-              <p className="text-foreground/80 mb-4">
+              <p className="text-foreground mb-4">
                 Ofrecemos cursos de preparación para el examen de radioaficionado. Cubrimos todos los temas necesarios: 
                 reglamentación, técnica de radio, propagación, antenas y seguridad.
               </p>
-              <ul className="space-y-2 text-foreground/70 text-sm">
+              <ul className="space-y-2 text-foreground text-sm">
                 <li>• Clases teóricas y prácticas</li>
                 <li>• Material de estudio</li>
                 <li>• Simulacros de examen</li>
@@ -200,11 +200,11 @@ const Index = () => {
 
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-3">Información del Examen</h4>
-              <p className="text-foreground/80 mb-4">
+              <p className="text-foreground mb-4">
                 El examen oficial se realiza a través de la administración de telecomunicaciones y consta de una 
                 prueba teórica sobre conocimientos técnicos y normativos.
               </p>
-              <ul className="space-y-2 text-foreground/70 text-sm">
+              <ul className="space-y-2 text-foreground text-sm">
                 <li>• Convocatorias regulares</li>
                 <li>• Examen tipo test</li>
                 <li>• Diferentes niveles de licencia</li>
@@ -228,7 +228,7 @@ const Index = () => {
           <p className="font-display text-lg font-bold text-primary mb-2">
             Asociación Cantabra de Radioaficionados
           </p>
-          <p className="text-foreground/70 text-sm">
+          <p className="text-foreground text-sm">
             © {new Date().getFullYear()} - Todos los derechos reservados
           </p>
         </div>
