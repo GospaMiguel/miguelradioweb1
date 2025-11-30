@@ -43,7 +43,7 @@ export const GallerySection = () => {
         <div className="p-6 bg-muted rounded-lg text-center hover:bg-muted/80 transition-colors border-2 border-dashed border-border">
           <ImageIcon className="w-12 h-12 mx-auto mb-4 text-secondary" />
           <h4 className="font-display text-lg font-bold text-foreground mb-2">Subir Fotos</h4>
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm text-foreground mb-4">
             Comparte fotos de activaciones y eventos
           </p>
           <Button
@@ -59,7 +59,7 @@ export const GallerySection = () => {
         <div className="p-6 bg-muted rounded-lg text-center hover:bg-muted/80 transition-colors border-2 border-dashed border-border">
           <Video className="w-12 h-12 mx-auto mb-4 text-accent" />
           <h4 className="font-display text-lg font-bold text-foreground mb-2">Subir Videos</h4>
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm text-foreground mb-4">
             Sube videos de tus experiencias
           </p>
           <Button
@@ -75,7 +75,7 @@ export const GallerySection = () => {
         <div className="p-6 bg-muted rounded-lg text-center hover:bg-muted/80 transition-colors border-2 border-dashed border-border">
           <Video className="w-12 h-12 mx-auto mb-4 text-warning" />
           <h4 className="font-display text-lg font-bold text-foreground mb-2">YouTube</h4>
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm text-foreground mb-4">
             Añade videos desde YouTube
           </p>
           <div className="space-y-2">
@@ -101,7 +101,7 @@ export const GallerySection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Placeholder for uploaded content */}
           <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border-2 border-border">
-            <p className="text-muted-foreground">Contenido próximamente</p>
+            <p className="text-foreground">Contenido próximamente</p>
           </div>
         </div>
       </div>

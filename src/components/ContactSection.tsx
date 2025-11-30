@@ -42,7 +42,7 @@ export const ContactSection = () => {
             <Mail className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-foreground">Email</p>
-              <a href="mailto:ea1rbm@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors">
+              <a href="mailto:ea1rbm@gmail.com" className="text-foreground hover:text-secondary transition-colors">
                 ea1rbm@gmail.com
               </a>
             </div>
@@ -54,7 +54,7 @@ export const ContactSection = () => {
               <p className="font-semibold text-foreground">WhatsApp</p>
               <button
                 onClick={handleWhatsApp}
-                className="text-muted-foreground hover:text-success transition-colors"
+                className="text-foreground hover:text-success transition-colors"
               >
                 +34 639 207 033
               </button>

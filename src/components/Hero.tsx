@@ -34,7 +34,7 @@ export const Hero = () => {
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-sans max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-foreground mb-12 font-sans max-w-3xl mx-auto">
           Conectando personas a través de las ondas de radio desde Cantabria
         </p>
 
