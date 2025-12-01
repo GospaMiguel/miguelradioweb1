@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'display': ['Algerian', 'Abril Fatface', 'Cinzel Decorative', 'serif'],
+        'display': ['Playfair Display', 'serif'],
         'sans': ['Inter', 'sans-serif'],
       },
       colors: {
