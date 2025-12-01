@@ -14,7 +14,7 @@ export const Section = ({ id, title, children, colorAccent = "primary" }: Sectio
     <section id={id} className="py-16 px-4 scroll-mt-20">
       <div className="container mx-auto max-w-5xl">
         <ArcText text={title} className="mb-12" />
-        <Card className="bg-card p-8 md:p-12 shadow-2xl border-2 border-border/50 backdrop-blur-sm">
+        <Card className="bg-black text-white p-8 md:p-12 shadow-2xl border-2 border-primary/30 backdrop-blur-sm">
           {children}
         </Card>
       </div>
