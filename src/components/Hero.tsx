@@ -30,7 +30,11 @@ export const Hero = () => {
           </span>
           <br />
           <span className="text-foreground">
-            de Radioaficionados
+            de
+          </span>
+          <br />
+          <span className="text-foreground">
+            Radioaficionados
           </span>
         </h1>
         
