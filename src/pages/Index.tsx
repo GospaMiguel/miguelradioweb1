@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { ContactSection } from "@/components/ContactSection";
 import { GallerySection } from "@/components/GallerySection";
 import { Radio, Users, Calendar, Wrench, Antenna, GraduationCap } from "lucide-react";
+import logoAsociacion from "@/assets/logo-asociacion.png";
 
 const Index = () => {
   return (
@@ -12,7 +13,15 @@ const Index = () => {
       <Hero />
 
       <Section id="sobre-nosotros" title="Sobre Nosotros">
-        <div className="space-y-6">
+        <div className="space-y-8">
+          <div className="flex justify-center mb-8">
+            <img 
+              src={logoAsociacion} 
+              alt="Logo Asociación Cantabra de Radioaficionados" 
+              className="w-48 h-48 object-contain"
+            />
+          </div>
+          
           <div className="flex items-start space-x-4">
             <Users className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
