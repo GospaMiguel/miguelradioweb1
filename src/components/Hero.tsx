@@ -1,5 +1,6 @@
 import { Radio, Waves } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import radioOperator from "@/assets/radio-operator.png";
 
 export const Hero = () => {
   return (
@@ -25,10 +26,16 @@ export const Hero = () => {
         </div>
         
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-6 leading-tight">
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
-            Asociación Cantabra
-          </span>
-          <br />
+          <div className="flex items-center justify-center gap-4 md:gap-8">
+            <img 
+              src={radioOperator} 
+              alt="Radioaficionado con walkie-talkie" 
+              className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+            />
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Asociación Cantabra
+            </span>
+          </div>
           <span className="text-foreground">
             de
           </span>
