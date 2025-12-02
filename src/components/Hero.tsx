@@ -25,13 +25,7 @@ export const Hero = () => {
         </div>
         
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-6 leading-tight">
-          <span 
-            className="bg-gradient-primary bg-clip-text text-transparent"
-            style={{
-              textShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4)',
-              filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))'
-            }}
-          >
+          <span className="bg-gradient-primary bg-clip-text text-transparent">
             Asociación Cantabra
           </span>
           <br />
