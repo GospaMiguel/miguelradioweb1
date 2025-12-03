@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const navItems = [
   { id: "sobre-nosotros", label: "Sobre Nosotros" },
-  { id: "activaciones", label: "Activaciones" },
+  { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
   { id: "equipos", label: "Equipos" },
   { id: "sobre-radio", label: "Sobre la Radio" },

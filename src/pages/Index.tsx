@@ -48,7 +48,7 @@ const Index = () => {
         </div>
       </Section>
 
-      <Section id="activaciones" title="Activaciones">
+      <Section id="actividades" title="Actividades">
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
             <Antenna className="w-8 h-8 text-success flex-shrink-0 mt-1" />
