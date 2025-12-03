@@ -18,7 +18,7 @@ const Index = () => {
             <img 
               src={logoAsociacion} 
               alt="Logo Asociación Cantabra de Radioaficionados" 
-              className="w-48 h-48 object-contain"
+              className="w-72 h-72 object-contain"
             />
           </div>
           
