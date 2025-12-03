@@ -24,18 +24,12 @@ export const Hero = () => {
           <Waves className="w-16 h-16 md:w-20 md:h-20 text-secondary animate-glow" style={{ animationDelay: "0.5s" }} />
         </div>
         
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-6 leading-tight">
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
-            Asociación Cantabra
-          </span>
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
+          <span>Asociación Cantabra</span>
           <br />
-          <span className="text-foreground">
-            de
-          </span>
+          <span>de</span>
           <br />
-          <span className="text-foreground">
-            Radioaficionados
-          </span>
+          <span>Radioaficionados</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-foreground mb-12 font-sans max-w-3xl mx-auto">
