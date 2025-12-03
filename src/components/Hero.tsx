@@ -1,4 +1,4 @@
-import { Radio, Waves } from "lucide-react";
+import { Antenna, TowerControl } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
@@ -20,8 +20,8 @@ export const Hero = () => {
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="flex items-center justify-center mb-8 space-x-6">
-          <Radio className="w-16 h-16 md:w-20 md:h-20 text-primary animate-glow" />
-          <Waves className="w-16 h-16 md:w-20 md:h-20 text-secondary animate-glow" style={{ animationDelay: "0.5s" }} />
+          <Antenna className="w-16 h-16 md:w-20 md:h-20 text-primary animate-glow" />
+          <TowerControl className="w-16 h-16 md:w-20 md:h-20 text-secondary animate-glow" style={{ animationDelay: "0.5s" }} />
         </div>
         
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
