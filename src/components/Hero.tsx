@@ -9,7 +9,7 @@ export const Hero = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-background/50"></div>
       </div>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
