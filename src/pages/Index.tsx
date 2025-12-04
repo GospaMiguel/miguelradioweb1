@@ -194,8 +194,9 @@ const Index = () => {
             <div>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Obtén tu Licencia</h3>
               <p className="text-foreground leading-relaxed">
-                Para practicar la radioafición es necesario superar los exámenes oficiales para obtener una autorización 
-                administrativa de telecomunicaciones. Te ayudamos a prepararte y te guiamos en el proceso de obtención 
+                Para practicar la radioafición es necesario superar los exámenes oficiales y obtener una autorización 
+                administrativa de telecomunicaciones que acredite que estás apto y con los conocimientos para el manejo 
+                de una estación de radioaficionado. Te ayudamos a prepararte y te guiamos en el proceso de obtención 
                 de tu indicativo de llamada.
               </p>
             </div>
