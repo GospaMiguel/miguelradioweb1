@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { GallerySection } from "@/components/GallerySection";
 import { Radio, Users, Calendar, Wrench, Antenna, GraduationCap } from "lucide-react";
 import logoAsociacion from "@/assets/logo-asociacion.png";
-
+import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -87,7 +87,7 @@ const Index = () => {
           <div className="flex items-start space-x-4">
             <Calendar className="w-8 h-8 text-warning flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Encuentros Mensuales</h3>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">Reunión ordinaria mensual</h3>
               <p className="text-foreground leading-relaxed">
                 Celebramos reuniones mensuales donde compartimos experiencias, aprendemos sobre nuevas tecnologías, 
                 discutimos proyectos y planificamos actividades. Un espacio ideal para conocer a otros radioaficionados 
@@ -103,8 +103,17 @@ const Index = () => {
             </div>
             <div className="bg-muted p-6 rounded-lg">
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Dónde</h4>
-              <p className="text-foreground">Sede de la asociación - Consulta ubicación</p>
+              <p className="text-foreground">Cafetería Don Lucas</p>
+              <p className="text-foreground text-sm">Revilla de Camargo</p>
             </div>
+          </div>
+
+          <div className="flex justify-center">
+            <img 
+              src={cafeteriaDonLucas} 
+              alt="Cafetería Don Lucas - Lugar de reunión" 
+              className="rounded-lg shadow-lg max-w-md w-full object-cover"
+            />
           </div>
         </div>
       </Section>
