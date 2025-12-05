@@ -27,7 +27,7 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center h-16">
+        <div className="flex items-center justify-center h-24">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-center space-x-2 flex-wrap">
             {navItems.map((item) => (
@@ -42,20 +42,20 @@ export const Navigation = () => {
             ))}
             <style>{`
               .nav-glow {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                             0 0 20px rgba(255, 255, 255, 1),
+                             0 0 35px rgba(255, 255, 255, 1),
+                             0 0 50px rgba(255, 255, 255, 0.9),
+                             0 0 70px rgba(255, 255, 255, 0.8),
+                             0 0 100px rgba(255, 255, 255, 0.6);
+              }
+              .nav-glow:hover {
                 text-shadow: 0 0 15px rgba(255, 255, 255, 1),
                              0 0 30px rgba(255, 255, 255, 1),
                              0 0 50px rgba(255, 255, 255, 1),
                              0 0 80px rgba(255, 255, 255, 1),
-                             0 0 120px rgba(255, 255, 255, 1),
-                             0 0 180px rgba(255, 255, 255, 0.9);
-              }
-              .nav-glow:hover {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1),
-                             0 0 40px rgba(255, 255, 255, 1),
-                             0 0 70px rgba(255, 255, 255, 1),
-                             0 0 110px rgba(255, 255, 255, 1),
-                             0 0 160px rgba(255, 255, 255, 1),
-                             0 0 220px rgba(255, 255, 255, 0.95);
+                             0 0 120px rgba(255, 255, 255, 0.9),
+                             0 0 160px rgba(255, 255, 255, 0.7);
               }
             `}</style>
           </div>
