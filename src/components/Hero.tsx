@@ -3,7 +3,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image - sin oscurecimiento */}
       <div 
         className="absolute inset-0 bg-cover bg-center"

@@ -15,7 +15,7 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:ea1rbm@gmail.com?subject=Contacto desde web - ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}%0D%0A%0D%0AEmail: ${encodeURIComponent(formData.email)}`;
+    const mailtoLink = `mailto:ea1uru@gmail.com?subject=Contacto desde web - ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}%0D%0A%0D%0AEmail: ${encodeURIComponent(formData.email)}`;
     window.location.href = mailtoLink;
     
     toast({
@@ -42,8 +42,8 @@ export const ContactSection = () => {
             <Mail className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-foreground">Email</p>
-              <a href="mailto:ea1rbm@gmail.com" className="text-foreground hover:text-secondary transition-colors">
-                ea1rbm@gmail.com
+            <a href="mailto:ea1uru@gmail.com" className="text-foreground hover:text-secondary transition-colors">
+                ea1uru@gmail.com
               </a>
             </div>
           </div>
