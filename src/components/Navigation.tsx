@@ -35,25 +35,21 @@ export const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow"
+                className="text-[#800020] hover:text-[#a00028] transition-all font-sans text-lg px-4 py-2 nav-glow font-semibold"
               >
                 {item.label}
               </Button>
             ))}
             <style>{`
               .nav-glow {
-                text-shadow: 0 0 8px rgba(255, 255, 255, 1),
-                             0 0 15px rgba(255, 255, 255, 1),
-                             0 0 25px rgba(255, 255, 255, 0.9),
-                             0 0 40px rgba(255, 255, 255, 0.7),
-                             0 0 60px rgba(255, 255, 255, 0.5);
+                text-shadow: 0 0 8px rgba(128, 0, 32, 0.6),
+                             0 0 15px rgba(128, 0, 32, 0.5),
+                             0 0 25px rgba(128, 0, 32, 0.4);
               }
               .nav-glow:hover {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                             0 0 20px rgba(255, 255, 255, 1),
-                             0 0 35px rgba(255, 255, 255, 1),
-                             0 0 55px rgba(255, 255, 255, 0.9),
-                             0 0 80px rgba(255, 255, 255, 0.7);
+                text-shadow: 0 0 10px rgba(128, 0, 32, 0.8),
+                             0 0 20px rgba(128, 0, 32, 0.7),
+                             0 0 35px rgba(128, 0, 32, 0.6);
               }
             `}</style>
           </div>
