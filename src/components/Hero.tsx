@@ -1,4 +1,4 @@
-import { Antenna, TowerControl } from "lucide-react";
+
 import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
@@ -18,39 +18,8 @@ export const Hero = () => {
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-success/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <div className="flex items-center justify-center mb-8 space-x-6">
-          <Antenna className="w-16 h-16 md:w-20 md:h-20 text-primary animate-glow" />
-          <TowerControl className="w-16 h-16 md:w-20 md:h-20 text-secondary animate-glow" style={{ animationDelay: "0.5s" }} />
-        </div>
-        
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-          <span>Asociación Cantabra</span>
-          <br />
-          <span>de</span>
-          <br />
-          <span>Radioaficionados</span>
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-foreground mb-12 font-sans max-w-3xl mx-auto">
-          Conectando personas a través de las ondas de radio desde Cantabria
-        </p>
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <a
-            href="#sobre-nosotros"
-            className="px-8 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-full hover:scale-105 transition-transform shadow-lg hover:shadow-primary/50"
-          >
-            Descubre Más
-          </a>
-          <a
-            href="#contacto"
-            className="px-8 py-4 bg-secondary text-secondary-foreground font-sans font-semibold rounded-full hover:scale-105 transition-transform shadow-lg hover:shadow-secondary/50"
-          >
-            Únete a Nosotros
-          </a>
-        </div>
-      </div>
+      {/* Content removed - image already has title */}
+      <div className="relative z-10"></div>
     </div>
   );
 };
