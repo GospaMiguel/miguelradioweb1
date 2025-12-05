@@ -42,14 +42,20 @@ export const Navigation = () => {
             ))}
             <style>{`
               .nav-glow {
-                text-shadow: 0 0 8px rgba(128, 0, 32, 0.6),
-                             0 0 15px rgba(128, 0, 32, 0.5),
-                             0 0 25px rgba(128, 0, 32, 0.4);
+                text-shadow: 0 0 10px rgba(128, 0, 32, 1),
+                             0 0 20px rgba(128, 0, 32, 1),
+                             0 0 35px rgba(128, 0, 32, 0.9),
+                             0 0 50px rgba(128, 0, 32, 0.8),
+                             0 0 70px rgba(128, 0, 32, 0.6),
+                             0 0 100px rgba(128, 0, 32, 0.5);
               }
               .nav-glow:hover {
-                text-shadow: 0 0 10px rgba(128, 0, 32, 0.8),
-                             0 0 20px rgba(128, 0, 32, 0.7),
-                             0 0 35px rgba(128, 0, 32, 0.6);
+                text-shadow: 0 0 15px rgba(128, 0, 32, 1),
+                             0 0 30px rgba(128, 0, 32, 1),
+                             0 0 50px rgba(128, 0, 32, 1),
+                             0 0 75px rgba(128, 0, 32, 0.9),
+                             0 0 100px rgba(128, 0, 32, 0.8),
+                             0 0 140px rgba(128, 0, 32, 0.6);
               }
             `}</style>
           </div>
