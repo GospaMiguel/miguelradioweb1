@@ -3,10 +3,10 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
   return (
-    <div className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+    <div className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image - sin oscurecimiento */}
       <div 
-        className="absolute inset-0 bg-contain bg-top bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-bottom"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
       </div>
