@@ -6,8 +6,8 @@ export const Hero = () => {
     <div className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image - sin oscurecimiento */}
       <div 
-        className="absolute inset-0 bg-cover bg-bottom"
-        style={{ backgroundImage: `url(${heroBackground})` }}
+        className="absolute inset-0 bg-cover"
+        style={{ backgroundImage: `url(${heroBackground})`, backgroundPosition: 'center 150%' }}
       >
       </div>
 
