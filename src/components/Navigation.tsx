@@ -35,27 +35,27 @@ export const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="text-[#800020] hover:text-[#a00028] transition-all font-sans text-lg px-4 py-2 nav-glow font-bold"
+                className="text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold"
               >
                 {item.label}
               </Button>
             ))}
             <style>{`
               .nav-glow {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                             0 0 20px rgba(255, 255, 255, 1),
-                             0 0 35px rgba(255, 255, 255, 1),
-                             0 0 50px rgba(255, 255, 255, 0.9),
-                             0 0 70px rgba(255, 255, 255, 0.8),
-                             0 0 100px rgba(255, 255, 255, 0.6);
-              }
-              .nav-glow:hover {
                 text-shadow: 0 0 15px rgba(255, 255, 255, 1),
                              0 0 30px rgba(255, 255, 255, 1),
                              0 0 50px rgba(255, 255, 255, 1),
-                             0 0 80px rgba(255, 255, 255, 1),
-                             0 0 120px rgba(255, 255, 255, 0.9),
-                             0 0 160px rgba(255, 255, 255, 0.7);
+                             0 0 80px rgba(255, 255, 255, 0.9),
+                             0 0 120px rgba(255, 255, 255, 0.8),
+                             0 0 160px rgba(255, 255, 255, 0.6);
+              }
+              .nav-glow:hover {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                             0 0 40px rgba(255, 255, 255, 1),
+                             0 0 70px rgba(255, 255, 255, 1),
+                             0 0 100px rgba(255, 255, 255, 1),
+                             0 0 150px rgba(255, 255, 255, 0.9),
+                             0 0 200px rgba(255, 255, 255, 0.7);
               }
             `}</style>
           </div>
