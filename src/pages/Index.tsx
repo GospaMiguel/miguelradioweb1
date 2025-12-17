@@ -45,6 +45,24 @@ const Index = () => {
               </p>
             </div>
           </div>
+
+          <div className="mt-12 pt-8 border-t border-border/30">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">Historia de nuestra Asociación</h3>
+            <div className="space-y-4 text-foreground leading-relaxed">
+              <p>
+                Nuestros primeros pasos empezaron por el año 2013 cuando a nivel local estaba vacía la banda de los 27 Mhz y no estaba abierta la propagación debido a un ciclo solar que afecto a la banda de los 27 Mhz y no se escuchaba nadie, la gente que volvía a desempolvar los equipos después del Boom que fueron los 27 Mhz de los años 90, algunos compañeros nos contaron que tiraron los equipos a la basura creyendo que estaba estropeados por que no se escuchaba nada.
+              </p>
+              <p>
+                Entonces quedábamos 2 amigos en el canal 35 FM para charlar todas las tardes al escucharnos nuestros habituales QSO después de unos meses salieron otros dos compañeros a unirse con nosotros luego otros más y otros hasta que por el año 2015 ya éramos un grupo de unos 15 colegas que habíamos regresado al mundo de las ondas después de casi 20 años de QRT Radiofónico.
+              </p>
+              <p>
+                Empezamos a quedar todos los viernes en vernos para comentar proyectos antenas averías de equipos y demás temas referentes a nuestra afición, A partir de este año Telecomunicaciones abrió una campaña para recuperar a la gente que tuvimos indicativos EA y nos dimos de baja nos pusimos todos de acuerdo y volvimos a recuperar nuestras licencias de Radioaficionados y a partir de ese momento ya empezamos a Registrar la asociación en el Gobierno de Cantabria y demás tramites en Telecomunicaciones.
+              </p>
+              <p>
+                En el año 2017 ya éramos una Asociación de Radioaficionados, sin ánimo de lucro, nueva moderna y legalizada para velar y mantener activas las bandas de radioaficionados y demás equipos repetidores de uso por nuestra comunidad y debido a la desaparición de otros radioclub antiguos que los habían mantenido en funcionamiento y por falta de uso y debido a lo que comentábamos anteriormente de la desaparion de radioaficionados después del boom de las nuevas tecnologías por el año 2000 teléfonos móviles internet etc. fueron apagados y desaparecidos en Cantabria.
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
 
