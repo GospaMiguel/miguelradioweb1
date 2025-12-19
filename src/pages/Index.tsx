@@ -187,20 +187,20 @@ const Index = () => {
           </p>
           <div className="flex flex-col items-center gap-4 mt-4">
             <a 
-              href="https://www.fediea.org" 
+              href="https://www.fediea.org/examen/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
-              www.fediea.org
+              www.fediea.org/examen
             </a>
             <a 
-              href="https://radioclubquijotes.org/" 
+              href="https://radioclubquijotes.org/examen-radioaficionado-test-requisitos/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
-              radioclubquijotes.org
+              radioclubquijotes.org/examen
             </a>
           </div>
         </div>
