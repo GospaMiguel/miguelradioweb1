@@ -1,5 +1,5 @@
 
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-background.png";
 
 export const Hero = () => {
   return (
