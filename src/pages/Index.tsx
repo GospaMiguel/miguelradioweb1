@@ -195,6 +195,16 @@ const Index = () => {
               www.fediea.org
             </a>
           </p>
+          <p className="text-foreground leading-relaxed">
+            <a 
+              href="https://radioclubquijotes.org/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 underline font-semibold transition-colors"
+            >
+              radioclubquijotes.org
+            </a>
+          </p>
         </div>
       </Section>
 
