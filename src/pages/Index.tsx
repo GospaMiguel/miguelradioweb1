@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { ContactSection } from "@/components/ContactSection";
 import { GallerySection } from "@/components/GallerySection";
-import { Radio, Users, Calendar, Wrench, Antenna, GraduationCap } from "lucide-react";
+import { Radio, Users, Calendar, Wrench, GraduationCap } from "lucide-react";
 import logoAsociacion from "@/assets/logo-asociacion.png";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 const Index = () => {
@@ -68,34 +68,26 @@ const Index = () => {
 
       <Section id="actividades" title="Actividades">
         <div className="space-y-6">
-          <div className="flex items-start space-x-4">
-            <Antenna className="w-8 h-8 text-success flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">SOTA y POTA</h3>
-              <p className="text-foreground leading-relaxed">
-                Participa en nuestras activaciones de cumbres (SOTA - Summits On The Air) y parques (POTA - Parks On The Air). 
-                Organizamos salidas regulares donde combinamos la pasión por la naturaleza con las comunicaciones de radio 
-                desde ubicaciones privilegiadas de Cantabria.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-muted p-6 rounded-lg">
-            <h4 className="font-display text-lg font-bold text-foreground mb-3">Próximas Activaciones</h4>
-            <ul className="space-y-2 text-foreground">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
-                Activación SOTA - Pico Tres Mares
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                POTA - Parque Natural de Oyambre
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-success rounded-full mr-3"></span>
-                Activación Especial - Día de la Radio
-              </li>
-            </ul>
+          <h3 className="font-display text-2xl font-bold text-foreground text-center">QUE ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
+          <div className="space-y-4 text-foreground leading-relaxed">
+            <p>
+              Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria participamos en eventos deportivos como la media Maratón del Pas que se celebra cada mediados del mes de septiembre en Puente Arce y nos ponemos en diferentes puntos Kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
+            </p>
+            <p>
+              Otra actividad que participamos es en Guarnizo cada 15 de Agosto es la Festividad de la Virgen de Muslera con motivo de las fiestas instalamos nuestras emisoras y antenas y otorgamos tarjeta QSL especial a un solo contacto en la banda de 40 metros y contactamos con estaciones de toda España.
+            </p>
+            <p>
+              Otra actividad en la que hemos participado este año también en Guarnizo son en la feria de extra escolares en la cual se presentan todas las asociaciones de este ayuntamiento con la idea de dar a conocer lo que hacemos y a lo que nos dedicamos a la gente que acude a vernos.
+            </p>
+            <p>
+              Otra actividad más en la que Participamos es en las fiestas de la Virgen de Valencia en Renedo de Pielagos cada 27 de Septiembre Activamos con indicativo especial las fiestas otorgando tarjeta QSL a todas las estaciones que nos contactan desde cualquier lugar en la banda de HF 40 Metros.
+            </p>
+            <p>
+              Luego otro evento en el que nos reunimos y asistimos es en una Feria de Radioaficionados que se Celebra en Ávila Cada año el 15 de septiembre a la cual solemos asistir todos los Radioaficionados de esta asociación que nos podemos desplazar hasta allí, vemos la feria comemos por Ávila pasamos la noche y vuelta para Santander.
+            </p>
+            <p>
+              Otro evento al que solemos anualmente asistir es al merca Astur Radio cada 10 de mayo en Oviedo en el cual se compra y vende todo tipo de emisoras antenas nuevas y de segunda mano. Y dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo pasamos el día por allí y volvemos a Santander.
+            </p>
           </div>
         </div>
       </Section>
