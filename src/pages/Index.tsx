@@ -185,26 +185,24 @@ const Index = () => {
           <p className="text-foreground leading-relaxed">
             Para acceder a los test, aquí te dejamos dos enlaces a dos páginas web de radioaficionados: FEDIEA y Radio Club Quijotes.
           </p>
-          <p className="text-foreground leading-relaxed">
+          <div className="flex flex-col items-center gap-4 mt-4">
             <a 
               href="https://www.fediea.org" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-semibold transition-colors"
+              className="text-white hover:text-white/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
             >
               www.fediea.org
             </a>
-          </p>
-          <p className="text-foreground leading-relaxed">
             <a 
               href="https://radioclubquijotes.org/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-semibold transition-colors"
+              className="text-white hover:text-white/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
             >
               radioclubquijotes.org
             </a>
-          </p>
+          </div>
         </div>
       </Section>
 
