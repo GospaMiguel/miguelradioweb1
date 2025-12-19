@@ -161,38 +161,17 @@ const Index = () => {
 
       <Section id="sobre-radio" title="Sobre la Radio">
         <div className="space-y-6">
-          <div className="flex items-start space-x-4">
-            <Radio className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">¿Qué es la Radioafición?</h3>
-              <p className="text-foreground leading-relaxed">
-                La radioafición es un hobby técnico que permite la comunicación por radio con personas de todo el mundo. 
-                Es una actividad que combina tecnología, ciencia, deporte y amistad. Los radioaficionados experimentan con 
-                equipos de telecomunicaciones, aprenden sobre propagación de ondas, y participan en actividades de servicio público.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-secondary p-6 rounded-lg">
-            <h4 className="font-display text-lg font-bold text-white mb-3">Beneficios de la Radioafición</h4>
-            <ul className="space-y-2 text-white/90">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                Aprendizaje continuo sobre electrónica y telecomunicaciones
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                Conexión con personas de todo el mundo
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                Servicio público en emergencias y comunicaciones de apoyo
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                Experimentación técnica y desarrollo de proyectos
-              </li>
-            </ul>
+          <h3 className="font-display text-2xl font-bold text-foreground text-center">¿QUÉ ES LA RADIOAFICIÓN?</h3>
+          <div className="space-y-4 text-foreground leading-relaxed">
+            <p>
+              Aunque la Radioafición es un hobby que hoy en día con las nuevas tecnologías más modernas mucha gente joven no lo ve atractivo y no lo entienden o no lo encuentran útil como los que vivimos esos años en que no había internet ni teléfonos móviles y la única comunicación con otra persona que estuviera fuera de su domicilio era el teléfono con cable, el cual era fijo y era lo único que existía para comunicarse con otras personas.
+            </p>
+            <p>
+              Nosotros vivimos en aquellos años la magia de la radio que hablabas desde cualquier lugar con otra gente y sin cables como podías pedir socorro desde la montaña si te pasaba algún incidente o incluso en ciudad cuando tenías un percance con el coche pedir ayuda a través de la emisora y algún colega que te viniese con unas pinzas a arrancar el coche.
+            </p>
+            <p>
+              Nosotros nos decidimos por crear esta asociación con la idea de dar a conocer a la gente nueva este mundo de las ondas que con nostalgia de aquellos años seguimos utilizando y manteniéndolo activo para que la gente nueva que nos contacta lo conozca y les ayudemos a utilizar y salir por el mundo de las ondas incluso hay gente que nos contacta y nos cuenta que en sus casas recuerdan que su padre o su abuelo tenía una emisora y hablaba con casi todo el mundo y recuerdan que les parecía maravilloso conseguir algo así en aquellos años.
+            </p>
           </div>
         </div>
       </Section>
