@@ -183,7 +183,9 @@ const Index = () => {
             Para obtener tu licencia solo tienes que superar un test que consta de dos partes: uno de Normativa y otro de Electrónica. Una vez superada esta prueba, el Ministerio de Telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos "las letras". Y ya pasas a formar parte de nuestra gran familia radiofónica.
           </p>
           <p className="text-foreground leading-relaxed">
-            Para más información, visita la página de FEDIEA:{" "}
+            Para acceder a los test, aquí te dejamos dos enlaces a dos páginas web de radioaficionados: FEDIEA y Radio Club Quijotes.
+          </p>
+          <p className="text-foreground leading-relaxed">
             <a 
               href="https://www.fediea.org" 
               target="_blank" 
