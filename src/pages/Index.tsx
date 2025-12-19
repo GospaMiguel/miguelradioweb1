@@ -25,7 +25,7 @@ const Index = () => {
           <div className="flex items-start space-x-4">
             <Users className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Nuestra Asociación</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Nuestra Asociación</h3>
               <p className="text-foreground leading-relaxed">
                 La Asociación Cantabra de Radioaficionados es una comunidad apasionada por la radioafición y las telecomunicaciones. 
                 Nos dedicamos a promover y a dar a conocer el hobby de la radio y conectar a entusiastas de toda Cantabria 
@@ -37,7 +37,7 @@ const Index = () => {
           <div className="flex items-start space-x-4">
             <Radio className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Nuestra Misión</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Nuestra Misión</h3>
               <p className="text-foreground leading-relaxed">
                 Fomentar el desarrollo técnico y social de la radioafición, proporcionar formación continua a nuestros miembros, 
                 y servir como punto de encuentro para compartir experiencias y conocimientos en el fascinante mundo de las 
@@ -97,7 +97,7 @@ const Index = () => {
           <div className="flex items-start space-x-4">
             <Calendar className="w-8 h-8 text-warning flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Reunión ordinaria mensual</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Reunión ordinaria mensual</h3>
               <p className="text-foreground leading-relaxed">
                 Celebramos reuniones mensuales donde compartimos experiencias, aprendemos sobre nuevas tecnologías, 
                 discutimos proyectos y planificamos actividades. Un espacio ideal para conocer a otros radioaficionados 
@@ -133,7 +133,7 @@ const Index = () => {
           <div className="flex items-start space-x-4">
             <Wrench className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Equipamiento y Tecnología</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Equipamiento y Tecnología</h3>
               <p className="text-foreground leading-relaxed">
                 Información sobre equipos de radio, antenas, accesorios y tecnología utilizada por nuestros miembros. 
                 Compartimos experiencias sobre configuraciones, mantenimiento y optimización de equipos para diferentes 
