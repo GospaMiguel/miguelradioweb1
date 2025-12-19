@@ -50,16 +50,16 @@ const Index = () => {
             <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">Historia de nuestra Asociación</h3>
             <div className="space-y-4 text-foreground leading-relaxed">
               <p>
-                Nuestros primeros pasos empezaron por el año 2013 cuando a nivel local estaba vacía la banda de los 27 Mhz y no estaba abierta la propagación debido a un ciclo solar que afecto a la banda de los 27 Mhz y no se escuchaba nadie, la gente que volvía a desempolvar los equipos después del Boom que fueron los 27 Mhz de los años 90, algunos compañeros nos contaron que tiraron los equipos a la basura creyendo que estaba estropeados por que no se escuchaba nada.
+                Nuestros primeros pasos empezaron por el año 2013, cuando a nivel local estaba vacía la banda de los 27 MHz y no estaba abierta la propagación debido a un ciclo solar que afectó a la banda de los 27 MHz y no se escuchaba nadie. La gente que volvía a desempolvar los equipos después del boom que fueron los 27 MHz de los años 90, algunos compañeros nos contaron que tiraron los equipos a la basura creyendo que estaban estropeados porque no se escuchaba nada.
               </p>
               <p>
-                Entonces quedábamos 2 amigos en el canal 35 FM para charlar todas las tardes al escucharnos nuestros habituales QSO después de unos meses salieron otros dos compañeros a unirse con nosotros luego otros más y otros hasta que por el año 2015 ya éramos un grupo de unos 15 colegas que habíamos regresado al mundo de las ondas después de casi 20 años de QRT Radiofónico.
+                Entonces quedábamos 2 amigos en el canal 35 FM para charlar todas las tardes. Al escucharnos nuestros habituales QSO, después de unos meses salieron otros dos compañeros a unirse con nosotros, luego otros más y otros, hasta que por el año 2015 ya éramos un grupo de unos 15 colegas que habíamos regresado al mundo de las ondas después de casi 20 años de QRT Radiofónico.
               </p>
               <p>
-                Empezamos a quedar todos los viernes en vernos para comentar proyectos antenas averías de equipos y demás temas referentes a nuestra afición, A partir de este año Telecomunicaciones abrió una campaña para recuperar a la gente que tuvimos indicativos EA y nos dimos de baja nos pusimos todos de acuerdo y volvimos a recuperar nuestras licencias de Radioaficionados y a partir de ese momento ya empezamos a Registrar la asociación en el Gobierno de Cantabria y demás tramites en Telecomunicaciones.
+                Empezamos a quedar todos los viernes para vernos, comentar proyectos, antenas, averías de equipos y demás temas referentes a nuestra afición. A partir de este año, Telecomunicaciones abrió una campaña para recuperar a la gente que tuvimos indicativos EA y nos dimos de baja. Nos pusimos todos de acuerdo y volvimos a recuperar nuestras licencias de Radioaficionados, y a partir de ese momento ya empezamos a registrar la asociación en el Gobierno de Cantabria y demás trámites en Telecomunicaciones.
               </p>
               <p>
-                En el año 2017 ya éramos una Asociación de Radioaficionados, sin ánimo de lucro, nueva moderna y legalizada para velar y mantener activas las bandas de radioaficionados y demás equipos repetidores de uso por nuestra comunidad y debido a la desaparición de otros radioclub antiguos que los habían mantenido en funcionamiento y por falta de uso y debido a lo que comentábamos anteriormente de la desaparion de radioaficionados después del boom de las nuevas tecnologías por el año 2000 teléfonos móviles internet etc. fueron apagados y desaparecidos en Cantabria.
+                En el año 2017 ya éramos una Asociación de Radioaficionados, sin ánimo de lucro, nueva, moderna y legalizada para velar y mantener activas las bandas de radioaficionados y demás equipos repetidores de uso por nuestra comunidad. Debido a la desaparición de otros radioclubes antiguos que los habían mantenido en funcionamiento, y por falta de uso debido a lo que comentábamos anteriormente de la desaparición de radioaficionados después del boom de las nuevas tecnologías por el año 2000 (teléfonos móviles, internet, etc.), fueron apagados y desaparecidos en Cantabria.
               </p>
             </div>
           </div>
@@ -71,22 +71,22 @@ const Index = () => {
           <h3 className="font-display text-2xl font-bold text-foreground text-center">QUE ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
           <div className="space-y-4 text-foreground leading-relaxed">
             <p>
-              Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria participamos en eventos deportivos como la media Maratón del Pas que se celebra cada mediados del mes de septiembre en Puente Arce y nos ponemos en diferentes puntos Kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
+              Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria. Participamos en eventos deportivos como la Media Maratón del Pas, que se celebra cada mediados del mes de septiembre en Puente Arce, y nos ponemos en diferentes puntos kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
             </p>
             <p>
-              Otra actividad que participamos es en Guarnizo cada 15 de Agosto es la Festividad de la Virgen de Muslera con motivo de las fiestas instalamos nuestras emisoras y antenas y otorgamos tarjeta QSL especial a un solo contacto en la banda de 40 metros y contactamos con estaciones de toda España.
+              Otra actividad en la que participamos es en Guarnizo, cada 15 de agosto, en la Festividad de la Virgen de Muslera. Con motivo de las fiestas, instalamos nuestras emisoras y antenas, y otorgamos tarjeta QSL especial a un solo contacto en la banda de 40 metros, contactando con estaciones de toda España.
             </p>
             <p>
-              Otra actividad en la que hemos participado este año también en Guarnizo son en la feria de extra escolares en la cual se presentan todas las asociaciones de este ayuntamiento con la idea de dar a conocer lo que hacemos y a lo que nos dedicamos a la gente que acude a vernos.
+              Otra actividad en la que hemos participado este año, también en Guarnizo, es en la feria de extraescolares, en la cual se presentan todas las asociaciones de este ayuntamiento con la idea de dar a conocer lo que hacemos y a lo que nos dedicamos a la gente que acude a vernos.
             </p>
             <p>
-              Otra actividad más en la que Participamos es en las fiestas de la Virgen de Valencia en Renedo de Pielagos cada 27 de Septiembre Activamos con indicativo especial las fiestas otorgando tarjeta QSL a todas las estaciones que nos contactan desde cualquier lugar en la banda de HF 40 Metros.
+              Otra actividad más en la que participamos es en las fiestas de la Virgen de Valencia en Renedo de Piélagos, cada 27 de septiembre. Activamos con indicativo especial las fiestas, otorgando tarjeta QSL a todas las estaciones que nos contactan desde cualquier lugar en la banda de HF 40 metros.
             </p>
             <p>
-              Luego otro evento en el que nos reunimos y asistimos es en una Feria de Radioaficionados que se Celebra en Ávila Cada año el 15 de septiembre a la cual solemos asistir todos los Radioaficionados de esta asociación que nos podemos desplazar hasta allí, vemos la feria comemos por Ávila pasamos la noche y vuelta para Santander.
+              Luego, otro evento en el que nos reunimos y asistimos es una Feria de Radioaficionados que se celebra en Ávila cada año el 15 de septiembre, a la cual solemos asistir todos los radioaficionados de esta asociación que nos podemos desplazar hasta allí. Vemos la feria, comemos por Ávila, pasamos la noche y vuelta para Santander.
             </p>
             <p>
-              Otro evento al que solemos anualmente asistir es al merca Astur Radio cada 10 de mayo en Oviedo en el cual se compra y vende todo tipo de emisoras antenas nuevas y de segunda mano. Y dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo pasamos el día por allí y volvemos a Santander.
+              Otro evento al que solemos anualmente asistir es al Merca Astur Radio, cada 10 de mayo en Oviedo, en el cual se compra y vende todo tipo de emisoras y antenas nuevas y de segunda mano. Dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo, pasamos el día por allí y volvemos a Santander.
             </p>
           </div>
         </div>
@@ -164,13 +164,13 @@ const Index = () => {
           <h3 className="font-display text-2xl font-bold text-foreground text-center">¿QUÉ ES LA RADIOAFICIÓN?</h3>
           <div className="space-y-4 text-foreground leading-relaxed">
             <p>
-              Aunque la Radioafición es un hobby que hoy en día con las nuevas tecnologías más modernas mucha gente joven no lo ve atractivo y no lo entienden o no lo encuentran útil como los que vivimos esos años en que no había internet ni teléfonos móviles y la única comunicación con otra persona que estuviera fuera de su domicilio era el teléfono con cable, el cual era fijo y era lo único que existía para comunicarse con otras personas.
+              Aunque la Radioafición es un hobby que hoy en día, con las nuevas tecnologías más modernas, mucha gente joven no lo ve atractivo, no lo entiende o no lo encuentra útil, como los que vivimos esos años en que no había internet ni teléfonos móviles, y la única comunicación con otra persona que estuviera fuera de su domicilio era el teléfono con cable, el cual era fijo y era lo único que existía para comunicarse con otras personas.
             </p>
             <p>
-              Nosotros vivimos en aquellos años la magia de la radio que hablabas desde cualquier lugar con otra gente y sin cables como podías pedir socorro desde la montaña si te pasaba algún incidente o incluso en ciudad cuando tenías un percance con el coche pedir ayuda a través de la emisora y algún colega que te viniese con unas pinzas a arrancar el coche.
+              Nosotros vivimos en aquellos años la magia de la radio, que hablabas desde cualquier lugar con otra gente y sin cables. Podías pedir socorro desde la montaña si te pasaba algún incidente, o incluso en ciudad, cuando tenías un percance con el coche, pedir ayuda a través de la emisora y algún colega que te viniese con unas pinzas a arrancar el coche.
             </p>
             <p>
-              Nosotros nos decidimos por crear esta asociación con la idea de dar a conocer a la gente nueva este mundo de las ondas que con nostalgia de aquellos años seguimos utilizando y manteniéndolo activo para que la gente nueva que nos contacta lo conozca y les ayudemos a utilizar y salir por el mundo de las ondas incluso hay gente que nos contacta y nos cuenta que en sus casas recuerdan que su padre o su abuelo tenía una emisora y hablaba con casi todo el mundo y recuerdan que les parecía maravilloso conseguir algo así en aquellos años.
+              Nosotros nos decidimos por crear esta asociación con la idea de dar a conocer a la gente nueva este mundo de las ondas, que con nostalgia de aquellos años seguimos utilizando y manteniéndolo activo para que la gente nueva que nos contacta lo conozca y les ayudemos a utilizar y salir por el mundo de las ondas. Incluso hay gente que nos contacta y nos cuenta que en sus casas recuerdan que su padre o su abuelo tenía una emisora y hablaba con casi todo el mundo, y recuerdan que les parecía maravilloso conseguir algo así en aquellos años.
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@ const Index = () => {
         <div className="space-y-6">
           <h3 className="font-display text-2xl font-bold text-foreground text-center">PASOS PARA OBTENER TU DISTINTIVO DE LLAMADA</h3>
           <p className="text-foreground leading-relaxed">
-            Para obtener tu licencia solo tienes que superar un test que consta de dos partes, uno Normativa y otro de electrónica. Una vez superada esta prueba, el ministerio de telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos, las letras. Y ya pasas a formar parte de nuestra gran familia radiofónica.
+            Para obtener tu licencia solo tienes que superar un test que consta de dos partes: uno de Normativa y otro de Electrónica. Una vez superada esta prueba, el Ministerio de Telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos "las letras". Y ya pasas a formar parte de nuestra gran familia radiofónica.
           </p>
         </div>
       </Section>
