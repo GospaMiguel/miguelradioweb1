@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { ContactSection } from "@/components/ContactSection";
 import { GallerySection } from "@/components/GallerySection";
-import { Radio, Users, Calendar, Wrench, GraduationCap } from "lucide-react";
+import { Radio, Users, Calendar, Wrench } from "lucide-react";
 import logoAsociacion from "@/assets/logo-asociacion.png";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 const Index = () => {
@@ -197,50 +197,12 @@ const Index = () => {
         </div>
       </Section>
 
-      <Section id="examenes" title="Exámenes">
+      <Section id="examenes" title="REQUISITOS PARA LA OBTENCION DE LICENCIA DE RADIOAFICIONADO">
         <div className="space-y-6">
-          <div className="flex items-start space-x-4">
-            <GraduationCap className="w-8 h-8 text-success flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">Obtén tu Licencia</h3>
-              <p className="text-foreground leading-relaxed">
-                Para practicar la radioafición es necesario superar los exámenes oficiales y obtener una autorización 
-                administrativa de telecomunicaciones que acredite que estás apto y con los conocimientos para el manejo 
-                de una estación de radioaficionado. Te ayudamos a prepararte y te guiamos en el proceso de obtención 
-                de tu indicativo de llamada.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-muted p-6 rounded-lg">
-              <h4 className="font-display text-lg font-bold text-foreground mb-3">Preparación</h4>
-              <p className="text-foreground mb-4">
-                Ofrecemos cursos de preparación para el examen de radioaficionado. Cubrimos todos los temas necesarios: 
-                reglamentación, técnica de radio, propagación, antenas y seguridad.
-              </p>
-              <ul className="space-y-2 text-foreground text-sm">
-                <li>• Clases teóricas y prácticas</li>
-                <li>• Material de estudio</li>
-                <li>• Simulacros de examen</li>
-                <li>• Apoyo continuo</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted p-6 rounded-lg">
-              <h4 className="font-display text-lg font-bold text-foreground mb-3">Información del Examen</h4>
-              <p className="text-foreground mb-4">
-                El examen oficial se realiza a través de la administración de telecomunicaciones y consta de una 
-                prueba teórica sobre conocimientos técnicos y normativos.
-              </p>
-              <ul className="space-y-2 text-foreground text-sm">
-                <li>• Convocatorias regulares</li>
-                <li>• Examen tipo test</li>
-                <li>• Diferentes niveles de licencia</li>
-                <li>• Validez internacional</li>
-              </ul>
-            </div>
-          </div>
+          <h3 className="font-display text-2xl font-bold text-foreground text-center">PASOS PARA OBTENER TU DISTINTIVO DE LLAMADA</h3>
+          <p className="text-foreground leading-relaxed">
+            Para obtener tu licencia solo tienes que superar un test que consta de dos partes, uno Normativa y otro de electrónica. Una vez superada esta prueba, el ministerio de telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos, las letras. Y ya pasas a formar parte de nuestra gran familia radiofónica.
+          </p>
         </div>
       </Section>
 
