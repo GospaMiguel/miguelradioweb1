@@ -182,6 +182,17 @@ const Index = () => {
           <p className="text-foreground leading-relaxed">
             Para obtener tu licencia solo tienes que superar un test que consta de dos partes: uno de Normativa y otro de Electrónica. Una vez superada esta prueba, el Ministerio de Telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos "las letras". Y ya pasas a formar parte de nuestra gran familia radiofónica.
           </p>
+          <p className="text-foreground leading-relaxed">
+            Para más información, visita la página de FEDIEA:{" "}
+            <a 
+              href="https://www.fediea.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 underline font-semibold transition-colors"
+            >
+              www.fediea.org
+            </a>
+          </p>
         </div>
       </Section>
 
