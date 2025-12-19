@@ -190,7 +190,7 @@ const Index = () => {
               href="https://www.fediea.org" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-white/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
+              className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
               www.fediea.org
             </a>
@@ -198,7 +198,7 @@ const Index = () => {
               href="https://radioclubquijotes.org/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-white/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
+              className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
               radioclubquijotes.org
             </a>
