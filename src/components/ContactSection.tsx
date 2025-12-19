@@ -51,7 +51,7 @@ export const ContactSection = () => {
           <div className="flex items-start space-x-4 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
             <Phone className="w-6 h-6 text-success mt-1 flex-shrink-0" />
             <div>
-              <p className="font-semibold text-foreground">WhatsApp</p>
+              <p className="font-semibold text-foreground">WhatsApp - Miguel</p>
               <button
                 onClick={handleWhatsApp}
                 className="text-foreground hover:text-success transition-colors"
