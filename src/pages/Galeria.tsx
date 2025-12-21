@@ -3,37 +3,49 @@ import { Navigation } from "@/components/Navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface GalleryImage {
+interface GalleryItem {
   thumbnail: string;
   full: string;
   alt: string;
+  type: "image" | "video";
+  videoId?: string;
 }
 
 interface Category {
   id: string;
   name: string;
-  images: GalleryImage[];
+  items: GalleryItem[];
 }
 
 const categories: Category[] = [
   {
     id: "encuentro-2025-argolla",
     name: 'Encuentro 2025 "La Argolla"',
-    images: [
+    items: [
       {
         thumbnail: "https://i.ibb.co/XG2Mpvv/IMG-20251214-145258.jpg",
         full: "https://i.ibb.co/q2yV9PP/IMG-20251214-145258.jpg",
         alt: "Encuentro 2025 La Argolla - Imagen 1",
+        type: "image",
       },
       {
         thumbnail: "https://i.ibb.co/WNCvMGdk/IMG-20251214-171524.jpg",
         full: "https://i.ibb.co/JWZjGmbv/IMG-20251214-171524.jpg",
         alt: "Encuentro 2025 La Argolla - Imagen 2",
+        type: "image",
       },
       {
         thumbnail: "https://i.ibb.co/Gfnb8HHS/IMG-20251214-171623.jpg",
         full: "https://i.ibb.co/cKk7ZYYn/IMG-20251214-171623.jpg",
         alt: "Encuentro 2025 La Argolla - Imagen 3",
+        type: "image",
+      },
+      {
+        thumbnail: "https://i9.ytimg.com/vi/PpLINZu8f9g/mqdefault.jpg?sqp=CKjjn8oG-oaymwEmCMACELQB8quKqQMa8AEB-AHOBoAC3gOKAgwIABABGGUgSChBMA8=&rs=AOn4CLC1ZSdauu2SN8ZAV2hZaTa3ICmJdQ",
+        full: "",
+        alt: "Encuentro 2025 La Argolla - Video",
+        type: "video",
+        videoId: "PpLINZu8f9g",
       },
     ],
   },
@@ -42,13 +54,13 @@ const categories: Category[] = [
 const Galeria = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0].id);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
   const currentCategory = categories.find((cat) => cat.id === selectedCategory);
-  const currentImages = currentCategory?.images || [];
+  const currentItems = currentCategory?.items || [];
 
   const openLightbox = (index: number) => {
-    setCurrentImageIndex(index);
+    setCurrentItemIndex(index);
     setLightboxOpen(true);
   };
 
@@ -57,11 +69,11 @@ const Galeria = () => {
   };
 
   const goToPrevious = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? currentImages.length - 1 : prev - 1));
+    setCurrentItemIndex((prev) => (prev === 0 ? currentItems.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev === currentImages.length - 1 ? 0 : prev + 1));
+    setCurrentItemIndex((prev) => (prev === currentItems.length - 1 ? 0 : prev + 1));
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -100,26 +112,33 @@ const Galeria = () => {
               </nav>
             </aside>
 
-            {/* Grid de imágenes */}
+            {/* Grid de imágenes y videos */}
             <main className="flex-1">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {currentImages.map((image, index) => (
+                {currentItems.map((item, index) => (
                   <button
                     key={index}
                     onClick={() => openLightbox(index)}
-                    className="aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary relative"
                   >
                     <img
-                      src={image.thumbnail}
-                      alt={image.alt}
+                      src={item.thumbnail}
+                      alt={item.alt}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
+                    {item.type === "video" && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                          <div className="w-0 h-0 border-l-[16px] border-l-white border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1" />
+                        </div>
+                      </div>
+                    )}
                   </button>
                 ))}
               </div>
 
-              {currentImages.length === 0 && (
+              {currentItems.length === 0 && (
                 <p className="text-foreground text-center py-12">
                   No hay imágenes en esta categoría.
                 </p>
@@ -162,13 +181,24 @@ const Galeria = () => {
             <ChevronLeft className="h-12 w-12" />
           </Button>
 
-          {/* Imagen */}
-          <img
-            src={currentImages[currentImageIndex]?.full}
-            alt={currentImages[currentImageIndex]?.alt}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {/* Contenido: Imagen o Video */}
+          {currentItems[currentItemIndex]?.type === "video" ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${currentItems[currentItemIndex]?.videoId}?autoplay=1`}
+              title={currentItems[currentItemIndex]?.alt}
+              className="w-[90vw] h-[50.625vw] max-h-[90vh] max-w-[160vh]"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            <img
+              src={currentItems[currentItemIndex]?.full}
+              alt={currentItems[currentItemIndex]?.alt}
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
 
           {/* Flecha derecha */}
           <Button
@@ -185,7 +215,7 @@ const Galeria = () => {
 
           {/* Contador */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
-            {currentImageIndex + 1} / {currentImages.length}
+            {currentItemIndex + 1} / {currentItems.length}
           </div>
         </div>
       )}
