@@ -151,7 +151,7 @@ const Equipos = () => {
                         <img
                           src={currentEquipment.image}
                           alt={currentEquipment.name}
-                          className="max-w-full h-auto rounded-lg shadow-lg"
+                          className="max-w-[50%] h-auto rounded-lg shadow-lg"
                           loading="lazy"
                         />
                       </div>
