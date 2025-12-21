@@ -2,11 +2,21 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { ContactSection } from "@/components/ContactSection";
-import { GallerySection } from "@/components/GallerySection";
-import { Radio, Users, Calendar, Wrench } from "lucide-react";
+import { Radio, Users, Calendar, Wrench, Image as ImageIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.png";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 const Index = () => {
+  const navigate = useNavigate();
+  
+  // Obtener las 3 categorías más recientes (últimas 3 del array)
+  const recentCategories = categories.slice(-3).reverse();
+
+  const handleCategoryClick = () => {
+    navigate("/galeria");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -143,18 +153,69 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-muted p-6 rounded-lg text-center">
+            <button
+              onClick={() => navigate("/equipos?category=hf")}
+              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+            >
               <h4 className="font-display text-lg font-bold text-foreground mb-2">HF</h4>
               <p className="text-sm text-foreground">Bandas decamétricas</p>
-            </div>
-            <div className="bg-muted p-6 rounded-lg text-center">
+            </button>
+            <button
+              onClick={() => navigate("/equipos?category=vhf-uhf")}
+              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+            >
               <h4 className="font-display text-lg font-bold text-foreground mb-2">VHF/UHF</h4>
               <p className="text-sm text-foreground">Comunicaciones locales</p>
-            </div>
-            <div className="bg-muted p-6 rounded-lg text-center">
+            </button>
+            <button
+              onClick={() => navigate("/equipos?category=digital")}
+              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+            >
               <h4 className="font-display text-lg font-bold text-foreground mb-2">Digital</h4>
               <p className="text-sm text-foreground">Modos digitales modernos</p>
+            </button>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="galeria" title="Galería">
+        <div className="space-y-6">
+          <div className="flex items-start space-x-4">
+            <ImageIcon className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Galería de Eventos</h3>
+              <p className="text-foreground leading-relaxed">
+                Descubre nuestras últimas actividades, encuentros y eventos a través de nuestra galería de fotos y videos. 
+                Compartimos los mejores momentos de nuestra comunidad radioaficionada.
+              </p>
             </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {recentCategories.map((category) => {
+              const firstItem = category.items.find(item => item.type === "image") || category.items[0];
+              return (
+                <button
+                  key={category.id}
+                  onClick={handleCategoryClick}
+                  className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer"
+                >
+                  {firstItem && (
+                    <div className="mb-4 aspect-square overflow-hidden rounded-lg">
+                      <img
+                        src={firstItem.thumbnail}
+                        alt={category.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <h4 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {category.name}
+                  </h4>
+                </button>
+              );
+            })}
           </div>
         </div>
       </Section>
@@ -204,10 +265,6 @@ const Index = () => {
             </a>
           </div>
         </div>
-      </Section>
-
-      <Section id="galeria" title="Galería">
-        <GallerySection />
       </Section>
 
       <Section id="contacto" title="Contáctanos">

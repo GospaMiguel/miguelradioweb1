@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -11,13 +11,14 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { id: "inicio", label: "Inicio", isPage: true, path: "/" },
   { id: "sobre-nosotros", label: "Sobre Nosotros" },
   { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
   { id: "equipos", label: "Equipos" },
   { id: "sobre-radio", label: "Sobre la Radio" },
   { id: "examenes", label: "Exámenes" },
-  { id: "galeria", label: "Galería", isPage: true, path: "/galeria" },
+  { id: "galeria", label: "Galería" },
   { id: "contacto", label: "Contáctanos" },
 ];
 
@@ -27,17 +28,114 @@ interface NavigationProps {
 
 export const Navigation = ({ currentPage }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [cameFromOtherPage, setCameFromOtherPage] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const prevPathnameRef = useRef(location.pathname);
+
+  // Detectar cuando el usuario viene de otra página
+  useEffect(() => {
+    if (location.pathname === "/equipos") {
+      setActiveItem("equipos");
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
+    } else if (location.pathname === "/galeria") {
+      setActiveItem("galeria");
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
+    } else if (location.pathname === "/" && prevPathnameRef.current !== "/") {
+      setCameFromOtherPage(true);
+      setActiveItem("inicio");
+      prevPathnameRef.current = location.pathname;
+    } else if (prevPathnameRef.current !== location.pathname) {
+      const currentItem = navItems.find(item => item.path === location.pathname);
+      if (currentItem) {
+        setActiveItem(currentItem.id);
+      }
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
+    }
+  }, [location.pathname]);
+
+  // Detectar qué sección está visible cuando estamos en la página de inicio
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    const handleScroll = () => {
+      const sections = navItems
+        .filter(item => !item.isPage)
+        .map(item => ({
+          id: item.id,
+          element: document.getElementById(item.id),
+        }))
+        .filter(section => section.element !== null);
+
+      // Encontrar la sección que está más cerca del top del viewport
+      const navHeight = 96; // altura aproximada de la navegación
+      let activeSection: string | null = null;
+      let closestDistance = Infinity;
+
+      for (const section of sections) {
+        if (section.element) {
+          const rect = section.element.getBoundingClientRect();
+          const distanceFromTop = Math.abs(rect.top - navHeight);
+          
+          // Si la sección está visible en el viewport (con un margen para la navegación)
+          if (rect.top <= navHeight + 150 && rect.bottom >= navHeight - 50) {
+            if (distanceFromTop < closestDistance) {
+              closestDistance = distanceFromTop;
+              activeSection = section.id;
+            }
+          }
+        }
+      }
+
+      // Si encontramos una sección activa, activarla y desactivar "inicio"
+      if (activeSection) {
+        setActiveItem(activeSection);
+        setCameFromOtherPage(false);
+      } else if (cameFromOtherPage && window.scrollY < 100) {
+        // Solo activar "inicio" si estamos en el top de la página Y venimos de otra página
+        setActiveItem("inicio");
+      }
+      // Si no hay sección activa y no venimos de otra página, no cambiar el estado
+    };
+
+    // Ejecutar al cargar para detectar hash
+    const hash = location.hash.replace("#", "");
+    if (hash && navItems.find(item => item.id === hash)) {
+      setActiveItem(hash);
+      setCameFromOtherPage(false);
+    } else if (!cameFromOtherPage) {
+      // Si no hay hash y no venimos de otra página, detectar sección visible
+      handleScroll();
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname, location.hash, cameFromOtherPage]);
 
   const handleNavClick = (item: NavItem) => {
+    setActiveItem(item.id);
     if (item.isPage && item.path) {
-      navigate(item.path);
+      if (item.path === "/" && location.pathname === "/") {
+        // Si estamos en inicio y hacemos clic en inicio, hacer scroll al top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setCameFromOtherPage(true);
+        setActiveItem("inicio");
+      } else {
+        navigate(item.path);
+        if (item.path === "/") {
+          setCameFromOtherPage(true);
+        }
+      }
       setIsOpen(false);
     } else {
       // Si estamos en una subpágina, navegar a inicio y luego hacer scroll
       if (location.pathname !== "/") {
         navigate("/");
+        setCameFromOtherPage(false);
         setTimeout(() => {
           const element = document.getElementById(item.id);
           if (element) {
@@ -45,6 +143,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
           }
         }, 100);
       } else {
+        setCameFromOtherPage(false);
         const element = document.getElementById(item.id);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
@@ -55,10 +154,9 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
   };
 
   const isActive = (item: NavItem) => {
-    if (item.isPage && item.path) {
-      return location.pathname === item.path || currentPage === item.id;
-    }
-    return false;
+    // Solo usar activeItem para determinar qué está activo
+    // Esto asegura que solo un item esté activo a la vez
+    return activeItem === item.id;
   };
 
   return (
@@ -72,8 +170,8 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => handleNavClick(item)}
-                className={`text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold ${
-                  isActive(item) ? "bg-primary/30 ring-2 ring-primary" : ""
+                className={`text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold rounded-md ${
+                  isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                 }`}
               >
                 {item.label}
@@ -118,8 +216,8 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => handleNavClick(item)}
-                className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg ${
-                  isActive(item) ? "bg-primary/20 text-primary" : ""
+                className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg rounded-md ${
+                  isActive(item) ? "bg-purple-600/80 text-white hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                 }`}
               >
                 {item.label}

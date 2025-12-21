@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface GalleryItem {
+export interface GalleryItem {
   thumbnail: string;
   full: string;
   alt: string;
@@ -11,13 +11,13 @@ interface GalleryItem {
   videoId?: string;
 }
 
-interface Category {
+export interface Category {
   id: string;
   name: string;
   items: GalleryItem[];
 }
 
-const categories: Category[] = [
+export const categories: Category[] = [
   {
     id: "encuentro-2025-argolla",
     name: 'Encuentro 2025 "La Argolla"',

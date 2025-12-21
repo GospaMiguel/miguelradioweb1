@@ -13,22 +13,42 @@ export const ContactSection = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:asociacioncantabraradioaficion@gmail.com?subject=Contacto desde web - ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}%0D%0A%0D%0AEmail: ${encodeURIComponent(formData.email)}`;
-    window.location.href = mailtoLink;
     
-    toast({
-      title: "¡Mensaje enviado!",
-      description: "Abriendo tu cliente de correo electrónico...",
-    });
-    
-    setFormData({ name: "", email: "", message: "" });
+    const formDataToSend = new FormData();
+    formDataToSend.append("form-name", "contact");
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("message", formData.message);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as any).toString(),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado!",
+          description: "Gracias por contactarnos. Te responderemos pronto.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Error al enviar el formulario");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleWhatsApp = () => {
-    const message = "Hola, me gustaría obtener más información sobre la Asociación Cantabra de Radioaficionados.";
-    const whatsappUrl = `https://wa.me/34639207033?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/34639207033`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -74,9 +94,18 @@ export const ContactSection = () => {
         <div className="space-y-6">
           <h3 className="font-display text-2xl text-primary font-bold">Envíanos un Mensaje</h3>
           
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            
             <div>
               <Input
+                name="name"
                 placeholder="Tu nombre"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -88,6 +117,7 @@ export const ContactSection = () => {
             <div>
               <Input
                 type="email"
+                name="email"
                 placeholder="Tu email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -98,6 +128,7 @@ export const ContactSection = () => {
             
             <div>
               <Textarea
+                name="message"
                 placeholder="Tu mensaje"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
