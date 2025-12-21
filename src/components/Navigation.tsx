@@ -1,27 +1,64 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const navItems = [
+interface NavItem {
+  id: string;
+  label: string;
+  isPage?: boolean;
+  path?: string;
+}
+
+const navItems: NavItem[] = [
   { id: "sobre-nosotros", label: "Sobre Nosotros" },
   { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
   { id: "equipos", label: "Equipos" },
   { id: "sobre-radio", label: "Sobre la Radio" },
   { id: "examenes", label: "Exámenes" },
-  { id: "galeria", label: "Galería" },
+  { id: "galeria", label: "Galería", isPage: true, path: "/galeria" },
   { id: "contacto", label: "Contáctanos" },
 ];
 
-export const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavigationProps {
+  currentPage?: string;
+}
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+export const Navigation = ({ currentPage }: NavigationProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (item: NavItem) => {
+    if (item.isPage && item.path) {
+      navigate(item.path);
+      setIsOpen(false);
+    } else {
+      // Si estamos en una subpágina, navegar a inicio y luego hacer scroll
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          const element = document.getElementById(item.id);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.getElementById(item.id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
       setIsOpen(false);
     }
+  };
+
+  const isActive = (item: NavItem) => {
+    if (item.isPage && item.path) {
+      return location.pathname === item.path || currentPage === item.id;
+    }
+    return false;
   };
 
   return (
@@ -34,8 +71,10 @@ export const Navigation = () => {
               <Button
                 key={item.id}
                 variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold"
+                onClick={() => handleNavClick(item)}
+                className={`text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold ${
+                  isActive(item) ? "bg-primary/30 ring-2 ring-primary" : ""
+                }`}
               >
                 {item.label}
               </Button>
@@ -78,8 +117,10 @@ export const Navigation = () => {
               <Button
                 key={item.id}
                 variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg"
+                onClick={() => handleNavClick(item)}
+                className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg ${
+                  isActive(item) ? "bg-primary/20 text-primary" : ""
+                }`}
               >
                 {item.label}
               </Button>
