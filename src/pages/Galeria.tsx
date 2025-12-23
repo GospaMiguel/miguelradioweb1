@@ -41,7 +41,7 @@ export const categories: Category[] = [
         type: "image",
       },
       {
-        thumbnail: "https://img.youtube.com/vi/PpLINZu8f9g/maxresdefault.jpg",
+        thumbnail: "https://img.youtube.com/vi/PpLINZu8f9g/hqdefault.jpg",
         full: "",
         alt: "Video",
         type: "video",
