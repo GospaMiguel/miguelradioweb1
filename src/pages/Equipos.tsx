@@ -112,72 +112,75 @@ const Equipos = () => {
           {/* Contenido según la categoría seleccionada */}
           <div className="mt-8">
             {currentEquipments.length > 0 ? (
-              <div className="flex flex-col md:flex-row gap-8">
-                {/* Lista de equipos a la izquierda */}
-                <aside className="md:w-64 flex-shrink-0">
-                  <nav className="space-y-2">
-                    {currentEquipments.map((equipment) => (
-                      <button
-                        key={equipment.id}
-                        onClick={() => setSelectedEquipment(equipment.id)}
-                        className={`w-full text-left px-4 py-3 rounded-lg transition-all font-medium text-white text-lg ${
-                          selectedEquipment === equipment.id
-                            ? "equipment-glow font-bold text-xl"
-                            : "hover:bg-muted/50"
-                        }`}
-                      >
-                        {equipment.name}
-                      </button>
-                    ))}
-                  </nav>
-                  <style>{`
-                    .equipment-glow {
-                      text-shadow: 0 0 15px rgba(255, 255, 255, 1),
-                                   0 0 30px rgba(255, 255, 255, 1),
-                                   0 0 50px rgba(255, 255, 255, 1),
-                                   0 0 80px rgba(255, 255, 255, 0.9),
-                                   0 0 120px rgba(255, 255, 255, 0.8),
-                                   0 0 160px rgba(255, 255, 255, 0.6);
-                    }
-                  `}</style>
-                </aside>
+              <div className="space-y-8">
+                {/* Nombre del equipo y foto primero */}
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  {/* Lista de equipos a la izquierda */}
+                  <aside className="md:w-64 flex-shrink-0">
+                    <nav className="space-y-2">
+                      {currentEquipments.map((equipment) => (
+                        <button
+                          key={equipment.id}
+                          onClick={() => setSelectedEquipment(equipment.id)}
+                          className={`w-full text-left px-4 py-3 rounded-lg transition-all font-medium text-white text-lg ${
+                            selectedEquipment === equipment.id
+                              ? "equipment-glow font-bold text-xl"
+                              : "hover:bg-muted/50"
+                          }`}
+                        >
+                          {equipment.name}
+                        </button>
+                      ))}
+                    </nav>
+                    <style>{`
+                      .equipment-glow {
+                        text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+                                     0 0 30px rgba(255, 255, 255, 1),
+                                     0 0 50px rgba(255, 255, 255, 1),
+                                     0 0 80px rgba(255, 255, 255, 0.9),
+                                     0 0 120px rgba(255, 255, 255, 0.8),
+                                     0 0 160px rgba(255, 255, 255, 0.6);
+                      }
+                    `}</style>
+                  </aside>
 
-                {/* Contenido central: foto, características y comentarios */}
-                <main className="flex-1">
+                  {/* Foto del equipo - a la derecha del nombre */}
                   {currentEquipment && (
-                    <div className="space-y-6">
-                      {/* Foto del equipo - centrada */}
-                      <div className="flex justify-center">
-                        <img
-                          src={currentEquipment.image}
-                          alt={currentEquipment.name}
-                          className="max-w-[50%] h-auto rounded-lg shadow-lg"
-                          loading="lazy"
-                        />
-                      </div>
-
-                      {/* Comentarios primero */}
-                      <div>
-                        <h3 className="font-display text-2xl font-bold text-primary mb-4">
-                          Comentarios
-                        </h3>
-                        <p className="text-foreground leading-relaxed">
-                          {currentEquipment.comments}
-                        </p>
-                      </div>
-
-                      {/* Características después */}
-                      <div>
-                        <h3 className="font-display text-2xl font-bold text-primary mb-4">
-                          Características
-                        </h3>
-                        <div className="text-foreground whitespace-pre-line leading-relaxed">
-                          {currentEquipment.characteristics}
-                        </div>
-                      </div>
+                    <div className="flex-1 flex justify-center">
+                      <img
+                        src={currentEquipment.image}
+                        alt={currentEquipment.name}
+                        className="max-w-full md:max-w-[60%] h-auto rounded-lg shadow-lg"
+                        loading="lazy"
+                      />
                     </div>
                   )}
-                </main>
+                </div>
+
+                {/* Características y comentarios debajo */}
+                {currentEquipment && (
+                  <div className="space-y-6">
+                    {/* Comentarios */}
+                    <div>
+                      <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                        Comentarios
+                      </h3>
+                      <p className="text-foreground leading-relaxed">
+                        {currentEquipment.comments}
+                      </p>
+                    </div>
+
+                    {/* Características */}
+                    <div>
+                      <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                        Características
+                      </h3>
+                      <div className="text-foreground whitespace-pre-line leading-relaxed">
+                        {currentEquipment.characteristics}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="text-center py-12">
