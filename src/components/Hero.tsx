@@ -3,7 +3,7 @@ import heroMain from "@/assets/hero-main.jpg";
 
 export const Hero = () => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden bg-background mt-20">
+    <div className="relative flex items-center justify-center overflow-hidden bg-background mt-[5.5rem]">
       {/* Main Hero Image */}
       <img 
         src={heroMain} 
