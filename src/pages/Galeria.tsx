@@ -43,7 +43,7 @@ export const categories: Category[] = [
       {
         thumbnail: "https://i9.ytimg.com/vi/PpLINZu8f9g/mqdefault.jpg?sqp=CKjjn8oG-oaymwEmCMACELQB8quKqQMa8AEB-AHOBoAC3gOKAgwIABABGGUgSChBMA8=&rs=AOn4CLC1ZSdauu2SN8ZAV2hZaTa3ICmJdQ",
         full: "",
-        alt: "Encuentro 2025 La Argolla - Video",
+        alt: "Video",
         type: "video",
         videoId: "PpLINZu8f9g",
       },
