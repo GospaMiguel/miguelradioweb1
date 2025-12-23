@@ -146,7 +146,7 @@ const Equipos = () => {
                 <main className="flex-1">
                   {currentEquipment && (
                     <div className="space-y-6">
-                      {/* Foto del equipo */}
+                      {/* Foto del equipo - centrada */}
                       <div className="flex justify-center">
                         <img
                           src={currentEquipment.image}
@@ -156,17 +156,7 @@ const Equipos = () => {
                         />
                       </div>
 
-                      {/* Características */}
-                      <div>
-                        <h3 className="font-display text-2xl font-bold text-primary mb-4">
-                          Características
-                        </h3>
-                        <div className="text-foreground whitespace-pre-line leading-relaxed">
-                          {currentEquipment.characteristics}
-                        </div>
-                      </div>
-
-                      {/* Comentarios */}
+                      {/* Comentarios primero */}
                       <div>
                         <h3 className="font-display text-2xl font-bold text-primary mb-4">
                           Comentarios
@@ -174,6 +164,16 @@ const Equipos = () => {
                         <p className="text-foreground leading-relaxed">
                           {currentEquipment.comments}
                         </p>
+                      </div>
+
+                      {/* Características después */}
+                      <div>
+                        <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                          Características
+                        </h3>
+                        <div className="text-foreground whitespace-pre-line leading-relaxed">
+                          {currentEquipment.characteristics}
+                        </div>
                       </div>
                     </div>
                   )}
