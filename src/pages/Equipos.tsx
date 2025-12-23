@@ -97,14 +97,14 @@ const Equipos = () => {
                   setSelectedCategory(category.id);
                   setSearchParams({ category: category.id });
                 }}
-                className={`bg-muted p-6 rounded-lg text-center transition-all border-2 border-[#8B0000] shadow-[0_0_10px_#8B0000,0_0_20px_#8B0000] ${
+                className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
-                    ? "bg-primary text-primary-foreground ring-2 ring-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000,0_0_45px_#8B0000]"
-                    : "text-foreground hover:bg-muted/80 hover:shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
+                    ? "bg-white text-[#8B0000] border-[#8B0000] shadow-[0_0_20px_#8B0000,0_0_40px_#8B0000,0_0_60px_#8B0000] ring-2 ring-[#8B0000]"
+                    : "bg-white/90 text-[#8B0000] border-[#8B0000] shadow-[0_0_10px_#8B0000,0_0_20px_#8B0000] hover:shadow-[0_0_20px_#8B0000,0_0_40px_#8B0000]"
                 }`}
               >
                 <h4 className="font-display text-lg font-bold mb-2">{category.label}</h4>
-                <p className="text-sm">{category.subtitle}</p>
+                <p className="text-sm opacity-80">{category.subtitle}</p>
               </button>
             ))}
           </div>
