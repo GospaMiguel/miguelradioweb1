@@ -155,24 +155,24 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-4">
             <button
               onClick={() => navigate("/equipos?category=hf")}
-              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold text-foreground mb-2">HF</h4>
-              <p className="text-sm text-foreground">Bandas decamétricas</p>
+              <h4 className="font-display text-lg font-bold mb-2">HF</h4>
+              <p className="text-sm opacity-80">Bandas decamétricas</p>
             </button>
             <button
               onClick={() => navigate("/equipos?category=vhf-uhf")}
-              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold text-foreground mb-2">VHF/UHF</h4>
-              <p className="text-sm text-foreground">Comunicaciones locales</p>
+              <h4 className="font-display text-lg font-bold mb-2">VHF/UHF</h4>
+              <p className="text-sm opacity-80">Comunicaciones locales</p>
             </button>
             <button
               onClick={() => navigate("/equipos?category=digital")}
-              className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors cursor-pointer"
+              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold text-foreground mb-2">Digital</h4>
-              <p className="text-sm text-foreground">Modos digitales modernos</p>
+              <h4 className="font-display text-lg font-bold mb-2">Digital</h4>
+              <p className="text-sm opacity-80">Modos digitales modernos</p>
             </button>
           </div>
         </div>
