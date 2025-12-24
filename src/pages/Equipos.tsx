@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
+type HFSubcategory = "emisoras" | "antenas" | "acopladores";
 
 interface Equipment {
   id: string;
@@ -12,8 +13,9 @@ interface Equipment {
   comments: string;
 }
 
-const equipmentData: Record<EquipmentCategory, Equipment[]> = {
-  hf: [
+// Datos de HF organizados por subcategoría
+const hfEquipmentData: Record<HFSubcategory, Equipment[]> = {
+  emisoras: [
     {
       id: "yaesu-ft-710",
       name: "YaesuFT-710",
@@ -31,9 +33,21 @@ const equipmentData: Record<EquipmentCategory, Equipment[]> = {
       comments: `El Yaesu FT-710 es un transceptor HF de alta gama que combina la potencia tradicional de Yaesu con tecnología SDR moderna. Su receptor de doble conversión ofrece excelente selectividad y rechazo de señales no deseadas. El display TFT a color facilita la visualización del espectro y la configuración del equipo. Ideal para operadores que buscan un equipo versátil y potente para comunicaciones en HF. La interfaz USB permite control remoto y conexión directa con ordenadores para modos digitales.`,
     },
   ],
+  antenas: [],
+  acopladores: [],
+};
+
+const equipmentData: Record<EquipmentCategory, Equipment[]> = {
+  hf: [], // HF ahora usa subcategorías
   "vhf-uhf": [],
   digital: [],
 };
+
+const hfSubcategories = [
+  { id: "emisoras" as HFSubcategory, label: "Emisoras" },
+  { id: "antenas" as HFSubcategory, label: "Antenas" },
+  { id: "acopladores" as HFSubcategory, label: "Acopladores/Medidores de estacionarias" },
+];
 
 const Equipos = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,29 +59,36 @@ const Equipos = () => {
       : "hf"
   );
 
-  const [selectedEquipment, setSelectedEquipment] = useState<string | null>(
-    equipmentData[selectedCategory]?.[0]?.id || null
-  );
+  const [selectedHFSubcategory, setSelectedHFSubcategory] = useState<HFSubcategory>("emisoras");
+
+  const [selectedEquipment, setSelectedEquipment] = useState<string | null>(null);
+
+  // Obtener los equipos actuales según la categoría y subcategoría
+  const getCurrentEquipments = () => {
+    if (selectedCategory === "hf") {
+      return hfEquipmentData[selectedHFSubcategory] || [];
+    }
+    return equipmentData[selectedCategory] || [];
+  };
+
+  const currentEquipments = getCurrentEquipments();
 
   // Actualizar la categoría cuando cambie el parámetro de la URL
   useEffect(() => {
     if (categoryParam && ["hf", "vhf-uhf", "digital"].includes(categoryParam)) {
       setSelectedCategory(categoryParam);
-      // Seleccionar el primer equipo de la nueva categoría
-      const firstEquipment = equipmentData[categoryParam]?.[0];
-      if (firstEquipment) {
-        setSelectedEquipment(firstEquipment.id);
-      }
     }
   }, [categoryParam]);
 
-  // Actualizar el equipo seleccionado cuando cambie la categoría
+  // Actualizar el equipo seleccionado cuando cambie la categoría o subcategoría
   useEffect(() => {
-    const firstEquipment = equipmentData[selectedCategory]?.[0];
-    if (firstEquipment) {
-      setSelectedEquipment(firstEquipment.id);
+    const equipments = getCurrentEquipments();
+    if (equipments.length > 0) {
+      setSelectedEquipment(equipments[0].id);
+    } else {
+      setSelectedEquipment(null);
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, selectedHFSubcategory]);
 
   const categories = [
     { id: "hf" as EquipmentCategory, label: "HF", subtitle: "Bandas decamétricas" },
@@ -75,7 +96,6 @@ const Equipos = () => {
     { id: "digital" as EquipmentCategory, label: "DIGITAL", subtitle: "Modos digitales modernos" },
   ];
 
-  const currentEquipments = equipmentData[selectedCategory] || [];
   const currentEquipment = currentEquipments.find((eq) => eq.id === selectedEquipment);
 
   return (
@@ -89,13 +109,16 @@ const Equipos = () => {
           </h1>
 
           {/* Botones de categorías */}
-          <div className="grid md:grid-cols-3 gap-4 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => {
                   setSelectedCategory(category.id);
                   setSearchParams({ category: category.id });
+                  if (category.id === "hf") {
+                    setSelectedHFSubcategory("emisoras");
+                  }
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
@@ -108,6 +131,25 @@ const Equipos = () => {
               </button>
             ))}
           </div>
+
+          {/* Subcategorías de HF */}
+          {selectedCategory === "hf" && (
+            <div className="grid md:grid-cols-3 gap-4 mb-12">
+              {hfSubcategories.map((subcategory) => (
+                <button
+                  key={subcategory.id}
+                  onClick={() => setSelectedHFSubcategory(subcategory.id)}
+                  className={`p-4 rounded-lg text-center transition-all border-2 ${
+                    selectedHFSubcategory === subcategory.id
+                      ? "bg-[#8B0000] text-white border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
+                      : "bg-white/80 text-[#8B0000] border-[#8B0000]/50 hover:border-[#8B0000] hover:shadow-[0_0_10px_#8B0000]"
+                  }`}
+                >
+                  <h5 className="font-display text-base font-semibold">{subcategory.label}</h5>
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Contenido según la categoría seleccionada */}
           <div className="mt-8">
@@ -185,7 +227,7 @@ const Equipos = () => {
             ) : (
               <div className="text-center py-12">
                 <p className="text-foreground">
-                  No hay equipos disponibles en esta categoría.
+                  No hay equipos disponibles en esta {selectedCategory === "hf" ? "subcategoría" : "categoría"}.
                 </p>
               </div>
             )}
@@ -208,4 +250,3 @@ const Equipos = () => {
 };
 
 export default Equipos;
-
