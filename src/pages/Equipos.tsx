@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
-type HFSubcategory = "emisoras" | "antenas" | "acopladores";
+type Subcategory = "emisoras" | "antenas" | "acopladores";
 
 interface Equipment {
   id: string;
@@ -14,7 +14,7 @@ interface Equipment {
 }
 
 // Datos de HF organizados por subcategoría
-const hfEquipmentData: Record<HFSubcategory, Equipment[]> = {
+const hfEquipmentData: Record<Subcategory, Equipment[]> = {
   emisoras: [
     {
       id: "yaesu-ft-710",
@@ -37,16 +37,23 @@ const hfEquipmentData: Record<HFSubcategory, Equipment[]> = {
   acopladores: [],
 };
 
+// Datos de VHF/UHF organizados por subcategoría
+const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
+  emisoras: [],
+  antenas: [],
+  acopladores: [],
+};
+
 const equipmentData: Record<EquipmentCategory, Equipment[]> = {
   hf: [], // HF ahora usa subcategorías
-  "vhf-uhf": [],
+  "vhf-uhf": [], // VHF/UHF ahora usa subcategorías
   digital: [],
 };
 
-const hfSubcategories = [
-  { id: "emisoras" as HFSubcategory, label: "Emisoras" },
-  { id: "antenas" as HFSubcategory, label: "Antenas" },
-  { id: "acopladores" as HFSubcategory, label: "Acopladores/Medidores de estacionarias" },
+const subcategories = [
+  { id: "emisoras" as Subcategory, label: "Emisoras" },
+  { id: "antenas" as Subcategory, label: "Antenas" },
+  { id: "acopladores" as Subcategory, label: "Acopladores/Medidores de estacionarias" },
 ];
 
 const Equipos = () => {
@@ -59,14 +66,17 @@ const Equipos = () => {
       : "hf"
   );
 
-  const [selectedHFSubcategory, setSelectedHFSubcategory] = useState<HFSubcategory>("emisoras");
+  const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory>("emisoras");
 
   const [selectedEquipment, setSelectedEquipment] = useState<string | null>(null);
 
   // Obtener los equipos actuales según la categoría y subcategoría
   const getCurrentEquipments = () => {
     if (selectedCategory === "hf") {
-      return hfEquipmentData[selectedHFSubcategory] || [];
+      return hfEquipmentData[selectedSubcategory] || [];
+    }
+    if (selectedCategory === "vhf-uhf") {
+      return vhfUhfEquipmentData[selectedSubcategory] || [];
     }
     return equipmentData[selectedCategory] || [];
   };
@@ -88,7 +98,7 @@ const Equipos = () => {
     } else {
       setSelectedEquipment(null);
     }
-  }, [selectedCategory, selectedHFSubcategory]);
+  }, [selectedCategory, selectedSubcategory]);
 
   const categories = [
     { id: "hf" as EquipmentCategory, label: "HF", subtitle: "Bandas decamétricas" },
@@ -116,8 +126,8 @@ const Equipos = () => {
                 onClick={() => {
                   setSelectedCategory(category.id);
                   setSearchParams({ category: category.id });
-                  if (category.id === "hf") {
-                    setSelectedHFSubcategory("emisoras");
+                  if (category.id === "hf" || category.id === "vhf-uhf") {
+                    setSelectedSubcategory("emisoras");
                   }
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
@@ -132,15 +142,15 @@ const Equipos = () => {
             ))}
           </div>
 
-          {/* Subcategorías de HF */}
-          {selectedCategory === "hf" && (
+          {/* Subcategorías de HF y VHF/UHF */}
+          {(selectedCategory === "hf" || selectedCategory === "vhf-uhf") && (
             <div className="grid md:grid-cols-3 gap-4 mb-12">
-              {hfSubcategories.map((subcategory) => (
+              {subcategories.map((subcategory) => (
                 <button
                   key={subcategory.id}
-                  onClick={() => setSelectedHFSubcategory(subcategory.id)}
+                  onClick={() => setSelectedSubcategory(subcategory.id)}
                   className={`p-4 rounded-lg text-center transition-all border-2 ${
-                    selectedHFSubcategory === subcategory.id
+                    selectedSubcategory === subcategory.id
                       ? "bg-[#8B0000] text-white border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
                       : "bg-white/80 text-[#8B0000] border-[#8B0000]/50 hover:border-[#8B0000] hover:shadow-[0_0_10px_#8B0000]"
                   }`}
