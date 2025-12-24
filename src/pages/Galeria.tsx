@@ -20,7 +20,7 @@ export interface Category {
 export const categories: Category[] = [
   {
     id: "reunion-anual-2025",
-    name: 'Reunión anual de amigos de esta asociación de Cantabria 2025',
+    name: 'Comida anual de amigos de esta asociación de Cantabria 2025',
     items: [
       {
         thumbnail: "https://i.ibb.co/XG2Mpvv/IMG-20251214-145258.jpg",
