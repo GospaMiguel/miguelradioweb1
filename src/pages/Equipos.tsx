@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
 
@@ -59,6 +59,7 @@ const subcategories = [
 const Equipos = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get("category") as EquipmentCategory | null;
+  const contentRef = useRef<HTMLDivElement>(null);
   
   const [selectedCategory, setSelectedCategory] = useState<EquipmentCategory>(
     categoryParam && ["hf", "vhf-uhf", "digital"].includes(categoryParam) 
@@ -69,6 +70,11 @@ const Equipos = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory>("emisoras");
 
   const [selectedEquipment, setSelectedEquipment] = useState<string | null>(null);
+
+  // Scroll al inicio del contenido cuando cambia la categoría
+  const scrollToContent = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Obtener los equipos actuales según la categoría y subcategoría
   const getCurrentEquipments = () => {
@@ -129,6 +135,7 @@ const Equipos = () => {
                   if (category.id === "hf" || category.id === "vhf-uhf") {
                     setSelectedSubcategory("emisoras");
                   }
+                  scrollToContent();
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
@@ -148,7 +155,10 @@ const Equipos = () => {
               {subcategories.map((subcategory) => (
                 <button
                   key={subcategory.id}
-                  onClick={() => setSelectedSubcategory(subcategory.id)}
+                  onClick={() => {
+                    setSelectedSubcategory(subcategory.id);
+                    scrollToContent();
+                  }}
                   className={`p-4 rounded-lg text-center transition-all border-2 ${
                     selectedSubcategory === subcategory.id
                       ? "bg-[#8B0000] text-white border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
