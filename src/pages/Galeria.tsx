@@ -149,26 +149,7 @@ const Galeria = () => {
             Galería
           </h1>
 
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* Sidebar con categorías */}
-            <aside className="md:w-64 flex-shrink-0">
-              <nav className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-colors font-medium ${
-                      selectedCategory === category.id
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-muted"
-                    }`}
-                  >
-                    {category.name}
-                  </button>
-                ))}
-              </nav>
-            </aside>
-
+          <div className="flex flex-col gap-8">
             {/* Grid de imágenes y videos */}
             <main className="flex-1 space-y-8">
               {/* Tabs para Fotos y Videos */}
