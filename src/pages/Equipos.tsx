@@ -152,7 +152,7 @@ const Equipos = () => {
                   className={`p-4 rounded-lg text-center transition-all border-2 ${
                     selectedSubcategory === subcategory.id
                       ? "bg-[#8B0000] text-white border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
-                      : "bg-white/80 text-[#8B0000] border-[#8B0000]/50 hover:border-[#8B0000] hover:shadow-[0_0_10px_#8B0000]"
+                      : "bg-black text-[#8B0000] border-[#8B0000]/50 hover:border-[#8B0000] hover:shadow-[0_0_10px_#8B0000]"
                   }`}
                 >
                   <h5 className="font-display text-base font-semibold">{subcategory.label}</h5>
