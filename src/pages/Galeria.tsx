@@ -48,13 +48,6 @@ export const categories: Category[] = [
         type: "image",
       },
       {
-        thumbnail: "https://img.youtube.com/vi/PpLINZu8f9g/hqdefault.jpg",
-        full: "",
-        alt: "Video",
-        type: "video",
-        videoId: "PpLINZu8f9g",
-      },
-      {
         thumbnail: comida2025Grupo1,
         full: comida2025Grupo1,
         alt: "Comida anual 2025 - Foto de grupo 1",
@@ -95,6 +88,13 @@ export const categories: Category[] = [
         full: comida2025Mesa5,
         alt: "Comida anual 2025 - Mesa 5",
         type: "image",
+      },
+      {
+        thumbnail: "https://img.youtube.com/vi/PpLINZu8f9g/hqdefault.jpg",
+        full: "",
+        alt: "Video",
+        type: "video",
+        videoId: "PpLINZu8f9g",
       },
     ],
   },
