@@ -104,9 +104,17 @@ const Galeria = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0].id);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const [currentMediaType, setCurrentMediaType] = useState<"image" | "video">("image");
 
   const currentCategory = categories.find((cat) => cat.id === selectedCategory);
-  const currentItems = currentCategory?.items || [];
+  const allItems = currentCategory?.items || [];
+  
+  // Separar fotos y videos
+  const photos = allItems.filter((item) => item.type === "image");
+  const videos = allItems.filter((item) => item.type === "video");
+  
+  // Items actuales según el tipo seleccionado
+  const currentItems = currentMediaType === "image" ? photos : videos;
 
   const openLightbox = (index: number) => {
     setCurrentItemIndex(index);
@@ -162,7 +170,38 @@ const Galeria = () => {
             </aside>
 
             {/* Grid de imágenes y videos */}
-            <main className="flex-1">
+            <main className="flex-1 space-y-8">
+              {/* Tabs para Fotos y Videos */}
+              <div className="flex gap-4 border-b border-border pb-4">
+                <button
+                  onClick={() => {
+                    setCurrentMediaType("image");
+                    setCurrentItemIndex(0);
+                  }}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+                    currentMediaType === "image"
+                      ? "bg-secondary text-secondary-foreground"
+                      : "text-foreground hover:bg-muted"
+                  }`}
+                >
+                  Fotos ({photos.length})
+                </button>
+                <button
+                  onClick={() => {
+                    setCurrentMediaType("video");
+                    setCurrentItemIndex(0);
+                  }}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+                    currentMediaType === "video"
+                      ? "bg-accent text-accent-foreground"
+                      : "text-foreground hover:bg-muted"
+                  }`}
+                >
+                  Videos ({videos.length})
+                </button>
+              </div>
+
+              {/* Grid de contenido */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {currentItems.map((item, index) => (
                   <button
@@ -189,7 +228,7 @@ const Galeria = () => {
 
               {currentItems.length === 0 && (
                 <p className="text-foreground text-center py-12">
-                  No hay imágenes en esta categoría.
+                  No hay {currentMediaType === "image" ? "fotos" : "videos"} en esta categoría.
                 </p>
               )}
             </main>
