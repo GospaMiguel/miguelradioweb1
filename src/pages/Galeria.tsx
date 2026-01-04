@@ -6,6 +6,9 @@ import comida2025Grupo1 from "@/assets/galeria/comida-2025-grupo1.jpg";
 import comida2025Grupo2 from "@/assets/galeria/comida-2025-grupo2.jpg";
 import comida2025Mesa1 from "@/assets/galeria/comida-2025-mesa1.jpg";
 import comida2025Mesa2 from "@/assets/galeria/comida-2025-mesa2.jpg";
+import comida2025Mesa3 from "@/assets/galeria/comida-2025-mesa3.jpg";
+import comida2025Mesa4 from "@/assets/galeria/comida-2025-mesa4.jpg";
+import comida2025Mesa5 from "@/assets/galeria/comida-2025-mesa5.jpg";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -73,6 +76,24 @@ export const categories: Category[] = [
         thumbnail: comida2025Mesa2,
         full: comida2025Mesa2,
         alt: "Comida anual 2025 - Mesa 2",
+        type: "image",
+      },
+      {
+        thumbnail: comida2025Mesa3,
+        full: comida2025Mesa3,
+        alt: "Comida anual 2025 - Mesa 3",
+        type: "image",
+      },
+      {
+        thumbnail: comida2025Mesa4,
+        full: comida2025Mesa4,
+        alt: "Comida anual 2025 - Mesa 4",
+        type: "image",
+      },
+      {
+        thumbnail: comida2025Mesa5,
+        full: comida2025Mesa5,
+        alt: "Comida anual 2025 - Mesa 5",
         type: "image",
       },
     ],
