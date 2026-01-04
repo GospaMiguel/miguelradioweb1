@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import comida2025Grupo1 from "@/assets/galeria/comida-2025-grupo1.jpg";
+import comida2025Grupo2 from "@/assets/galeria/comida-2025-grupo2.jpg";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -46,6 +48,18 @@ export const categories: Category[] = [
         alt: "Video",
         type: "video",
         videoId: "PpLINZu8f9g",
+      },
+      {
+        thumbnail: comida2025Grupo1,
+        full: comida2025Grupo1,
+        alt: "Comida anual 2025 - Foto de grupo 1",
+        type: "image",
+      },
+      {
+        thumbnail: comida2025Grupo2,
+        full: comida2025Grupo2,
+        alt: "Comida anual 2025 - Foto de grupo 2",
+        type: "image",
       },
     ],
   },
