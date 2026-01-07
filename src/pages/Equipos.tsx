@@ -272,7 +272,7 @@ const Equipos = () => {
                         <img
                           src={currentEquipment.characteristics}
                           alt="Datos técnicos"
-                          className="max-w-full rounded-lg shadow-lg"
+                          className="max-w-full rounded-lg border-4 border-amber-700 shadow-[0_0_15px_rgba(180,120,60,0.6),0_0_30px_rgba(180,120,60,0.4)]"
                           loading="lazy"
                         />
                       ) : (
