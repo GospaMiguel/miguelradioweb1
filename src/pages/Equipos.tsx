@@ -37,7 +37,7 @@ const hfEquipmentData: Record<Subcategory, Equipment[]> = {
     {
       id: "dipolo-v-hf",
       name: "DIPOLO RIGIDO EN V DE HF CON 5 BANDAS D-ORIGINAL DX-ADIP-HF-5B",
-      image: new URL("@/assets/equipos/dipolo-v-hf.png", import.meta.url).href,
+      image: new URL("@/assets/equipos/dipolo-v-hf-clean.png", import.meta.url).href,
       characteristics: `• Bandas: 7, 14, 21, 28, 50 MHz
 • Potencia máxima: 500 W en CW y 1000 W en SSB
 • Impedancia: 50 Ohm
