@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
   { id: "sobre-radio", label: "Sobre la Radio" },
   { id: "examenes", label: "Exámenes" },
   { id: "galeria", label: "Galería" },
+  { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes" },
   { id: "contacto", label: "Contáctanos" },
 ];
 
@@ -42,6 +43,10 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/galeria") {
       setActiveItem("galeria");
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
+    } else if (location.pathname === "/tips-principiantes") {
+      setActiveItem("tips");
       setCameFromOtherPage(false);
       prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/" && prevPathnameRef.current !== "/") {
