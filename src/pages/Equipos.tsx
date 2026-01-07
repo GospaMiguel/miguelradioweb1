@@ -243,7 +243,11 @@ const Equipos = () => {
                       <img
                         src={currentEquipment.image}
                         alt={currentEquipment.name}
-                        className="max-w-full md:max-w-[60%] h-auto rounded-lg border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                        className={`max-w-full md:max-w-[60%] h-auto rounded-lg ${
+                          selectedSubcategory === "antenas" 
+                            ? "shadow-lg" 
+                            : "border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                        }`}
                         loading="lazy"
                       />
                     </div>
