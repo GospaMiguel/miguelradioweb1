@@ -36,7 +36,7 @@ const hfEquipmentData: Record<Subcategory, Equipment[]> = {
   antenas: [
     {
       id: "dipolo-v-hf",
-      name: "Dipolo Rígido en V",
+      name: "DIPOLO RIGIDO EN V DE HF CON 5 BANDAS D-ORIGINAL DX-ADIP-HF-5B",
       image: new URL("@/assets/equipos/dipolo-v-hf.png", import.meta.url).href,
       characteristics: `• Bandas: 7, 14, 21, 28, 50 MHz
 • Potencia máxima: 500 W en CW y 1000 W en SSB
@@ -238,10 +238,10 @@ const Equipos = () => {
 
                 {/* Características y comentarios debajo */}
                 {currentEquipment && (
-                  <div className="space-y-6">
+                  <div className="space-y-4 mt-4">
                     {/* Comentarios */}
                     <div>
-                      <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                      <h3 className="font-display text-2xl font-bold text-primary mb-2">
                         Comentarios
                       </h3>
                       <p className="text-foreground leading-relaxed">
@@ -251,7 +251,7 @@ const Equipos = () => {
 
                     {/* Características */}
                     <div>
-                      <h3 className="font-display text-2xl font-bold text-primary mb-4">
+                      <h3 className="font-display text-2xl font-bold text-primary mb-2">
                         Características
                       </h3>
                       <div className="text-foreground whitespace-pre-line leading-relaxed">
