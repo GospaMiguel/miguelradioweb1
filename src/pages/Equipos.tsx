@@ -54,7 +54,7 @@ const hfEquipmentData: Record<Subcategory, Equipment[]> = {
   acopladores: [
     {
       id: "ldg-z11pro2",
-      name: "Acoplador HF: LDG Z-11Pro II",
+      name: "Acoplador HF\nLDG Z-11Pro II",
       image: new URL("@/assets/equipos/ldg-z11pro2.png", import.meta.url).href,
       characteristics: new URL("@/assets/equipos/ldg-z11pro2-specs.png", import.meta.url).href,
       comments: `El LDG Z-11Pro II es un sintonizador de antena compacto y automático para las bandas de 160 - 6m. Sólo se requiere una potencia mínima de entrada de RF de 0,1 vatios para un proceso de sintonización exitoso, por lo que la operación QRP tampoco es un problema. La potencia de entrada máxima es de 125 W (PEP), que es completamente suficiente para la mayoría de los transceptores comunes de la clase de 100 vatios.
@@ -215,7 +215,7 @@ const Equipos = () => {
                         <button
                           key={equipment.id}
                           onClick={() => setSelectedEquipment(equipment.id)}
-                          className={`w-full text-left px-4 py-3 rounded-lg transition-all font-medium text-white text-lg ${
+                          className={`w-full text-left px-4 py-3 rounded-lg transition-all font-medium text-white text-lg whitespace-pre-line ${
                             selectedEquipment === equipment.id
                               ? "equipment-glow font-bold text-xl"
                               : "hover:bg-muted/50"
