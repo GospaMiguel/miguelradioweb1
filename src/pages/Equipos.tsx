@@ -51,7 +51,21 @@ const hfEquipmentData: Record<Subcategory, Equipment[]> = {
       comments: `Dipolo rígido en V para HF, 7, 14, 21, 28 y 50 MHz, con una potencia máxima de 500 CW y 1000 W en SSB, con una longitud de 9,7 m (simple 4,85 m), resistencia al viento 90 a 100 Km/h....`,
     },
   ],
-  acopladores: [],
+  acopladores: [
+    {
+      id: "ldg-z11pro2",
+      name: "LDG Z-11Pro II",
+      image: new URL("@/assets/equipos/ldg-z11pro2.png", import.meta.url).href,
+      characteristics: new URL("@/assets/equipos/ldg-z11pro2-specs.png", import.meta.url).href,
+      comments: `El LDG Z-11Pro II es un sintonizador de antena compacto y automático para las bandas de 160 - 6m. Sólo se requiere una potencia mínima de entrada de RF de 0,1 vatios para un proceso de sintonización exitoso, por lo que la operación QRP tampoco es un problema. La potencia de entrada máxima es de 125 W (PEP), que es completamente suficiente para la mayoría de los transceptores comunes de la clase de 100 vatios.
+
+Casi todas las antenas se pueden personalizar: Dipolos, verticales, en V invertida, todas las antenas con alimentación coaxial. Con un balun 1:4 opcional, también se pueden sintonizar antenas de hilo largo o alimentadas por hilo paralelo. El rango de impedancia ajustable es de 6 a 1000 Ω (16 a 150 Ω a 6 m), 6 a 4000 Ω con balun 1:4.
+
+Funcionamiento sencillo: pulse «Sintonizar» mientras se transmite una portadora y el sintonizador sintoniza automáticamente. Para un funcionamiento aún más cómodo, existen varias interfaces (cables de control) para la mayoría de los transceptores. Esto facilita aún más la sintonización: con sólo pulsar un botón, el TRx pasa a transmitir, se activa la sintonización y la radio vuelve al modo de funcionamiento utilizado anteriormente.
+
+2000 memorias en las que se almacenan los ajustes una vez encontrados, LEDS para la visualización de funciones.`,
+    },
+  ],
 };
 
 // Datos de VHF/UHF organizados por subcategoría
@@ -249,14 +263,23 @@ const Equipos = () => {
                       </p>
                     </div>
 
-                    {/* Características */}
+                    {/* Características / Datos Técnicos */}
                     <div>
                       <h3 className="font-display text-2xl font-bold text-primary mb-2">
-                        Características
+                        {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? 'Datos Técnicos' : 'Características'}
                       </h3>
-                      <div className="text-foreground whitespace-pre-line leading-relaxed">
-                        {currentEquipment.characteristics}
-                      </div>
+                      {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? (
+                        <img
+                          src={currentEquipment.characteristics}
+                          alt="Datos técnicos"
+                          className="max-w-full rounded-lg shadow-lg"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="text-foreground whitespace-pre-line leading-relaxed">
+                          {currentEquipment.characteristics}
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
