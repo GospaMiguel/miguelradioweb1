@@ -238,7 +238,7 @@ const Equipos = () => {
 
                 {/* Características y comentarios debajo */}
                 {currentEquipment && (
-                  <div className="space-y-4 mt-4">
+                  <div className="space-y-3 -mt-2">
                     {/* Comentarios */}
                     <div>
                       <h3 className="font-display text-2xl font-bold text-primary mb-2">
