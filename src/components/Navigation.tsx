@@ -169,7 +169,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-24">
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center space-x-1">
+          <div className="hidden lg:flex items-center justify-center space-x-3">
             {navItems.map((item) => (
               <Button
                 key={item.id}
