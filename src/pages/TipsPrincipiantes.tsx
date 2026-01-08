@@ -37,7 +37,7 @@ const TipsPrincipiantes = () => {
       
       <main className="pt-32 pb-16">
         <Section id="tips-principiantes" title="Tips Principiantes">
-          <div className="flex flex-col gap-8 max-w-3xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {tips.map((tip, index) => (
               <div 
                 key={index}
@@ -54,7 +54,7 @@ const TipsPrincipiantes = () => {
             ))}
           </div>
           
-          <div className="mt-12 p-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl max-w-3xl mx-auto">
+          <div className="mt-12 p-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
             <h3 className="text-xl font-bold text-yellow-400 mb-3 flex items-center gap-2">
               <Lightbulb className="h-5 w-5" />
               Consejo del día
