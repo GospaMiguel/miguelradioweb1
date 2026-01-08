@@ -175,7 +175,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => handleNavClick(item)}
-                className={`text-white hover:text-white transition-all font-sans text-[1.05rem] px-2 py-1.5 nav-glow font-bold rounded-md ${
+                className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
                   isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                 }`}
               >
