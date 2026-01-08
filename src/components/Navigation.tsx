@@ -169,13 +169,13 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-24">
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center space-x-2 flex-wrap">
+          <div className="hidden lg:flex items-center justify-center space-x-1">
             {navItems.map((item) => (
               <Button
                 key={item.id}
                 variant="ghost"
                 onClick={() => handleNavClick(item)}
-                className={`text-white hover:text-white transition-all font-sans text-lg px-4 py-2 nav-glow font-bold rounded-md ${
+                className={`text-white hover:text-white transition-all font-sans text-base px-3 py-1.5 nav-glow font-bold rounded-md ${
                   isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                 }`}
               >
