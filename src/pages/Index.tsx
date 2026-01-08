@@ -263,6 +263,14 @@ const Index = () => {
             >
               radioclubquijotes.org/examen
             </a>
+            <a 
+              href="https://www.ea5rca.es/PDF/LibroE.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
+            >
+              Libro de Examen
+            </a>
           </div>
         </div>
       </Section>
