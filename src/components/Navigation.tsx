@@ -1,13 +1,27 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+
+interface SubItem {
+  id: string;
+  label: string;
+  path: string;
+}
 
 interface NavItem {
   id: string;
   label: string;
   isPage?: boolean;
   path?: string;
+  hasDropdown?: boolean;
+  subItems?: SubItem[];
 }
 
 const navItems: NavItem[] = [
@@ -15,7 +29,14 @@ const navItems: NavItem[] = [
   { id: "sobre-nosotros", label: "Sobre Nosotros" },
   { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
-  { id: "equipos", label: "Equipos" },
+  { 
+    id: "equipamientos", 
+    label: "Equipamientos", 
+    hasDropdown: true,
+    subItems: [
+      { id: "equipos", label: "Equipos", path: "/equipos" }
+    ]
+  },
   { id: "sobre-radio", label: "Sobre la Radio" },
   { id: "examenes", label: "Exámenes" },
   { id: "galeria", label: "Galería" },
@@ -38,7 +59,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
   // Detectar cuando el usuario viene de otra página
   useEffect(() => {
     if (location.pathname === "/equipos") {
-      setActiveItem("equipos");
+      setActiveItem("equipamientos");
       setCameFromOtherPage(false);
       prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/galeria") {
@@ -158,9 +179,13 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
     }
   };
 
+  const handleSubItemClick = (subItem: SubItem, parentId: string) => {
+    setActiveItem(parentId);
+    navigate(subItem.path);
+    setIsOpen(false);
+  };
+
   const isActive = (item: NavItem) => {
-    // Solo usar activeItem para determinar qué está activo
-    // Esto asegura que solo un item esté activo a la vez
     return activeItem === item.id;
   };
 
@@ -171,16 +196,43 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-center space-x-3">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => handleNavClick(item)}
-                className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
-                  isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
-                }`}
-              >
-                {item.label}
-              </Button>
+              item.hasDropdown && item.subItems ? (
+                <DropdownMenu key={item.id}>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
+                        isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-border">
+                    {item.subItems.map((subItem) => (
+                      <DropdownMenuItem
+                        key={subItem.id}
+                        onClick={() => handleSubItemClick(subItem, item.id)}
+                        className="text-white hover:bg-purple-600/40 cursor-pointer font-sans"
+                      >
+                        {subItem.label}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  onClick={() => handleNavClick(item)}
+                  className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
+                    isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
+                  }`}
+                >
+                  {item.label}
+                </Button>
+              )
             ))}
             <style>{`
               .nav-glow {
@@ -217,16 +269,36 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
         {isOpen && (
           <div className="lg:hidden py-4 space-y-2">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => handleNavClick(item)}
-                className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg rounded-md ${
-                  isActive(item) ? "bg-purple-600/80 text-white hover:bg-purple-600/90" : "hover:bg-purple-600/40"
-                }`}
-              >
-                {item.label}
-              </Button>
+              item.hasDropdown && item.subItems ? (
+                <div key={item.id} className="space-y-1">
+                  <div className="text-center text-white font-sans text-lg font-bold py-2">
+                    {item.label}
+                  </div>
+                  {item.subItems.map((subItem) => (
+                    <Button
+                      key={subItem.id}
+                      variant="ghost"
+                      onClick={() => handleSubItemClick(subItem, item.id)}
+                      className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-base rounded-md pl-8 ${
+                        activeItem === item.id ? "bg-purple-600/60 text-white hover:bg-purple-600/70" : "hover:bg-purple-600/40"
+                      }`}
+                    >
+                      ↳ {subItem.label}
+                    </Button>
+                  ))}
+                </div>
+              ) : (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  onClick={() => handleNavClick(item)}
+                  className={`w-full justify-center text-foreground hover:text-primary transition-colors font-sans text-lg rounded-md ${
+                    isActive(item) ? "bg-purple-600/80 text-white hover:bg-purple-600/90" : "hover:bg-purple-600/40"
+                  }`}
+                >
+                  {item.label}
+                </Button>
+              )
             ))}
           </div>
         )}
