@@ -34,7 +34,8 @@ const navItems: NavItem[] = [
     label: "Equipamientos", 
     hasDropdown: true,
     subItems: [
-      { id: "equipos", label: "Equipos", path: "/equipos" }
+      { id: "equipos", label: "Equipos", path: "/equipos" },
+      { id: "repetidores", label: "Repetidores", path: "/repetidores" }
     ]
   },
   { id: "sobre-radio", label: "Sobre la Radio" },
