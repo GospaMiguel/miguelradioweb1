@@ -355,35 +355,63 @@ const Equipos = () => {
 
                 {/* Características y comentarios debajo */}
                 {currentEquipment && (
-                  <div className="space-y-2 -mt-4">
+                  <div className="space-y-6 -mt-4">
+                    {/* Detalles (para equipos con campo details) */}
+                    {currentEquipment.details && (
+                      <div>
+                        <h3 className="font-display text-2xl font-bold text-primary mb-2">
+                          Detalles
+                        </h3>
+                        <div className="text-foreground whitespace-pre-line leading-relaxed">
+                          {currentEquipment.details}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Comentarios / Descripción */}
-                    <div>
-                      <h3 className="font-display text-2xl font-bold text-primary mb-2">
-                        {selectedCategory === "vhf-uhf" ? "Descripción" : "Comentarios"}
-                      </h3>
-                      <p className="text-foreground leading-relaxed">
-                        {currentEquipment.comments}
-                      </p>
-                    </div>
+                    {currentEquipment.comments && (
+                      <div>
+                        <h3 className="font-display text-2xl font-bold text-primary mb-2">
+                          {selectedCategory === "vhf-uhf" ? "Descripción" : "Comentarios"}
+                        </h3>
+                        <p className="text-foreground leading-relaxed whitespace-pre-line">
+                          {currentEquipment.comments}
+                        </p>
+                      </div>
+                    )}
 
                     {/* Características / Datos Técnicos */}
-                    <div>
-                      <h3 className="font-display text-2xl font-bold text-primary mb-2">
-                        {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? 'Datos Técnicos' : 'Características'}
-                      </h3>
-                      {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? (
-                        <img
-                          src={currentEquipment.characteristics}
-                          alt="Datos técnicos"
-                          className="max-w-full rounded-lg border-4 border-amber-700 shadow-[0_0_15px_rgba(180,120,60,0.6),0_0_30px_rgba(180,120,60,0.4)]"
-                          loading="lazy"
-                        />
-                      ) : (
+                    {currentEquipment.characteristics && (
+                      <div>
+                        <h3 className="font-display text-2xl font-bold text-primary mb-2">
+                          {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? 'Datos Técnicos' : 'Características'}
+                        </h3>
+                        {currentEquipment.characteristics.includes('/assets/') || currentEquipment.characteristics.includes('blob:') ? (
+                          <img
+                            src={currentEquipment.characteristics}
+                            alt="Datos técnicos"
+                            className="max-w-full rounded-lg border-4 border-amber-700 shadow-[0_0_15px_rgba(180,120,60,0.6),0_0_30px_rgba(180,120,60,0.4)]"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="text-foreground whitespace-pre-line leading-relaxed">
+                            {currentEquipment.characteristics}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Especificaciones (para equipos con campo specifications) */}
+                    {currentEquipment.specifications && (
+                      <div>
+                        <h3 className="font-display text-2xl font-bold text-primary mb-2">
+                          Especificaciones
+                        </h3>
                         <div className="text-foreground whitespace-pre-line leading-relaxed">
-                          {currentEquipment.characteristics}
+                          {currentEquipment.specifications}
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
