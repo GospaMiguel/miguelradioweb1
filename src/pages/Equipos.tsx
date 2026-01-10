@@ -70,7 +70,27 @@ Funcionamiento sencillo: pulse «Sintonizar» mientras se transmite una portador
 
 // Datos de VHF/UHF organizados por subcategoría
 const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
-  emisoras: [],
+  emisoras: [
+    {
+      id: "baofeng-uv21-pro",
+      name: "Walkie talkie Baofeng uv-21 pro",
+      image: new URL("@/assets/equipos/baofeng-uv21-pro.jpg", import.meta.url).href,
+      characteristics: `• Frecuencia inalámbrica de la copia
+• Canal de memoria 999
+• Pantalla de 1,77 pulgadas
+• Función VOX
+• Función de emergencia
+• Función de escaneo
+• Batería Ahorrar`,
+      comments: `• Largo Alcance de 16 KM: Manténgase conectado con un alcance de hasta 16 km, lo que lo hace perfecto para actividades al aire libre y emergencias.
+
+• Impermeable y resistente al agua: Con una clasificación IP45, este walkie talkie es impermeable y resistente al agua, lo que garantiza una comunicación confiable incluso en condiciones húmedas.
+
+• Tipo-c Cargador: Cargue su walkie talkie rápida y fácilmente con el cargador tipo C, ahorrándole tiempo y molestia.
+
+• UV 5R: La función UV 5R le permite enviar y recibir mensajes sin la necesidad de una red celular, lo que la hace ideal para la comunicación fuera de la red.`,
+    },
+  ],
   antenas: [],
   acopladores: [],
 };
