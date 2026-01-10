@@ -1,16 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
+import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type Subcategory = "emisoras" | "antenas" | "acopladores";
 
 interface Equipment {
-  id: string;
+  id?: string;
   name: string;
   image: string;
-  characteristics: string;
-  comments: string;
+  characteristics?: string;
+  comments?: string;
+  details?: string;
+  specifications?: string;
 }
 
 // Datos de HF organizados por subcategoría
@@ -95,6 +98,73 @@ Este walkie talkie funciona tanto en directo como a través de repetidores.
 Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 25 euros.
 
 Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de walkies es suficiente para conectarte incluso con zonas lejanas a través de los repetidores.`,
+    },
+    {
+      name: "Anytone AT-5888 UV",
+      image: anytoneAt5888uv,
+      details: `El Anytone AT-5888UV es un transceptor bibanda construido robustamente, de altísima calidad con potencias de 50 W en VHF y de 40 W en UHF.
+
+Posee una ventilación forzada mediante un ventilador controlado por un termostato para mantener siempre una temperatura adecuada en los circuitos internos del transceptor. En uno de sus laterales posee un conector USB para carga o alimentación de dispositivos tipo teléfonos móviles, ipad, cámaras de fotos o video,...
+
+El AT-5888UV tiene cuatro bandas independientes en recepción, que son UU, UV, VU y VV, para la recepción dual y asimismo transmisión dual, más la recepción en banda Aerea en AM y FM (no comercial), banda Marina, PMR, TV analógicas, etc.
+
+Dispone de 758 canales de memoria, operación FULL DUPLEX con controles de volumen y squelch independientes. También incluye los modos DCS, DTMF y tonos secuenciales de 2 y 5 tonos para llamadas selectivas. Incluye un cable de separación de la carátula de 3 metros de longitud.
+
+Dispone de un gran ancho de banda en recepción: (FM) 134-174, 200-260, 350-400, 400-520 MHz y FM Broadcast, (AM) 118-134 MHz (Banda Aérea).`,
+      characteristics: `50 W de potencia en VHF y 40 W en UHF
+
+758 Canales de memoria
+
+FULL DUPLEX con controles independientes de volumen y squelch
+
+Incluye función banda cruzada
+
+Cuatro bandas independientes en recepción UU, UV, VU, VV, para entrada y salida en dual, más recepción para señales de AM/FM en las bandas Marina, Aviación, PMR,...
+
+Display LCD con brillo ajustable muy útil para uso nocturno
+
+Dispone de una adecuada distribución se su botonera y potenciómetros para una fácil operación
+
+Dispone de 758 canales programables identificables con nombre o número de memoria
+
+Cuatro niveles de potencia para cada banda
+
+Incluye tonos CTCSS (subtonos) y DCS con 2 y 5 tonos de llamada por canal, para rechazar llamadas no deseadas de otras estaciones
+
+Dispone de varias funciones de escáner incluyendo las de CTCSS y DCS
+
+Codificación de llamada en 5 tonos secuenciales, llamada de emergencia, llamada a todos, función hombre muerto, despertador remoto,...
+
+Función automática de identificación de llamada por DTMF-ANI o bien 5 TONOS-ANI
+
+Función compander: circuito para mejorar la relación señal/ruido, seleccionable canal por canal
+
+Distintos anchos de banda por canal, 25 kHz para banda ancha y 12,5 kHz para banda estrecha
+
+Alarma anti-robo para mayor seguridad
+
+Incluye micrófono con teclas retroiluminadas con subida y bajada de frecuencias o canales y teclado numérico y tecla de conmutación de bandas A/B.`,
+      specifications: `Nº. de canales: 758
+
+Espaciado entre canales: 25 kHz (ancha) y 12,5 kHz (estrecha)
+
+Saltos de frecuencia: 2.5, 5, 6.25, 10, 12.5, 15, 20, 25, 30 y 50 kHz
+
+Voltaje: 13,8 VCC +-15%
+
+Squelch: Portadora, CTCSS, DCS, 2 Tonos, 5 Tonos, DTMF
+
+Estabilidad de frecuencia: +-2.5 ppm
+
+Temperatura de operación: -20º C a +60º C
+
+Dimensiones: (A x Al x D): 139 (A) x 40 (Al) x 212 (D) mm
+
+Peso: 1.14 kg aprox.
+
+Potencia de salida VHF: 50 W, 25 W, 10 W y 5 W
+
+Potencia de salida UHF: 40 W, 25 W, 10 W y 5 W.`,
     },
   ],
   antenas: [],
