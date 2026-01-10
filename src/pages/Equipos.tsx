@@ -362,7 +362,7 @@ const Equipos = () => {
                         <h3 className="font-display text-2xl font-bold text-primary mb-2">
                           Detalles
                         </h3>
-                        <div className="text-foreground whitespace-pre-line leading-relaxed">
+                        <div className="text-foreground whitespace-pre-line leading-normal">
                           {currentEquipment.details}
                         </div>
                       </div>
@@ -374,7 +374,7 @@ const Equipos = () => {
                         <h3 className="font-display text-2xl font-bold text-primary mb-2">
                           {selectedCategory === "vhf-uhf" ? "Descripción" : "Comentarios"}
                         </h3>
-                        <p className="text-foreground leading-relaxed whitespace-pre-line">
+                        <p className="text-foreground leading-normal whitespace-pre-line">
                           {currentEquipment.comments}
                         </p>
                       </div>
@@ -394,7 +394,7 @@ const Equipos = () => {
                             loading="lazy"
                           />
                         ) : (
-                          <div className="text-foreground whitespace-pre-wrap leading-relaxed">
+                          <div className="text-foreground whitespace-pre-line leading-normal">
                             {currentEquipment.characteristics}
                           </div>
                         )}
@@ -407,7 +407,7 @@ const Equipos = () => {
                         <h3 className="font-display text-2xl font-bold text-primary mb-2">
                           Especificaciones
                         </h3>
-                        <div className="text-foreground whitespace-pre-wrap leading-relaxed">
+                        <div className="text-foreground whitespace-pre-line leading-normal">
                           {currentEquipment.specifications}
                         </div>
                       </div>
