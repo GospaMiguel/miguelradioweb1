@@ -92,7 +92,9 @@ const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
 
 Este walkie talkie funciona tanto en directo como a través de repetidores.
 
-Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 25 euros.`,
+Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 25 euros.
+
+Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de walkies es suficiente para conectarte incluso con zonas lejanas a través de los repetidores.`,
     },
   ],
   antenas: [],
