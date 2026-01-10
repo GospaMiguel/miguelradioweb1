@@ -265,7 +265,7 @@ const Equipos = () => {
                         alt={currentEquipment.name}
                         className={`max-w-full h-auto rounded-lg ${
                           selectedCategory === "vhf-uhf" && selectedSubcategory === "emisoras"
-                            ? "md:max-w-[75%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                            ? "md:max-w-[90%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
                             : selectedSubcategory === "emisoras" 
                               ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
                               : "md:max-w-[60%] shadow-lg"
