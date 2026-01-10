@@ -394,7 +394,7 @@ const Equipos = () => {
                             loading="lazy"
                           />
                         ) : (
-                          <div className="text-foreground whitespace-pre-line leading-relaxed">
+                          <div className="text-foreground whitespace-pre-wrap leading-relaxed">
                             {currentEquipment.characteristics}
                           </div>
                         )}
@@ -407,7 +407,7 @@ const Equipos = () => {
                         <h3 className="font-display text-2xl font-bold text-primary mb-2">
                           Especificaciones
                         </h3>
-                        <div className="text-foreground whitespace-pre-line leading-relaxed">
+                        <div className="text-foreground whitespace-pre-wrap leading-relaxed">
                           {currentEquipment.specifications}
                         </div>
                       </div>
