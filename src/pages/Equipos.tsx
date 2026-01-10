@@ -263,10 +263,12 @@ const Equipos = () => {
                       <img
                         src={currentEquipment.image}
                         alt={currentEquipment.name}
-                        className={`max-w-full md:max-w-[60%] h-auto rounded-lg ${
-                          selectedSubcategory === "emisoras" 
-                            ? "border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
-                            : "shadow-lg"
+                        className={`max-w-full h-auto rounded-lg ${
+                          selectedCategory === "vhf-uhf" && selectedSubcategory === "emisoras"
+                            ? "md:max-w-[75%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                            : selectedSubcategory === "emisoras" 
+                              ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                              : "md:max-w-[60%] shadow-lg"
                         }`}
                         loading="lazy"
                       />
@@ -277,10 +279,10 @@ const Equipos = () => {
                 {/* Características y comentarios debajo */}
                 {currentEquipment && (
                   <div className="space-y-2 -mt-4">
-                    {/* Comentarios */}
+                    {/* Comentarios / Descripción */}
                     <div>
                       <h3 className="font-display text-2xl font-bold text-primary mb-2">
-                        Comentarios
+                        {selectedCategory === "vhf-uhf" ? "Descripción" : "Comentarios"}
                       </h3>
                       <p className="text-foreground leading-relaxed">
                         {currentEquipment.comments}
