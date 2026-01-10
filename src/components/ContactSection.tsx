@@ -62,8 +62,8 @@ export const ContactSection = () => {
             <Mail className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-foreground">Email</p>
-              <a href="mailto:asociacioncantabraradioaficion@gmail.com" className="text-foreground hover:text-secondary transition-colors">
-                asociacioncantabraradioaficion@gmail.com
+              <a href="mailto:asoccantabraradioaficion@gmail.com" className="text-foreground hover:text-secondary transition-colors">
+                asoccantabraradioaficion@gmail.com
               </a>
             </div>
           </div>
