@@ -100,6 +100,7 @@ Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 
 Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de walkies es suficiente para conectarte incluso con zonas lejanas a través de los repetidores.`,
     },
     {
+      id: "anytone-at5888uv",
       name: "Anytone AT-5888 UV",
       image: anytoneAt5888uv,
       details: `El Anytone AT-5888UV es un transceptor bibanda construido robustamente, de altísima calidad con potencias de 50 W en VHF y de 40 W en UHF.
