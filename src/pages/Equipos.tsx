@@ -130,25 +130,15 @@ Distintos anchos de banda por canal, 25 kHz para banda ancha y 12,5 kHz para ban
 Alarma anti-robo para mayor seguridad
 Incluye micrófono con teclas retroiluminadas con subida y bajada de frecuencias o canales y teclado numérico y tecla de conmutación de bandas A/B.`,
       specifications: `Nº. de canales: 758
-
 Espaciado entre canales: 25 kHz (ancha) y 12,5 kHz (estrecha)
-
 Saltos de frecuencia: 2.5, 5, 6.25, 10, 12.5, 15, 20, 25, 30 y 50 kHz
-
 Voltaje: 13,8 VCC +-15%
-
 Squelch: Portadora, CTCSS, DCS, 2 Tonos, 5 Tonos, DTMF
-
 Estabilidad de frecuencia: +-2.5 ppm
-
 Temperatura de operación: -20º C a +60º C
-
 Dimensiones: (A x Al x D): 139 (A) x 40 (Al) x 212 (D) mm
-
 Peso: 1.14 kg aprox.
-
 Potencia de salida VHF: 50 W, 25 W, 10 W y 5 W
-
 Potencia de salida UHF: 40 W, 25 W, 10 W y 5 W.`,
     },
   ],
