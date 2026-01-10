@@ -152,27 +152,27 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3 max-w-2xl mx-auto">
             <button
               onClick={() => navigate("/equipos?category=hf")}
-              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+              className="bg-white text-[#8B0000] p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold mb-2">HF</h4>
-              <p className="text-sm opacity-80">Bandas decamétricas</p>
+              <h4 className="font-display text-base font-bold mb-1">HF</h4>
+              <p className="text-xs opacity-80">Bandas decamétricas</p>
             </button>
             <button
               onClick={() => navigate("/equipos?category=vhf-uhf")}
-              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+              className="bg-white text-[#8B0000] p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold mb-2">VHF/UHF</h4>
-              <p className="text-sm opacity-80">Comunicaciones locales</p>
+              <h4 className="font-display text-base font-bold mb-1">VHF/UHF</h4>
+              <p className="text-xs opacity-80">Comunicaciones locales</p>
             </button>
             <button
               onClick={() => navigate("/equipos?category=digital")}
-              className="bg-white text-[#8B0000] p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+              className="bg-white text-[#8B0000] p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-lg font-bold mb-2">Digital</h4>
-              <p className="text-sm opacity-80">Modos digitales modernos</p>
+              <h4 className="font-display text-base font-bold mb-1">Digital</h4>
+              <p className="text-xs opacity-80">Modos digitales modernos</p>
             </button>
           </div>
         </div>
