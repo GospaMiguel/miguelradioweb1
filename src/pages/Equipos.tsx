@@ -98,13 +98,9 @@ Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de
       name: "Anytone AT-5888 UV",
       image: anytoneAt5888uv,
       details: `El Anytone AT-5888UV es un transceptor bibanda construido robustamente, de altísima calidad con potencias de 50 W en VHF y de 40 W en UHF.
-
 Posee una ventilación forzada mediante un ventilador controlado por un termostato para mantener siempre una temperatura adecuada en los circuitos internos del transceptor. En uno de sus laterales posee un conector USB para carga o alimentación de dispositivos tipo teléfonos móviles, ipad, cámaras de fotos o video,...
-
 El AT-5888UV tiene cuatro bandas independientes en recepción, que son UU, UV, VU y VV, para la recepción dual y asimismo transmisión dual, más la recepción en banda Aerea en AM y FM (no comercial), banda Marina, PMR, TV analógicas, etc.
-
 Dispone de 758 canales de memoria, operación FULL DUPLEX con controles de volumen y squelch independientes. También incluye los modos DCS, DTMF y tonos secuenciales de 2 y 5 tonos para llamadas selectivas. Incluye un cable de separación de la carátula de 3 metros de longitud.
-
 Dispone de un gran ancho de banda en recepción: (FM) 134-174, 200-260, 350-400, 400-520 MHz y FM Broadcast, (AM) 118-134 MHz (Banda Aérea).`,
       characteristics: `50 W de potencia en VHF y 40 W en UHF
 758 Canales de memoria
