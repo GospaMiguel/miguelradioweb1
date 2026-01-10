@@ -202,12 +202,12 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="ghost"
-                      className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
+                      className={`text-white hover:text-white transition-all font-sans text-sm px-1.5 py-1 nav-glow font-bold rounded-md ${
                         isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className="ml-1 h-4 w-4" />
+                      <ChevronDown className="ml-1 h-3 w-3" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-background/95 backdrop-blur-md border-border">
@@ -227,7 +227,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                   key={item.id}
                   variant="ghost"
                   onClick={() => handleNavClick(item)}
-                  className={`text-white hover:text-white transition-all font-sans text-[1.15rem] px-1.5 py-1 nav-glow font-bold rounded-md ${
+                  className={`text-white hover:text-white transition-all font-sans text-sm px-1.5 py-1 nav-glow font-bold rounded-md ${
                     isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                   }`}
                 >
