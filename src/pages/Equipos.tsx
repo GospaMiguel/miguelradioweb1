@@ -90,7 +90,9 @@ const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
 
 • UV 5R: La función UV 5R le permite enviar y recibir mensajes sin la necesidad de una red celular, lo que la hace ideal para la comunicación fuera de la red.
 
-Este walkie talkie funciona tanto en directo como a través de repetidores.`,
+Este walkie talkie funciona tanto en directo como a través de repetidores.
+
+Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 25 euros.`,
     },
   ],
   antenas: [],
