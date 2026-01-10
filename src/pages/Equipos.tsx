@@ -88,7 +88,9 @@ const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
 
 • Tipo-c Cargador: Cargue su walkie talkie rápida y fácilmente con el cargador tipo C, ahorrándole tiempo y molestia.
 
-• UV 5R: La función UV 5R le permite enviar y recibir mensajes sin la necesidad de una red celular, lo que la hace ideal para la comunicación fuera de la red.`,
+• UV 5R: La función UV 5R le permite enviar y recibir mensajes sin la necesidad de una red celular, lo que la hace ideal para la comunicación fuera de la red.
+
+Este walkie talkie funciona tanto en directo como a través de repetidores.`,
     },
   ],
   antenas: [],
