@@ -210,7 +210,7 @@ const Index = () => {
                       />
                     </div>
                   )}
-                  <h4 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h4 className="font-display text-sm font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                     {category.name}
                   </h4>
                 </button>
@@ -251,7 +251,7 @@ const Index = () => {
               href="https://www.fediea.org/examen/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
+              className="text-primary hover:text-primary/80 underline font-bold text-sm transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
               www.fediea.org/examen
             </a>
@@ -259,7 +259,7 @@ const Index = () => {
               href="https://radioclubquijotes.org/examen-radioaficionado-test-requisitos/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-lg transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
+              className="text-primary hover:text-primary/80 underline font-bold text-sm transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white]"
             >
               radioclubquijotes.org/examen
             </a>
