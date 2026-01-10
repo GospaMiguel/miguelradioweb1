@@ -113,37 +113,21 @@ Dispone de 758 canales de memoria, operación FULL DUPLEX con controles de volum
 
 Dispone de un gran ancho de banda en recepción: (FM) 134-174, 200-260, 350-400, 400-520 MHz y FM Broadcast, (AM) 118-134 MHz (Banda Aérea).`,
       characteristics: `50 W de potencia en VHF y 40 W en UHF
-
 758 Canales de memoria
-
 FULL DUPLEX con controles independientes de volumen y squelch
-
 Incluye función banda cruzada
-
 Cuatro bandas independientes en recepción UU, UV, VU, VV, para entrada y salida en dual, más recepción para señales de AM/FM en las bandas Marina, Aviación, PMR,...
-
 Display LCD con brillo ajustable muy útil para uso nocturno
-
 Dispone de una adecuada distribución se su botonera y potenciómetros para una fácil operación
-
 Dispone de 758 canales programables identificables con nombre o número de memoria
-
 Cuatro niveles de potencia para cada banda
-
 Incluye tonos CTCSS (subtonos) y DCS con 2 y 5 tonos de llamada por canal, para rechazar llamadas no deseadas de otras estaciones
-
 Dispone de varias funciones de escáner incluyendo las de CTCSS y DCS
-
 Codificación de llamada en 5 tonos secuenciales, llamada de emergencia, llamada a todos, función hombre muerto, despertador remoto,...
-
 Función automática de identificación de llamada por DTMF-ANI o bien 5 TONOS-ANI
-
 Función compander: circuito para mejorar la relación señal/ruido, seleccionable canal por canal
-
 Distintos anchos de banda por canal, 25 kHz para banda ancha y 12,5 kHz para banda estrecha
-
 Alarma anti-robo para mayor seguridad
-
 Incluye micrófono con teclas retroiluminadas con subida y bajada de frecuencias o canales y teclado numérico y tecla de conmutación de bandas A/B.`,
       specifications: `Nº. de canales: 758
 
