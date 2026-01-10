@@ -86,17 +86,11 @@ const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
 • Función de escaneo
 • Batería Ahorrar`,
       comments: `• Largo Alcance de 16 KM: Manténgase conectado con un alcance de hasta 16 km, lo que lo hace perfecto para actividades al aire libre y emergencias.
-
 • Impermeable y resistente al agua: Con una clasificación IP45, este walkie talkie es impermeable y resistente al agua, lo que garantiza una comunicación confiable incluso en condiciones húmedas.
-
 • Tipo-c Cargador: Cargue su walkie talkie rápida y fácilmente con el cargador tipo C, ahorrándole tiempo y molestia.
-
 • UV 5R: La función UV 5R le permite enviar y recibir mensajes sin la necesidad de una red celular, lo que la hace ideal para la comunicación fuera de la red.
-
 Este walkie talkie funciona tanto en directo como a través de repetidores.
-
 Su coste es lo mejor de todo, se puede encontrar en algunas páginas entre 20 y 25 euros.
-
 Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de walkies es suficiente para conectarte incluso con zonas lejanas a través de los repetidores.`,
     },
     {
