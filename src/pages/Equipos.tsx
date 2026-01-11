@@ -236,7 +236,7 @@ const Equipos = () => {
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
-                    ? "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_15px_#CC0000,0_0_30px_#CC0000] ring-2 ring-[#CC0000]"
+                    ? "bg-[#CC0000] text-white border-[#CC0000] shadow-[0_0_15px_#CC0000,0_0_30px_#CC0000]"
                     : "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_10px_#CC0000,0_0_20px_#CC0000] hover:shadow-[0_0_20px_#CC0000,0_0_35px_#CC0000]"
                 }`}
               >
