@@ -4,7 +4,8 @@ import { useSearchParams } from "react-router-dom";
 import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
-type Subcategory = "emisoras" | "antenas" | "acopladores";
+type SubcategoryType = "emisoras" | "antenas" | "acopladores";
+type Subcategory = SubcategoryType | null;
 
 interface Equipment {
   id?: string;
@@ -17,7 +18,7 @@ interface Equipment {
 }
 
 // Datos de HF organizados por subcategoría
-const hfEquipmentData: Record<Subcategory, Equipment[]> = {
+const hfEquipmentData: Record<SubcategoryType, Equipment[]> = {
   emisoras: [
     {
       id: "yaesu-ft-710",
@@ -72,7 +73,7 @@ Funcionamiento sencillo: pulse «Sintonizar» mientras se transmite una portador
 };
 
 // Datos de VHF/UHF organizados por subcategoría
-const vhfUhfEquipmentData: Record<Subcategory, Equipment[]> = {
+const vhfUhfEquipmentData: Record<SubcategoryType, Equipment[]> = {
   emisoras: [
     {
       id: "baofeng-uv21-pro",
@@ -143,9 +144,9 @@ const equipmentData: Record<EquipmentCategory, Equipment[]> = {
 };
 
 const subcategories = [
-  { id: "emisoras" as Subcategory, label: "Emisoras" },
-  { id: "antenas" as Subcategory, label: "Antenas" },
-  { id: "acopladores" as Subcategory, label: "Acopladores/Medidores de estacionarias" },
+  { id: "emisoras" as SubcategoryType, label: "Emisoras" },
+  { id: "antenas" as SubcategoryType, label: "Antenas" },
+  { id: "acopladores" as SubcategoryType, label: "Acopladores/Medidores de estacionarias" },
 ];
 
 const Equipos = () => {
@@ -159,7 +160,7 @@ const Equipos = () => {
       : "hf"
   );
 
-  const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory>("emisoras");
+  const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory | null>(null);
 
   const [selectedEquipment, setSelectedEquipment] = useState<string | null>(null);
 
@@ -170,6 +171,9 @@ const Equipos = () => {
 
   // Obtener los equipos actuales según la categoría y subcategoría
   const getCurrentEquipments = () => {
+    if (selectedSubcategory === null) {
+      return [];
+    }
     if (selectedCategory === "hf") {
       return hfEquipmentData[selectedSubcategory] || [];
     }
@@ -224,9 +228,7 @@ const Equipos = () => {
                 onClick={() => {
                   setSelectedCategory(category.id);
                   setSearchParams({ category: category.id });
-                  if (category.id === "hf" || category.id === "vhf-uhf") {
-                    setSelectedSubcategory("emisoras");
-                  }
+                  setSelectedSubcategory(null);
                   scrollToContent();
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
