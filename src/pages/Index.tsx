@@ -199,17 +199,17 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3 max-w-3xl mx-auto">
             {recentCategories.map((category) => {
               const firstItem = category.items.find(item => item.type === "image") || category.items[0];
               return (
                 <button
                   key={category.id}
                   onClick={handleCategoryClick}
-                  className="bg-muted p-6 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer"
+                  className="bg-muted p-3 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer"
                 >
                   {firstItem && (
-                    <div className="mb-4 aspect-square overflow-hidden rounded-lg">
+                    <div className="mb-2 aspect-square overflow-hidden rounded-lg max-w-[160px] mx-auto">
                       <img
                         src={firstItem.thumbnail}
                         alt={category.name}
@@ -218,7 +218,7 @@ const Index = () => {
                       />
                     </div>
                   )}
-                  <h4 className="font-display text-sm font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  <h4 className="font-display text-xs font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                     {category.name}
                   </h4>
                 </button>
