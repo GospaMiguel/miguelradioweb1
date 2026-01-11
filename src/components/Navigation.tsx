@@ -27,6 +27,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: "inicio", label: "Inicio", isPage: true, path: "/" },
   { id: "sobre-nosotros", label: "Sobre Nosotros" },
+  { id: "que-ofrecemos", label: "Que ofrecemos" },
   { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
   { 
