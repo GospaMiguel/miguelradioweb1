@@ -15,6 +15,7 @@ interface Equipment {
   comments?: string;
   details?: string;
   specifications?: string;
+  noTranslate?: boolean;
 }
 
 // Datos de HF organizados por subcategoría
@@ -97,6 +98,7 @@ Para empezar con esta afición, no hacen falta grandes equipos, con este tipo de
     {
       id: "anytone-at5888uv",
       name: "Anytone AT-5888 UV",
+      noTranslate: true,
       image: anytoneAt5888uv,
       details: `El Anytone AT-5888UV es un transceptor bibanda construido robustamente, de altísima calidad con potencias de 50 W en VHF y de 40 W en UHF.
 Posee una ventilación forzada mediante un ventilador controlado por un termostato para mantener siempre una temperatura adecuada en los circuitos internos del transceptor. En uno de sus laterales posee un conector USB para carga o alimentación de dispositivos tipo teléfonos móviles, ipad, cámaras de fotos o video,...
@@ -283,8 +285,9 @@ const Equipos = () => {
                               ? "equipment-glow font-bold text-xl"
                               : "hover:bg-muted/50"
                           }`}
+                          {...(equipment.noTranslate ? { translate: "no" } : {})}
                         >
-                          {equipment.name}
+                          <span className={equipment.noTranslate ? "notranslate" : ""}>{equipment.name}</span>
                         </button>
                       ))}
                     </nav>
