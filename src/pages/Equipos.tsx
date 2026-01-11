@@ -382,7 +382,9 @@ const Equipos = () => {
                 )}
               </div>
             ) : (
-              <div></div>
+              <div className="text-center py-12">
+                <p className="text-foreground">Pincha en las subcategorías para ver el contenido</p>
+              </div>
             )}
           </div>
         </div>
