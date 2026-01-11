@@ -240,7 +240,9 @@ const Equipos = () => {
                     : "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_10px_#CC0000,0_0_20px_#CC0000] hover:shadow-[0_0_20px_#CC0000,0_0_35px_#CC0000]"
                 }`}
               >
-                <h4 className="font-display text-lg font-bold mb-2">{category.label}</h4>
+              <h4 className="font-display text-lg font-bold mb-2">
+                <span className="notranslate" translate="no">{category.label}</span>
+              </h4>
                 <p className="text-sm opacity-80">{category.subtitle}</p>
               </button>
             ))}
