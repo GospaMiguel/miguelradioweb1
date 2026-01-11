@@ -37,7 +37,7 @@ const TipsPrincipiantes = () => {
       
       <main className="pt-32 pb-16">
         <Section id="tips-principiantes" title="Tips Principiantes">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-wrap lg:flex-nowrap gap-4 justify-center">
             {tips.map((tip, index) => (
               <div 
                 key={index}
