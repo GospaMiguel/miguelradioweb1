@@ -386,7 +386,7 @@ const Equipos = () => {
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-white text-lg font-medium" style={{ textShadow: '0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.7), 0 0 60px rgba(255,255,255,0.5)' }}>
+                <p className="text-white text-xl font-bold" style={{ textShadow: '0 0 20px rgba(255,255,255,1), 0 0 40px rgba(255,255,255,1), 0 0 60px rgba(255,255,255,1), 0 0 100px rgba(255,255,255,0.9), 0 0 150px rgba(255,255,255,0.8), 0 0 200px rgba(255,255,255,0.6)' }}>
                   Pincha en las subcategorías para ver el contenido
                 </p>
               </div>
