@@ -236,8 +236,8 @@ const Equipos = () => {
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
-                    ? "bg-white text-[#8B0000] border-[#8B0000] shadow-[0_0_20px_#8B0000,0_0_40px_#8B0000,0_0_60px_#8B0000] ring-2 ring-[#8B0000]"
-                    : "bg-white/90 text-[#8B0000] border-[#8B0000] shadow-[0_0_10px_#8B0000,0_0_20px_#8B0000] hover:shadow-[0_0_20px_#8B0000,0_0_40px_#8B0000]"
+                    ? "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_15px_#CC0000,0_0_30px_#CC0000] ring-2 ring-[#CC0000]"
+                    : "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_10px_#CC0000,0_0_20px_#CC0000] hover:shadow-[0_0_20px_#CC0000,0_0_35px_#CC0000]"
                 }`}
               >
                 <h4 className="font-display text-lg font-bold mb-2">{category.label}</h4>
