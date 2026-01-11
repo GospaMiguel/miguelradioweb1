@@ -28,7 +28,7 @@ const Index = () => {
             <img 
               src={logoAsociacion} 
               alt="Logo Asociación Cantabra de Radioaficionados" 
-              className="w-72 h-72 object-contain rounded-full border-4 border-emerald-700 shadow-[0_0_20px_rgba(4,120,87,0.6)]"
+              className="w-72 h-72 object-contain rounded-full border-4 border-emerald-700"
             />
           </div>
           
