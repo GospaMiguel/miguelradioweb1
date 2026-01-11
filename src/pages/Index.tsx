@@ -76,6 +76,14 @@ const Index = () => {
         </div>
       </Section>
 
+      <Section id="que-ofrecemos" title="Que ofrecemos">
+        <div className="space-y-6">
+          <p className="text-foreground leading-relaxed text-center">
+            Contenido próximamente...
+          </p>
+        </div>
+      </Section>
+
       <Section id="actividades" title="Actividades">
         <div className="space-y-6">
           <h3 className="font-display text-2xl font-bold text-foreground text-center">QUE ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
