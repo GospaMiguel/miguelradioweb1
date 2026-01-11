@@ -67,6 +67,57 @@ const Repetidores = () => {
                 </div>
               </div>
             </div>
+
+            {/* UHF Section */}
+            <div className="bg-card border border-border rounded-lg p-8 space-y-2 mt-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                Instrucciones para conectarte a un repetidor de UHF
+              </h2>
+              
+              <p className="text-black leading-tight">
+                Para conectarte a un repetidor UHF, necesitas una radio configurada para usar una frecuencia de entrada (RX) y una frecuencia de salida (TX) separadas, además de un tono CTCSS (o un código DTMF/digital) para activarlo; sintoniza la radio a la frecuencia de salida, pulsa el botón PTT junto con el tono de activación (a veces un tono de 1750 Hz, pero a menudo un código digital) para abrirlo, espera la identificación del repetidor, suelta el PTT y luego habla, dejando pausas para permitir que otros usen el repetidor.
+              </p>
+
+              <div className="space-y-1">
+                <h3 className="text-xl font-semibold text-primary">Pasos básicos para conectar</h3>
+                
+                <div className="space-y-1 text-black">
+                  <div>
+                    <p className="font-semibold">1. Obtén los datos del repetidor:</p>
+                    <p className="ml-4 text-black">Averigua la frecuencia de entrada (RX), la frecuencia de salida (TX) y el tono CTCSS o código digital (como DTMF o D-Star) del repetidor local, usualmente en sitios web de radioaficionados.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">2. Configura tu radio:</p>
+                    <ul className="ml-4 space-y-0 text-black list-disc list-inside">
+                      <li><span className="font-medium">Frecuencias:</span> Programa la frecuencia de salida (TX) en tu radio como si fuera la frecuencia que vas a usar para hablar.</li>
+                      <li><span className="font-medium">Desplazamiento (Offset):</span> La radio calculará automáticamente la frecuencia de entrada (RX) sumando o restando el desplazamiento (por ejemplo, +5 MHz o -5 MHz).</li>
+                      <li><span className="font-medium">Tono/Código:</span> Configura el tono CTCSS (por ejemplo, 100.0 Hz) o el código digital que requiera el repetidor para activarse.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold">3. Activa el repetidor:</p>
+                    <ul className="ml-4 space-y-0 text-black list-disc list-inside">
+                      <li>Pulsa el botón de Transmitir (PTT) y, al mismo tiempo, activa el tono de apertura (a menudo manteniendo pulsado el botón por 1-2 segundos) o envía el código DTMF/digital requerido.</li>
+                      <li>Suelta el PTT para escuchar la identificación del repetidor (un indicativo o un tono).</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold">4. Transmite y escucha:</p>
+                    <ul className="ml-4 space-y-0 text-black list-disc list-inside">
+                      <li>Una vez identificado, pulsa el PTT para hablar, pero no demasiado tiempo.</li>
+                      <li>Suelta el PTT para escuchar, dejando espacios para que otros se unan y para escuchar el tail (la portadora del repetidor al finalizar).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-1 pt-2 border-t border-border">
+                <h3 className="text-xl font-semibold text-primary">En resumen</h3>
+                <p className="text-black">
+                  Es como llamar a una línea telefónica especial: sintonizas la línea correcta, haces una señal para que te contesten (el tono), y luego hablas dejando espacio para los demás, ¡siempre con cortesía!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
