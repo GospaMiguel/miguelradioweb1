@@ -13,7 +13,7 @@ const Repetidores = () => {
           
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground text-center mb-12">
-              Información sobre los repetidores disponibles para radioaficionados.
+              Como conectarte a los repetidores de VHF y UHF
             </p>
             
             <div className="bg-card border border-border rounded-lg p-8 space-y-2">
