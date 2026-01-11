@@ -22,6 +22,7 @@ interface NavItem {
   path?: string;
   hasDropdown?: boolean;
   subItems?: SubItem[];
+  noTranslate?: boolean;
 }
 
 const navItems: NavItem[] = [
@@ -42,7 +43,7 @@ const navItems: NavItem[] = [
   { id: "sobre-radio", label: "Sobre la Radio" },
   { id: "examenes", label: "Exámenes" },
   { id: "galeria", label: "Galería" },
-  { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes" },
+  { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes", noTranslate: true },
   { id: "contacto", label: "Contáctanos" },
 ];
 
@@ -231,8 +232,9 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
                   className={`text-white hover:text-white transition-all font-sans text-base px-1.5 py-1 nav-glow font-bold rounded-md ${
                     isActive(item) ? "bg-purple-600/80 hover:bg-purple-600/90" : "hover:bg-purple-600/40"
                   }`}
+                  {...(item.noTranslate ? { translate: "no" } : {})}
                 >
-                  {item.label}
+                  <span className={item.noTranslate ? "notranslate" : ""}>{item.label}</span>
                 </Button>
               )
             ))}
