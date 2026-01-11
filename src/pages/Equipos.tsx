@@ -258,8 +258,8 @@ const Equipos = () => {
                   }}
                   className={`p-4 rounded-lg text-center transition-all border-2 ${
                     selectedSubcategory === subcategory.id
-                      ? "bg-[#8B0000] text-white border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000]"
-                      : "bg-white/80 text-[#8B0000] border-[#8B0000]/50 hover:border-[#8B0000] hover:shadow-[0_0_10px_#8B0000]"
+                      ? "bg-[#006400] text-white border-[#00FF00] shadow-[0_0_15px_#00FF00,0_0_30px_#00FF00]"
+                      : "bg-white/80 text-[#006400] border-[#00FF00]/70 shadow-[0_0_8px_#00FF00,0_0_15px_#00FF00] hover:shadow-[0_0_15px_#00FF00,0_0_25px_#00FF00]"
                   }`}
                 >
                   <h5 className="font-display text-base font-semibold">{subcategory.label}</h5>
