@@ -157,11 +157,7 @@ const Equipos = () => {
   const categoryParam = searchParams.get("category") as EquipmentCategory | null;
   const contentRef = useRef<HTMLDivElement>(null);
   
-  const [selectedCategory, setSelectedCategory] = useState<EquipmentCategory>(
-    categoryParam && ["hf", "vhf-uhf", "digital"].includes(categoryParam) 
-      ? categoryParam 
-      : "hf"
-  );
+  const [selectedCategory, setSelectedCategory] = useState<EquipmentCategory | null>(null);
 
   const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory | null>(null);
 
@@ -174,7 +170,7 @@ const Equipos = () => {
 
   // Obtener los equipos actuales según la categoría y subcategoría
   const getCurrentEquipments = () => {
-    if (selectedSubcategory === null) {
+    if (selectedCategory === null || selectedSubcategory === null) {
       return [];
     }
     if (selectedCategory === "hf") {
@@ -187,13 +183,6 @@ const Equipos = () => {
   };
 
   const currentEquipments = getCurrentEquipments();
-
-  // Actualizar la categoría cuando cambie el parámetro de la URL
-  useEffect(() => {
-    if (categoryParam && ["hf", "vhf-uhf", "digital"].includes(categoryParam)) {
-      setSelectedCategory(categoryParam);
-    }
-  }, [categoryParam]);
 
   // Actualizar el equipo seleccionado cuando cambie la categoría o subcategoría
   useEffect(() => {
