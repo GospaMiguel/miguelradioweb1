@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
 import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
+import yaesuFt991a from "@/assets/equipos/yaesu-ft991a.png";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type SubcategoryType = "emisoras" | "antenas" | "acopladores";
@@ -385,10 +386,15 @@ const Equipos = () => {
                 )}
               </div>
             ) : (
-              <div className="text-center py-12">
+              <div className="flex items-center justify-center gap-8 py-12">
                 <p className="text-white text-xl font-bold" style={{ textShadow: '0 0 20px rgba(255,255,255,1), 0 0 40px rgba(255,255,255,1), 0 0 60px rgba(255,255,255,1), 0 0 100px rgba(255,255,255,0.9), 0 0 150px rgba(255,255,255,0.8), 0 0 200px rgba(255,255,255,0.6)' }}>
                   Pincha en las subcategorías para ver el contenido
                 </p>
+                <img 
+                  src={yaesuFt991a} 
+                  alt="Yaesu FT-991A" 
+                  className="w-40 h-auto object-contain"
+                />
               </div>
             )}
           </div>
