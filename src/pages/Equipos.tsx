@@ -382,11 +382,7 @@ const Equipos = () => {
                 )}
               </div>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-foreground">
-                  No hay equipos disponibles en esta {selectedCategory === "hf" ? "subcategoría" : "categoría"}.
-                </p>
-              </div>
+              <div></div>
             )}
           </div>
         </div>
