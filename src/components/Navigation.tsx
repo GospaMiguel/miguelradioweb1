@@ -53,14 +53,25 @@ interface NavigationProps {
 
 export const Navigation = ({ currentPage }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [activeItem, setActiveItem] = useState<string | null>("inicio");
   const [cameFromOtherPage, setCameFromOtherPage] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const prevPathnameRef = useRef(location.pathname);
 
   // Detectar cuando el usuario viene de otra página
   useEffect(() => {
+    // Al cargar la página por primera vez en "/", activar "inicio"
+    if (initialLoad && location.pathname === "/") {
+      setActiveItem("inicio");
+      setCameFromOtherPage(true);
+      setInitialLoad(false);
+      prevPathnameRef.current = location.pathname;
+      return;
+    }
+    setInitialLoad(false);
+
     if (location.pathname === "/equipos") {
       setActiveItem("equipamientos");
       setCameFromOtherPage(false);
@@ -85,7 +96,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       setCameFromOtherPage(false);
       prevPathnameRef.current = location.pathname;
     }
-  }, [location.pathname]);
+  }, [location.pathname, initialLoad]);
 
   // Detectar qué sección está visible cuando estamos en la página de inicio
   useEffect(() => {
