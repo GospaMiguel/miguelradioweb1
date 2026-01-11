@@ -225,8 +225,8 @@ const Equipos = () => {
                 }}
                 className={`p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
-                    ? "bg-[#CC0000] text-white border-[#CC0000] shadow-[0_0_15px_#CC0000,0_0_30px_#CC0000]"
-                    : "bg-white text-[#8B0000] border-[#CC0000] shadow-[0_0_10px_#CC0000,0_0_20px_#CC0000] hover:shadow-[0_0_20px_#CC0000,0_0_35px_#CC0000]"
+                    ? "bg-[#CC0000] text-white border-[#CC0000]"
+                    : "bg-white text-[#8B0000] border-[#CC0000] hover:bg-gray-50"
                 }`}
               >
               <h4 className="font-display text-lg font-bold mb-2">
@@ -249,8 +249,8 @@ const Equipos = () => {
                   }}
                   className={`p-4 rounded-lg text-center transition-all border-2 ${
                     selectedSubcategory === subcategory.id
-                      ? "bg-[#006400] text-white border-[#00FF00] shadow-[0_0_15px_#00FF00,0_0_30px_#00FF00]"
-                      : "bg-white text-[#006400] border-[#00FF00]/70 shadow-[0_0_8px_#00FF00,0_0_15px_#00FF00] hover:shadow-[0_0_15px_#00FF00,0_0_25px_#00FF00]"
+                      ? "bg-[#006400] text-white border-[#00FF00]"
+                      : "bg-white text-[#006400] border-[#00FF00]/70 hover:bg-gray-50"
                   }`}
                 >
                   <h5 className="font-display text-base font-semibold">{subcategory.label}</h5>
