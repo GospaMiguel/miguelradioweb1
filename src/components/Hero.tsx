@@ -8,7 +8,7 @@ export const Hero = () => {
       <img 
         src={heroMain} 
         alt="Asociación Cántabra de Radioaficionados - Estación EA1RBM"
-        className="w-full max-w-5xl h-auto object-contain"
+        className="w-full max-w-[62rem] h-auto object-contain"
       />
     </div>
   );
