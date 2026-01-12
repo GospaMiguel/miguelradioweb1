@@ -39,24 +39,7 @@ const hfEquipmentData: Record<SubcategoryType, Equipment[]> = {
       comments: `El Yaesu FT-710 es un transceptor HF de alta gama que combina la potencia tradicional de Yaesu con tecnología SDR moderna. Su receptor de doble conversión ofrece excelente selectividad y rechazo de señales no deseadas. El display TFT a color facilita la visualización del espectro y la configuración del equipo. Ideal para operadores que buscan un equipo versátil y potente para comunicaciones en HF. La interfaz USB permite control remoto y conexión directa con ordenadores para modos digitales.`,
     },
   ],
-  antenas: [
-    {
-      id: "dipolo-v-hf",
-      name: "DIPOLO RIGIDO EN V DE HF CON 5 BANDAS D-ORIGINAL DX-ADIP-HF-5B",
-      image: new URL("@/assets/equipos/dipolo-v-hf-clean.png", import.meta.url).href,
-      characteristics: `• Bandas: 7, 14, 21, 28, 50 MHz
-• Potencia máxima: 500 W en CW y 1000 W en SSB
-• Impedancia: 50 Ohm
-• VSWR: <1.5
-• Longitud: 9,7 m (simple 4,85 m)
-• Radio rotación: 2,05 m
-• Conector: PL macho
-• Peso: 5,5 Kgs
-• Resistencia al viento: 90 - 100 Km/h
-• Diámetro mástil: 40 - 50 mm`,
-      comments: `Dipolo rígido en V para HF, 7, 14, 21, 28 y 50 MHz, con una potencia máxima de 500 CW y 1000 W en SSB, con una longitud de 9,7 m (simple 4,85 m), resistencia al viento 90 a 100 Km/h....`,
-    },
-  ],
+  antenas: [],
   acopladores: [
     {
       id: "ldg-z11pro2",
