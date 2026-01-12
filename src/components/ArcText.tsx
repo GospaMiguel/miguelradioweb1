@@ -6,7 +6,7 @@ interface ArcTextProps {
 export const ArcText = ({ text, className = "" }: ArcTextProps) => {
   return (
     <div className={`relative ${className}`}>
-      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center relative">
+      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center relative notranslate" translate="no">
         <span className="inline-block transform hover:scale-110 transition-all duration-500 glow-text">
           {text}
         </span>
