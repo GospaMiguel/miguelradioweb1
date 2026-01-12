@@ -39,7 +39,16 @@ const hfEquipmentData: Record<SubcategoryType, Equipment[]> = {
       comments: `El Yaesu FT-710 es un transceptor HF de alta gama que combina la potencia tradicional de Yaesu con tecnología SDR moderna. Su receptor de doble conversión ofrece excelente selectividad y rechazo de señales no deseadas. El display TFT a color facilita la visualización del espectro y la configuración del equipo. Ideal para operadores que buscan un equipo versátil y potente para comunicaciones en HF. La interfaz USB permite control remoto y conexión directa con ordenadores para modos digitales.`,
     },
   ],
-  antenas: [],
+  antenas: [
+    {
+      id: "ezwire-600w",
+      name: "Antena de hilo largo\nEZWIRE 600W",
+      image: new URL("@/assets/equipos/ezwire-600w.png", import.meta.url).href,
+      details: `Antena de hilo largo de 16 metros 600W para HF que no necesita radiales ni conexiones grupales. Cobertura total de todas las bandas de HF de 160m a 10m. Max Pwr 1KW, Max SWR 1: 3, además EZwire funcionan bien en varias configuraciones: Horizontal, Vertical, Sloper, L y Zig-Zag. EZ-wire es una antena perfecta para espacios limitados.
+EZwire le brinda cobertura de la mayoría de las bandas de HF, sin embargo, dependiendo de la configuración de montaje y del entorno en el que está montada su impedancia, puede variar mucho de una banda a otra. Para poder disfrutar de todas las bandas con EZwire, necesitará tener un sintonizador de antena, preferiblemente fuera de la radio y el manual.
+La EZwire es una antena diseñada para radioaficionados que tienen poco espacio.`,
+    },
+  ],
   acopladores: [
     {
       id: "ldg-z11pro2",
