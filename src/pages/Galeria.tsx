@@ -143,23 +143,23 @@ const Galeria = () => {
     <div className="min-h-screen bg-background">
       <Navigation currentPage="galeria" />
 
-      <div className="pt-32 pb-16 px-4">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 px-2 md:px-4">
         <div className="container mx-auto">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-12 text-center">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 md:mb-12 text-center">
             Galería
           </h1>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 md:gap-8">
             {/* Grid de imágenes y videos */}
             <main className="flex-1 space-y-8">
               {/* Tabs para Fotos y Videos */}
-              <div className="flex gap-4 border-b border-border pb-4">
+              <div className="flex gap-2 md:gap-4 border-b border-border pb-3 md:pb-4">
                 <button
                   onClick={() => {
                     setCurrentMediaType("image");
                     setCurrentItemIndex(0);
                   }}
-                  className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+                  className={`px-4 md:px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base ${
                     currentMediaType === "image"
                       ? "bg-secondary text-secondary-foreground"
                       : "text-foreground hover:bg-muted"
@@ -172,7 +172,7 @@ const Galeria = () => {
                     setCurrentMediaType("video");
                     setCurrentItemIndex(0);
                   }}
-                  className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+                  className={`px-4 md:px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base ${
                     currentMediaType === "video"
                       ? "bg-accent text-accent-foreground"
                       : "text-foreground hover:bg-muted"
@@ -183,7 +183,7 @@ const Galeria = () => {
               </div>
 
               {/* Grid de contenido */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4">
                 {currentItems.map((item, index) => (
                   <button
                     key={index}
@@ -289,12 +289,12 @@ const Galeria = () => {
         </div>
       )}
 
-      <footer className="bg-muted border-t border-border py-8">
+      <footer className="bg-muted border-t border-border py-6 md:py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="font-display text-lg font-bold text-primary mb-2">
+          <p className="font-display text-base md:text-lg font-bold text-primary mb-1 md:mb-2">
             Asociación Cantabra de Radioaficionados
           </p>
-          <p className="text-foreground text-sm">
+          <p className="text-foreground text-xs md:text-sm">
             © {new Date().getFullYear()} - Todos los derechos reservados
           </p>
         </div>

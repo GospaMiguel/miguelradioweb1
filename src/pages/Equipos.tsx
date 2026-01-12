@@ -198,14 +198,14 @@ const Equipos = () => {
     <div className="min-h-screen bg-background">
       <Navigation currentPage="equipos" />
 
-      <div className="pt-32 pb-16 px-4">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 px-2 md:px-4">
         <div className="container mx-auto">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-12 text-center">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 md:mb-12 text-center">
             Equipos
           </h1>
 
           {/* Botones de categorías */}
-          <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -215,23 +215,23 @@ const Equipos = () => {
                   setSelectedSubcategory(null);
                   scrollToContent();
                 }}
-                className={`p-6 rounded-lg text-center transition-all border-2 ${
+                className={`p-4 md:p-6 rounded-lg text-center transition-all border-2 ${
                   selectedCategory === category.id
                     ? "bg-[#CC0000] text-white border-[#CC0000]"
                     : "bg-white text-[#8B0000] border-[#CC0000] hover:bg-gray-50"
                 }`}
               >
-              <h4 className="font-display text-lg font-bold mb-2">
+              <h4 className="font-display text-base md:text-lg font-bold mb-1 md:mb-2">
                 <span className="notranslate" translate="no">{category.label}</span>
               </h4>
-                <p className="text-sm opacity-80">{category.subtitle}</p>
+                <p className="text-xs md:text-sm opacity-80">{category.subtitle}</p>
               </button>
             ))}
           </div>
 
           {/* Subcategorías de HF y VHF/UHF */}
           {(selectedCategory === "hf" || selectedCategory === "vhf-uhf") && (
-            <div className="grid md:grid-cols-3 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
               {subcategories.map((subcategory) => (
                 <button
                   key={subcategory.id}
@@ -239,13 +239,13 @@ const Equipos = () => {
                     setSelectedSubcategory(subcategory.id);
                     scrollToContent();
                   }}
-                  className={`p-4 rounded-lg text-center transition-all border-2 ${
+                  className={`p-3 md:p-4 rounded-lg text-center transition-all border-2 ${
                     selectedSubcategory === subcategory.id
                       ? "bg-[#006400] text-white border-[#00FF00]"
                       : "bg-white text-[#006400] border-[#00FF00]/70 hover:bg-gray-50"
                   }`}
                 >
-                  <h5 className="font-display text-base font-semibold">{subcategory.label}</h5>
+                  <h5 className="font-display text-sm md:text-base font-semibold">{subcategory.label}</h5>
                 </button>
               ))}
             </div>
