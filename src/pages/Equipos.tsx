@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 import yaesuFt991a from "@/assets/equipos/yaesu-ft991a.png";
 import diamondX200n from "@/assets/equipos/diamond-x200n.png";
+import teamPr2500 from "@/assets/equipos/team-pr2500.png";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type SubcategoryType = "emisoras" | "antenas" | "acopladores";
@@ -18,6 +19,7 @@ interface Equipment {
   details?: string;
   specifications?: string;
   noTranslate?: boolean;
+  yellowBorder?: boolean;
 }
 
 // Datos de HF organizados por subcategoría
@@ -146,7 +148,24 @@ Radiales: 3 de 54 cm cada uno`,
       comments: `Antena Diamond (original) de boble banda con 2,5 m de longitud en dos tramos y 6.0 dB en VHF y 8.0 dB en UHF con conector "N" o "PL" en la base. Diamond X200 made in Japan.`,
     },
   ],
-  acopladores: [],
+  acopladores: [
+    {
+      id: "team-pr2500",
+      name: "Medidor SWR PRO VHF/UHF\nTeam PR-2500",
+      image: teamPr2500,
+      comments: `PR-2500 Medidor SWR PRO V-UHF
+
+Medidor SWR PRO V-UHF. 0.5-100 W.`,
+      characteristics: `Rango frecuencias: 120 - 500 MHz.
+Potencia máxima: 100 W (0.5-10 W / 10-100 W)
+Impedancia: 50 Ω
+Conectores: PL
+
+Dimensiones: 130 x 60 x 100 mm.
+Peso: 248 gr.`,
+      yellowBorder: true,
+    },
+  ],
 };
 
 const equipmentData: Record<EquipmentCategory, Equipment[]> = {
@@ -315,15 +334,17 @@ const Equipos = () => {
                         src={currentEquipment.image}
                         alt={currentEquipment.name}
                         className={`max-w-full h-auto rounded-lg ${
-                          selectedCategory === "vhf-uhf" && selectedSubcategory === "emisoras"
-                            ? "md:max-w-[90%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
-                            : selectedSubcategory === "emisoras" 
-                              ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
-                              : selectedSubcategory === "antenas" && selectedCategory === "vhf-uhf"
-                                ? "md:max-w-[30%] shadow-lg rounded-3xl"
-                                : selectedSubcategory === "antenas" && selectedCategory === "hf"
-                                  ? "md:max-w-[40%] shadow-lg"
-                                  : "md:max-w-[60%] shadow-lg"
+                          currentEquipment.yellowBorder
+                            ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                            : selectedCategory === "vhf-uhf" && selectedSubcategory === "emisoras"
+                              ? "md:max-w-[90%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                              : selectedSubcategory === "emisoras" 
+                                ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
+                                : selectedSubcategory === "antenas" && selectedCategory === "vhf-uhf"
+                                  ? "md:max-w-[30%] shadow-lg rounded-3xl"
+                                  : selectedSubcategory === "antenas" && selectedCategory === "hf"
+                                    ? "md:max-w-[40%] shadow-lg"
+                                    : "md:max-w-[60%] shadow-lg"
                         }`}
                         loading="lazy"
                       />
