@@ -22,7 +22,7 @@ const Index = () => {
       <Navigation />
       <Hero />
 
-      <div className="mt-12 md:mt-16">
+      <div className="mt-20 md:mt-28">
         <Section id="sobre-nosotros" title="Sobre Nosotros">
         <div className="space-y-6 md:space-y-8">
           <div className="flex justify-center mb-6 md:mb-8">
