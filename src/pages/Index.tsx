@@ -22,7 +22,8 @@ const Index = () => {
       <Navigation />
       <Hero />
 
-      <Section id="sobre-nosotros" title="Sobre Nosotros">
+      <div className="mt-12 md:mt-16">
+        <Section id="sobre-nosotros" title="Sobre Nosotros">
         <div className="space-y-6 md:space-y-8">
           <div className="flex justify-center mb-6 md:mb-8">
             <img 
@@ -74,7 +75,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </Section>
+        </Section>
+      </div>
 
       <Section id="que-ofrecemos" title="Que ofrecemos">
         <div className="space-y-4 md:space-y-6">
