@@ -316,7 +316,7 @@ const Equipos = () => {
                             : selectedSubcategory === "emisoras" 
                               ? "md:max-w-[60%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
                               : selectedSubcategory === "antenas" && selectedCategory === "vhf-uhf"
-                                ? "md:max-w-[40%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)] rounded-[2rem]"
+                                ? "md:max-w-[40%] border-4 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.6),0_0_30px_rgba(250,204,21,0.4)]"
                                 : selectedSubcategory === "antenas" && selectedCategory === "hf"
                                   ? "md:max-w-[40%] shadow-lg"
                                   : "md:max-w-[60%] shadow-lg"
