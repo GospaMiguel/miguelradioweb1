@@ -83,7 +83,7 @@ const Index = () => {
           <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUE TE OFRECEMOS HACIÉNDOTE SOCIO</h3>
           <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
             <p>
-              Al formar parte de nuestra asociación te asesoramos y ayudamos en la presentación a los exámenes para la obtención de la licencia de radioaficionado.
+              Al formar parte de nuestra asociación te asesoramos y ayudamos en la presentación a las exámenes para la obtención de la licencia de radioaficionado.
             </p>
             <p>
               Asesoramiento sobre el montaje de tu estación de radioaficionado en tu casa o vehículo, qué equipos y antenas según lo que quieras invertir te convienen, incluso te montamos la instalación.
