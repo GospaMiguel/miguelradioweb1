@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { useSearchParams } from "react-router-dom";
 import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 import yaesuFt991a from "@/assets/equipos/yaesu-ft991a.png";
+import diamondX200n from "@/assets/equipos/diamond-x200n.png";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type SubcategoryType = "emisoras" | "antenas" | "acopladores";
@@ -128,7 +129,23 @@ Potencia de salida VHF: 50 W, 25 W, 10 W y 5 W
 Potencia de salida UHF: 40 W, 25 W, 10 W y 5 W.`,
     },
   ],
-  antenas: [],
+  antenas: [
+    {
+      id: "diamond-x200n",
+      name: "ANTENA VHF/UHF DIAMOND X-200 N",
+      image: diamondX200n,
+      characteristics: `Ganancia VHF: 6,0 dB
+Ganancia UHF: 8,0 dB
+Potencia max: 200 W
+Impedancia: 50 Ohm.
+Longitud: 2,5 m. en 2 tramos
+Peso: 1.4 Kg
+ROE S.W.R: 1,5
+Conector: A elegir entre conector N (baja perdida) o el estándar PL
+Radiales: 3 de 54 cm cada uno`,
+      comments: `Antena Diamond (original) de boble banda con 2,5 m de longitud en dos tramos y 6.0 dB en VHF y 8.0 dB en UHF con conector "N" o "PL" en la base. Diamond X200 made in Japan.`,
+    },
+  ],
   acopladores: [],
 };
 
