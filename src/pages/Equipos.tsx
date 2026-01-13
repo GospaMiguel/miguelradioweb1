@@ -154,13 +154,11 @@ Radiales: 3 de 54 cm cada uno`,
       name: "Medidor SWR PRO VHF/UHF\nTeam PR-2500",
       image: teamPr2500,
       comments: `PR-2500 Medidor SWR PRO V-UHF
-
 Medidor SWR PRO V-UHF. 0.5-100 W.`,
       characteristics: `Rango frecuencias: 120 - 500 MHz.
 Potencia máxima: 100 W (0.5-10 W / 10-100 W)
 Impedancia: 50 Ω
 Conectores: PL
-
 Dimensiones: 130 x 60 x 100 mm.
 Peso: 248 gr.`,
       yellowBorder: true,
