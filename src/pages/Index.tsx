@@ -132,7 +132,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
             <Calendar className="w-6 h-6 md:w-8 md:h-8 text-warning flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Reunión ordinaria mensual</h3>
+              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3 notranslate" translate="no">REUNION ORDINARIA MENSUAL</h3>
               <p className="text-foreground leading-relaxed text-sm md:text-base">
                 Celebramos reuniones mensuales donde compartimos experiencias, aprendemos sobre nuevas tecnologías, 
                 discutimos proyectos y planificamos actividades. Un espacio ideal para conocer a otros radioaficionados 
