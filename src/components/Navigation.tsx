@@ -40,8 +40,15 @@ const navItems: NavItem[] = [
       { id: "repetidores", label: "Repetidores", path: "/repetidores" }
     ]
   },
-  { id: "sobre-radio", label: "Sobre la Radio" },
-  { id: "examenes", label: "Exámenes" },
+  { 
+    id: "sobre-radio", 
+    label: "Sobre la Radio", 
+    hasDropdown: true,
+    subItems: [
+      { id: "sobre-radio-section", label: "Sobre la Radio", path: "/#sobre-radio" },
+      { id: "examenes", label: "Exámenes", path: "/#examenes" }
+    ]
+  },
   { id: "galeria", label: "Galería" },
   { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes", noTranslate: true },
   { id: "contacto", label: "Contáctanos" },
@@ -195,7 +202,29 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
 
   const handleSubItemClick = (subItem: SubItem, parentId: string) => {
     setActiveItem(parentId);
-    navigate(subItem.path);
+    
+    // Check if path is a hash link (section on homepage)
+    if (subItem.path.startsWith("/#")) {
+      const sectionId = subItem.path.replace("/#", "");
+      if (location.pathname !== "/") {
+        navigate("/");
+        setCameFromOtherPage(false);
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        setCameFromOtherPage(false);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else {
+      navigate(subItem.path);
+    }
     setIsOpen(false);
   };
 
