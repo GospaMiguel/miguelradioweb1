@@ -31,6 +31,7 @@ const navItems: NavItem[] = [
   { id: "que-ofrecemos", label: "Que ofrecemos" },
   { id: "actividades", label: "Actividades" },
   { id: "reuniones", label: "Reuniones" },
+  { id: "galeria", label: "Galería" },
   { 
     id: "equipamientos", 
     label: "Equipamientos", 
@@ -49,7 +50,6 @@ const navItems: NavItem[] = [
       { id: "examenes", label: "Exámenes", path: "/#examenes" }
     ]
   },
-  { id: "galeria", label: "Galería" },
   { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes", noTranslate: true },
   { id: "contacto", label: "Contáctanos" },
 ];
