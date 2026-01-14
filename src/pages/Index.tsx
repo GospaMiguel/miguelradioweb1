@@ -86,13 +86,13 @@ const Index = () => {
               Al formar parte de nuestra asociación te asesoramos y ayudamos en la presentación a los exámenes para la obtención de la licencia de radioaficionado.
             </p>
             <p>
-              Asesoramiento sobre el montaje de tu estación de radioaficionado en tu casa o vehículo, qué equipos y antenas según lo que quieras invertir te convienen, incluso te montamos la instalación.
+              Asesoramiento sobre el montaje de tu estación de radioaficionado en tu casa o vehículo que equipos y antenas según lo que quieras invertir te convienen incluso te montamos la instalación.
             </p>
             <p>
-              Programación de los equipos, todo el banco de memorias sobre frecuencias, bandas y, en caso de digital, repetidores analógicos y digitales con todos sus datos que tenemos en Cantabria y provincias limítrofes, para que con solo dar un botón lo tengas todo a tu alcance.
+              Programación de los equipos todo el banco de memorias sobre frecuencias bandas y en caso de digital repetidores analógico y digitales con todos sus datos que tenemos en Cantabria y provincias limítrofes para que con solo dar un botón lo tengas todo a tu alcance.
             </p>
             <p>
-              Reunirte todos los segundos viernes de cada mes con nuestros compañeros muy veteranos en el mundo de la radio, algunos con 50 años de experiencia y otros recién incorporados. Intercambiamos experiencias con antenas y equipos, y tratamos temas sobre la asociación y mantenimiento de nuestros repetidores.
+              Reunirte todos los segundos viernes de cada Mes con nuestros compañeros Muy veteranos en el mundo de la radio algunos con 50 años de experiencia y otros recién incorporados intercambiamos experiencias con antenas y equipos y tratamos temas sobre la asociación y mantenimiento de nuestros repetidores.
             </p>
             <p>
               En primavera y verano hacemos varias salidas al campo a hacer diversas actividades en las cuales puedes como socio participar.
