@@ -276,7 +276,7 @@ const Index = () => {
               href="https://www.fediea.org/examen/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-xs md:text-sm transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
+              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
             >
               www.fediea.org/examen
             </a>
@@ -284,7 +284,7 @@ const Index = () => {
               href="https://radioclubquijotes.org/examen-radioaficionado-test-requisitos/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-xs md:text-sm transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
+              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
             >
               radioclubquijotes.org/examen
             </a>
