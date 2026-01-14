@@ -37,23 +37,21 @@ const TipsPrincipiantes = () => {
       
       <main className="pt-24 md:pt-32 pb-12 md:pb-16 px-2 md:px-4">
         <Section id="tips-principiantes" title="Tips Principiantes">
-          <div className="bg-emerald-900/50 rounded-xl p-3 border border-emerald-700">
-            <div className="flex flex-row gap-3 overflow-x-auto pb-2">
-              {tips.map((tip, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex-shrink-0 w-56 md:w-64 flex flex-col"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="p-1.5 bg-primary/30 rounded-lg">
-                      <tip.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <h3 className="text-sm md:text-base font-bold text-white">{tip.title}</h3>
+          <div className="flex flex-row gap-3 overflow-x-auto pb-4">
+            {tips.map((tip, index) => (
+              <div 
+                key={index}
+                className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex-shrink-0 w-56 md:w-64 flex flex-col"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="p-1.5 bg-primary/30 rounded-lg">
+                    <tip.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-xs md:text-sm flex-grow">{tip.description}</p>
+                  <h3 className="text-sm md:text-base font-bold text-white">{tip.title}</h3>
                 </div>
-              ))}
-            </div>
+                <p className="text-gray-300 leading-relaxed text-xs md:text-sm flex-grow">{tip.description}</p>
+              </div>
+            ))}
           </div>
           
           <div className="mt-8 md:mt-12 p-4 md:p-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
