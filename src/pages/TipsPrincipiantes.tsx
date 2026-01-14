@@ -41,7 +41,7 @@ const TipsPrincipiantes = () => {
             {tips.map((tip, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex-shrink-0 w-56 md:w-64 flex flex-col"
+                className="bg-gradient-to-br from-emerald-900 to-emerald-950 rounded-xl p-4 border border-emerald-700 hover:border-emerald-500 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-900/30 flex-shrink-0 w-56 md:w-64 flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div className="p-1.5 bg-primary/30 rounded-lg">
