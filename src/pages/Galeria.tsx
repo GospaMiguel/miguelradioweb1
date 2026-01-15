@@ -10,6 +10,8 @@ import comida2025Mesa3 from "@/assets/galeria/comida-2025-mesa3.jpg";
 import comida2025Mesa4 from "@/assets/galeria/comida-2025-mesa4.jpg";
 import comida2025Mesa5 from "@/assets/galeria/comida-2025-mesa5.jpg";
 import actividadAstillero2025 from "@/assets/galeria/actividad-astillero-2025.png";
+import muslera2025_1 from "@/assets/galeria/muslera-2025-1.jpg";
+import muslera2025_2 from "@/assets/galeria/muslera-2025-2.jpg";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -26,6 +28,24 @@ export interface Category {
 }
 
 export const categories: Category[] = [
+  {
+    id: "muslera-2025",
+    name: "Activacion Fiestas Virgen de Muslera 2025",
+    items: [
+      {
+        thumbnail: muslera2025_1,
+        full: muslera2025_1,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_2,
+        full: muslera2025_2,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 2",
+        type: "image",
+      },
+    ],
+  },
   {
     id: "actividad-astillero-2025",
     name: "Actividad estraescolares Astillero Agosto 2025",
