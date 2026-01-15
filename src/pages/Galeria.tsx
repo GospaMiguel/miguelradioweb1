@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -229,10 +230,24 @@ export const categories: Category[] = [
 ];
 
 const Galeria = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0].id);
+  const [searchParams] = useSearchParams();
+  const eventoParam = searchParams.get("evento");
+  
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    eventoParam && categories.find(c => c.id === eventoParam) ? eventoParam : categories[0].id
+  );
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [currentMediaType, setCurrentMediaType] = useState<"image" | "video">("image");
+
+  // Actualizar categoría cuando cambie el parámetro de URL
+  useEffect(() => {
+    if (eventoParam && categories.find(c => c.id === eventoParam)) {
+      setSelectedCategory(eventoParam);
+      setCurrentItemIndex(0);
+      setCurrentMediaType("image");
+    }
+  }, [eventoParam]);
 
   const currentCategory = categories.find((cat) => cat.id === selectedCategory);
   const allItems = currentCategory?.items || [];
