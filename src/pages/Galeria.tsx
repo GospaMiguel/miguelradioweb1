@@ -12,6 +12,10 @@ import comida2025Mesa5 from "@/assets/galeria/comida-2025-mesa5.jpg";
 import actividadAstillero2025 from "@/assets/galeria/actividad-astillero-2025.png";
 import muslera2025_1 from "@/assets/galeria/muslera-2025-1.jpg";
 import muslera2025_2 from "@/assets/galeria/muslera-2025-2.jpg";
+import navidad2024_1 from "@/assets/galeria/navidad-2024-1.png";
+import navidad2024_2 from "@/assets/galeria/navidad-2024-2.png";
+import navidad2024_3 from "@/assets/galeria/navidad-2024-3.png";
+import navidad2024_4 from "@/assets/galeria/navidad-2024-4.png";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -28,6 +32,36 @@ export interface Category {
 }
 
 export const categories: Category[] = [
+  {
+    id: "navidad-2024",
+    name: "Comida Navidad 2024",
+    items: [
+      {
+        thumbnail: navidad2024_1,
+        full: navidad2024_1,
+        alt: "Comida Navidad 2024 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_2,
+        full: navidad2024_2,
+        alt: "Comida Navidad 2024 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_3,
+        full: navidad2024_3,
+        alt: "Comida Navidad 2024 - Tarta",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_4,
+        full: navidad2024_4,
+        alt: "Comida Navidad 2024 - Tarta 2",
+        type: "image",
+      },
+    ],
+  },
   {
     id: "muslera-2025",
     name: "Activacion Fiestas Virgen de Muslera 2025",
