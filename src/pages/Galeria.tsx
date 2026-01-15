@@ -33,36 +33,6 @@ export interface Category {
 
 export const categories: Category[] = [
   {
-    id: "navidad-2024",
-    name: "Comida Navidad 2024",
-    items: [
-      {
-        thumbnail: navidad2024_1,
-        full: navidad2024_1,
-        alt: "Comida Navidad 2024 - Foto 1",
-        type: "image",
-      },
-      {
-        thumbnail: navidad2024_2,
-        full: navidad2024_2,
-        alt: "Comida Navidad 2024 - Foto 2",
-        type: "image",
-      },
-      {
-        thumbnail: navidad2024_3,
-        full: navidad2024_3,
-        alt: "Comida Navidad 2024 - Tarta",
-        type: "image",
-      },
-      {
-        thumbnail: navidad2024_4,
-        full: navidad2024_4,
-        alt: "Comida Navidad 2024 - Tarta 2",
-        type: "image",
-      },
-    ],
-  },
-  {
     id: "muslera-2025",
     name: "Activacion Fiestas Virgen de Muslera 2025",
     items: [
@@ -101,7 +71,7 @@ export const categories: Category[] = [
   },
   {
     id: "reunion-anual-2025",
-    name: 'Comida anual de amigos de esta asociación de Cantabria 2025',
+    name: "Comida anual de amigos de esta asociación de Cantabria 2025",
     items: [
       {
         thumbnail: "https://i.ibb.co/XG2Mpvv/IMG-20251214-145258.jpg",
@@ -169,6 +139,36 @@ export const categories: Category[] = [
         alt: "Video",
         type: "video",
         videoId: "PpLINZu8f9g",
+      },
+    ],
+  },
+  {
+    id: "navidad-2024",
+    name: "Comida Navidad 2024",
+    items: [
+      {
+        thumbnail: navidad2024_1,
+        full: navidad2024_1,
+        alt: "Comida Navidad 2024 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_2,
+        full: navidad2024_2,
+        alt: "Comida Navidad 2024 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_3,
+        full: navidad2024_3,
+        alt: "Comida Navidad 2024 - Tarta",
+        type: "image",
+      },
+      {
+        thumbnail: navidad2024_4,
+        full: navidad2024_4,
+        alt: "Comida Navidad 2024 - Tarta 2",
+        type: "image",
       },
     ],
   },
