@@ -2,11 +2,40 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { ContactSection } from "@/components/ContactSection";
-import { Radio, Users, Calendar, Wrench, Image as ImageIcon } from "lucide-react";
+import { Radio, Users, Calendar, Wrench, Image as ImageIcon, Antenna, Lightbulb, BookOpen, Headphones } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.png";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
+
+const tips = [
+  {
+    icon: Radio,
+    title: "Conoce tu equipo",
+    description: "Antes de transmitir, familiarízate con los controles de tu transceptor. Lee el manual y practica en modo recepción."
+  },
+  {
+    icon: BookOpen,
+    title: "Aprende el código Q",
+    description: "El código Q es un lenguaje universal entre radioaficionados. QTH (ubicación), QSL (confirmación), QRM (interferencia) son esenciales."
+  },
+  {
+    icon: Headphones,
+    title: "Escucha antes de transmitir",
+    description: "Dedica tiempo a escuchar las bandas. Aprenderás protocolos, estilos de comunicación y encontrarás frecuencias activas."
+  },
+  {
+    icon: Users,
+    title: "Únete a un club",
+    description: "Los clubes de radioaficionados son una excelente fuente de conocimiento. Los miembros experimentados pueden guiarte en tu aprendizaje."
+  },
+  {
+    icon: Lightbulb,
+    title: "Empieza con VHF/UHF",
+    description: "Las bandas VHF y UHF son ideales para principiantes. Los repetidores locales facilitan hacer contactos iniciales."
+  }
+];
+
 const Index = () => {
   const navigate = useNavigate();
   
@@ -247,6 +276,38 @@ const Index = () => {
         </div>
       </Section>
 
+      <Section id="repetidores" title="Repetidores">
+        <div className="space-y-4 md:space-y-6">
+          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+            <Antenna className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Cómo conectarte a los repetidores</h3>
+              <p className="text-foreground leading-relaxed text-sm md:text-base">
+                Aprende a conectarte a los repetidores de VHF y UHF. Necesitas conocer la frecuencia de entrada (RX), 
+                salida (TX), el desplazamiento (offset) y el subtono CTCSS o código DTMF para activarlos.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+            <button
+              onClick={() => navigate("/repetidores")}
+              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+            >
+              <h4 className="font-display text-sm md:text-base font-bold mb-1">VHF</h4>
+              <p className="text-xs opacity-80">Offset típico: -600 kHz</p>
+            </button>
+            <button
+              onClick={() => navigate("/repetidores")}
+              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+            >
+              <h4 className="font-display text-sm md:text-base font-bold mb-1">UHF</h4>
+              <p className="text-xs opacity-80">Offset típico: ±5 MHz</p>
+            </button>
+          </div>
+        </div>
+      </Section>
+
       <Section id="sobre-radio" title="Sobre la Radio">
         <div className="space-y-4 md:space-y-6">
           <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">¿QUÉ ES LA RADIOAFICIÓN?</h3>
@@ -290,6 +351,38 @@ const Index = () => {
             >
               radioclubquijotes.org/examen
             </a>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="tips" title="Tips Principiantes">
+        <div className="space-y-4 md:space-y-6">
+          <div className="flex flex-row gap-3 overflow-x-auto pb-4">
+            {tips.map((tip, index) => (
+              <div 
+                key={index}
+                className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex-shrink-0 w-56 md:w-64 flex flex-col"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="p-1.5 bg-primary/30 rounded-lg">
+                    <tip.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold text-white">{tip.title}</h3>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-xs md:text-sm flex-grow">{tip.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-8 md:mt-12 p-4 md:p-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
+            <h3 className="text-lg md:text-xl font-bold text-yellow-400 mb-2 md:mb-3 flex items-center gap-2">
+              <Lightbulb className="h-4 w-4 md:h-5 md:w-5" />
+              Consejo del día
+            </h3>
+            <p className="text-gray-300 text-sm md:text-base">
+              La paciencia es clave en la radioafición. No te desanimes si al principio no consigues contactos. 
+              Practica tu técnica, mejora tu antena y verás cómo los resultados llegan.
+            </p>
           </div>
         </div>
       </Section>
