@@ -161,46 +161,6 @@ const Index = () => {
         </div>
       </Section>
 
-      <Section id="equipos" title="Equipos">
-        <div className="space-y-4 md:space-y-6">
-          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
-            <Wrench className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Equipamiento y Tecnología</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
-                Información sobre equipos de radio, antenas, accesorios y tecnología utilizada por nuestros miembros. 
-                Compartimos experiencias sobre configuraciones, mantenimiento y optimización de equipos para diferentes 
-                modos y bandas de operación.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
-            <button
-              onClick={() => navigate("/equipos?category=hf")}
-              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
-            >
-              <h4 className="font-display text-sm md:text-base font-bold mb-1">HF</h4>
-              <p className="text-xs opacity-80">Bandas decamétricas</p>
-            </button>
-            <button
-              onClick={() => navigate("/equipos?category=vhf-uhf")}
-              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
-            >
-              <h4 className="font-display text-sm md:text-base font-bold mb-1">VHF/UHF</h4>
-              <p className="text-xs opacity-80">Comunicaciones locales</p>
-            </button>
-            <button
-              onClick={() => navigate("/equipos?category=digital")}
-              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
-            >
-              <h4 className="font-display text-sm md:text-base font-bold mb-1">Digital</h4>
-              <p className="text-xs opacity-80">Modos digitales modernos</p>
-            </button>
-          </div>
-        </div>
-      </Section>
-
       <Section id="galeria" title="Galería">
         <div className="space-y-4 md:space-y-6">
           <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
@@ -243,6 +203,46 @@ const Index = () => {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="equipos" title="Equipos">
+        <div className="space-y-4 md:space-y-6">
+          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+            <Wrench className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Equipamiento y Tecnología</h3>
+              <p className="text-foreground leading-relaxed text-sm md:text-base">
+                Información sobre equipos de radio, antenas, accesorios y tecnología utilizada por nuestros miembros. 
+                Compartimos experiencias sobre configuraciones, mantenimiento y optimización de equipos para diferentes 
+                modos y bandas de operación.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+            <button
+              onClick={() => navigate("/equipos?category=hf")}
+              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+            >
+              <h4 className="font-display text-sm md:text-base font-bold mb-1">HF</h4>
+              <p className="text-xs opacity-80">Bandas decamétricas</p>
+            </button>
+            <button
+              onClick={() => navigate("/equipos?category=vhf-uhf")}
+              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+            >
+              <h4 className="font-display text-sm md:text-base font-bold mb-1">VHF/UHF</h4>
+              <p className="text-xs opacity-80">Comunicaciones locales</p>
+            </button>
+            <button
+              onClick={() => navigate("/equipos?category=digital")}
+              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+            >
+              <h4 className="font-display text-sm md:text-base font-bold mb-1">Digital</h4>
+              <p className="text-xs opacity-80">Modos digitales modernos</p>
+            </button>
           </div>
         </div>
       </Section>
