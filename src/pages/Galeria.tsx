@@ -37,7 +37,7 @@ export const categories: Category[] = [
         type: "image",
       },
       {
-        thumbnail: "https://img.youtube.com/vi/vkJiSSEt6WE/hqdefault.jpg",
+        thumbnail: actividadAstillero2025,
         full: "",
         alt: "Video Actividad Astillero 2025",
         type: "video",
