@@ -11,8 +11,8 @@ const Index = () => {
   const navigate = useNavigate();
   
 
-  const handleCategoryClick = () => {
-    navigate("/galeria");
+  const handleCategoryClick = (categoryId: string) => {
+    navigate(`/galeria?evento=${categoryId}`);
   };
 
   return (
@@ -222,7 +222,7 @@ const Index = () => {
                   return (
                     <button
                       key={category.id}
-                      onClick={handleCategoryClick}
+                      onClick={() => handleCategoryClick(category.id)}
                       className="bg-muted p-3 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer flex-shrink-0 w-[200px] md:w-[240px]"
                     >
                       {firstItem && (
