@@ -9,6 +9,7 @@ import comida2025Mesa2 from "@/assets/galeria/comida-2025-mesa2.jpg";
 import comida2025Mesa3 from "@/assets/galeria/comida-2025-mesa3.jpg";
 import comida2025Mesa4 from "@/assets/galeria/comida-2025-mesa4.jpg";
 import comida2025Mesa5 from "@/assets/galeria/comida-2025-mesa5.jpg";
+import actividadAstillero2025 from "@/assets/galeria/actividad-astillero-2025.png";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -25,6 +26,25 @@ export interface Category {
 }
 
 export const categories: Category[] = [
+  {
+    id: "actividad-astillero-2025",
+    name: "Actividad estraescolares Astillero Agosto 2025",
+    items: [
+      {
+        thumbnail: actividadAstillero2025,
+        full: actividadAstillero2025,
+        alt: "Actividad extraescolares Astillero 2025",
+        type: "image",
+      },
+      {
+        thumbnail: "https://img.youtube.com/vi/vkJiSSEt6WE/hqdefault.jpg",
+        full: "",
+        alt: "Video Actividad Astillero 2025",
+        type: "video",
+        videoId: "vkJiSSEt6WE",
+      },
+    ],
+  },
   {
     id: "reunion-anual-2025",
     name: 'Comida anual de amigos de esta asociación de Cantabria 2025',
@@ -148,6 +168,28 @@ const Galeria = () => {
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 md:mb-12 text-center">
             Galería
           </h1>
+
+          {/* Selector de categorías */}
+          <div className="mb-6 md:mb-8">
+            <label htmlFor="category-select" className="block text-sm font-medium text-foreground mb-2">
+              Seleccionar evento:
+            </label>
+            <select
+              id="category-select"
+              value={selectedCategory}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setCurrentItemIndex(0);
+              }}
+              className="w-full max-w-xl px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none"
+            >
+              {categories.map((cat) => (
+                <option key={cat.id} value={cat.id}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
           <div className="flex flex-col gap-6 md:gap-8">
             {/* Grid de imágenes y videos */}
