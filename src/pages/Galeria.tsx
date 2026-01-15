@@ -23,6 +23,10 @@ import grt2022_3 from "@/assets/galeria/grt-2022-3.jpg";
 import grt2022_4 from "@/assets/galeria/grt-2022-4.jpg";
 import ermita2021_1 from "@/assets/galeria/ermita-2021-1.png";
 import ermita2021_2 from "@/assets/galeria/ermita-2021-2.png";
+import renedo2021_1 from "@/assets/galeria/renedo-2021-1.jpg";
+import renedo2021_2 from "@/assets/galeria/renedo-2021-2.jpg";
+import renedo2021_3 from "@/assets/galeria/renedo-2021-3.jpg";
+import renedo2021_4 from "@/assets/galeria/renedo-2021-4.jpg";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -223,6 +227,36 @@ export const categories: Category[] = [
         thumbnail: ermita2021_2,
         full: ermita2021_2,
         alt: "Activación Ermita Santa Marina 2021 - Foto 2",
+        type: "image",
+      },
+    ],
+  },
+  {
+    id: "renedo-2021",
+    name: "Dia de convivencia en monte en Renedo 2021",
+    items: [
+      {
+        thumbnail: renedo2021_1,
+        full: renedo2021_1,
+        alt: "Convivencia Renedo 2021 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2021_2,
+        full: renedo2021_2,
+        alt: "Convivencia Renedo 2021 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2021_3,
+        full: renedo2021_3,
+        alt: "Convivencia Renedo 2021 - Foto 3",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2021_4,
+        full: renedo2021_4,
+        alt: "Convivencia Renedo 2021 - Foto 4",
         type: "image",
       },
     ],
