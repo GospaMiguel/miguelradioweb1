@@ -10,8 +10,6 @@ import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 const Index = () => {
   const navigate = useNavigate();
   
-  // Obtener las 3 categorías más recientes (últimas 3 del array)
-  const recentCategories = categories.slice(-3).reverse();
 
   const handleCategoryClick = () => {
     navigate("/galeria");
@@ -216,31 +214,35 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
-            {recentCategories.map((category) => {
-              const firstItem = category.items.find(item => item.type === "image") || category.items[0];
-              return (
-                <button
-                  key={category.id}
-                  onClick={handleCategoryClick}
-                  className="bg-muted p-3 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer"
-                >
-                  {firstItem && (
-                    <div className="mb-2 aspect-square overflow-hidden rounded-lg max-w-[120px] md:max-w-[160px] mx-auto">
-                      <img
-                        src={firstItem.thumbnail}
-                        alt={category.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <h4 className="font-display text-xs font-bold text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">
-                    {category.name}
-                  </h4>
-                </button>
-              );
-            })}
+          <div className="relative">
+            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-muted-foreground/40 scrollbar-track-muted/50">
+              <div className="flex gap-4 min-w-max px-1">
+                {categories.map((category) => {
+                  const firstItem = category.items.find(item => item.type === "image") || category.items[0];
+                  return (
+                    <button
+                      key={category.id}
+                      onClick={handleCategoryClick}
+                      className="bg-muted p-3 rounded-lg text-center hover:bg-muted/80 transition-colors group cursor-pointer flex-shrink-0 w-[200px] md:w-[240px]"
+                    >
+                      {firstItem && (
+                        <div className="mb-2 aspect-square overflow-hidden rounded-lg">
+                          <img
+                            src={firstItem.thumbnail}
+                            alt={category.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <h4 className="font-display text-xs md:text-sm font-bold text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">
+                        {category.name}
+                      </h4>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </Section>
