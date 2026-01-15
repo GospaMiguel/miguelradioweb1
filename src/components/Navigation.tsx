@@ -110,6 +110,12 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
     if (location.pathname !== "/") return;
 
     const handleScroll = () => {
+      // Si estamos en el top de la página (incluyendo el hero), mantener "inicio" activo
+      if (window.scrollY < 300) {
+        setActiveItem("inicio");
+        return;
+      }
+
       const sections = navItems
         .filter(item => !item.isPage)
         .map(item => ({
@@ -138,15 +144,11 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
         }
       }
 
-      // Si encontramos una sección activa, activarla y desactivar "inicio"
+      // Si encontramos una sección activa, activarla
       if (activeSection) {
         setActiveItem(activeSection);
         setCameFromOtherPage(false);
-      } else if (cameFromOtherPage && window.scrollY < 100) {
-        // Solo activar "inicio" si estamos en el top de la página Y venimos de otra página
-        setActiveItem("inicio");
       }
-      // Si no hay sección activa y no venimos de otra página, no cambiar el estado
     };
 
     // Ejecutar al cargar para detectar hash
@@ -154,9 +156,6 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
     if (hash && navItems.find(item => item.id === hash)) {
       setActiveItem(hash);
       setCameFromOtherPage(false);
-    } else if (!cameFromOtherPage) {
-      // Si no hay hash y no venimos de otra página, detectar sección visible
-      handleScroll();
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
