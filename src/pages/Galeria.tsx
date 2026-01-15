@@ -20,6 +20,8 @@ import grt2022_1 from "@/assets/galeria/grt-2022-1.jpg";
 import grt2022_2 from "@/assets/galeria/grt-2022-2.jpg";
 import grt2022_3 from "@/assets/galeria/grt-2022-3.jpg";
 import grt2022_4 from "@/assets/galeria/grt-2022-4.jpg";
+import ermita2021_1 from "@/assets/galeria/ermita-2021-1.png";
+import ermita2021_2 from "@/assets/galeria/ermita-2021-2.png";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -202,6 +204,24 @@ export const categories: Category[] = [
         thumbnail: grt2022_4,
         full: grt2022_4,
         alt: "Ejercicio GRT 2022 - Foto 4",
+        type: "image",
+      },
+    ],
+  },
+  {
+    id: "ermita-2021",
+    name: "Año 2021 Activación en Ermita Santa Marina, Valdeprado del Rio",
+    items: [
+      {
+        thumbnail: ermita2021_1,
+        full: ermita2021_1,
+        alt: "Activación Ermita Santa Marina 2021 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: ermita2021_2,
+        full: ermita2021_2,
+        alt: "Activación Ermita Santa Marina 2021 - Foto 2",
         type: "image",
       },
     ],
