@@ -175,22 +175,12 @@ export const categories: Category[] = [
 ];
 
 const Galeria = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0].id);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const [currentMediaType, setCurrentMediaType] = useState<"image" | "video">("image");
+  const [lightboxItems, setLightboxItems] = useState<GalleryItem[]>([]);
 
-  const currentCategory = categories.find((cat) => cat.id === selectedCategory);
-  const allItems = currentCategory?.items || [];
-  
-  // Separar fotos y videos
-  const photos = allItems.filter((item) => item.type === "image");
-  const videos = allItems.filter((item) => item.type === "video");
-  
-  // Items actuales según el tipo seleccionado
-  const currentItems = currentMediaType === "image" ? photos : videos;
-
-  const openLightbox = (index: number) => {
+  const openLightbox = (items: GalleryItem[], index: number) => {
+    setLightboxItems(items);
     setCurrentItemIndex(index);
     setLightboxOpen(true);
   };
@@ -200,11 +190,11 @@ const Galeria = () => {
   };
 
   const goToPrevious = () => {
-    setCurrentItemIndex((prev) => (prev === 0 ? currentItems.length - 1 : prev - 1));
+    setCurrentItemIndex((prev) => (prev === 0 ? lightboxItems.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentItemIndex((prev) => (prev === currentItems.length - 1 ? 0 : prev + 1));
+    setCurrentItemIndex((prev) => (prev === lightboxItems.length - 1 ? 0 : prev + 1));
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -223,92 +213,71 @@ const Galeria = () => {
             Galería
           </h1>
 
-          {/* Selector de categorías */}
-          <div className="mb-6 md:mb-8">
-            <label htmlFor="category-select" className="block text-sm font-medium text-foreground mb-2">
-              Seleccionar evento:
-            </label>
-            <select
-              id="category-select"
-              value={selectedCategory}
-              onChange={(e) => {
-                setSelectedCategory(e.target.value);
-                setCurrentItemIndex(0);
-              }}
-              className="w-full max-w-xl px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none"
-            >
-              {categories.map((cat) => (
-                <option key={cat.id} value={cat.id}>
-                  {cat.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Todos los eventos */}
+          <div className="space-y-12">
+            {categories.map((category) => {
+              const photos = category.items.filter((item) => item.type === "image");
+              const videos = category.items.filter((item) => item.type === "video");
 
-          <div className="flex flex-col gap-6 md:gap-8">
-            {/* Grid de imágenes y videos */}
-            <main className="flex-1 space-y-8">
-              {/* Tabs para Fotos y Videos */}
-              <div className="flex gap-2 md:gap-4 border-b border-border pb-3 md:pb-4">
-                <button
-                  onClick={() => {
-                    setCurrentMediaType("image");
-                    setCurrentItemIndex(0);
-                  }}
-                  className={`px-4 md:px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base ${
-                    currentMediaType === "image"
-                      ? "bg-secondary text-secondary-foreground"
-                      : "text-foreground hover:bg-muted"
-                  }`}
-                >
-                  Fotos ({photos.length})
-                </button>
-                <button
-                  onClick={() => {
-                    setCurrentMediaType("video");
-                    setCurrentItemIndex(0);
-                  }}
-                  className={`px-4 md:px-6 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base ${
-                    currentMediaType === "video"
-                      ? "bg-accent text-accent-foreground"
-                      : "text-foreground hover:bg-muted"
-                  }`}
-                >
-                  Videos ({videos.length})
-                </button>
-              </div>
+              return (
+                <section key={category.id} id={category.id} className="bg-muted/50 rounded-xl p-4 md:p-6">
+                  <h2 className="font-display text-xl md:text-2xl font-bold text-primary mb-6">
+                    {category.name}
+                  </h2>
 
-              {/* Grid de contenido */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4">
-                {currentItems.map((item, index) => (
-                  <button
-                    key={index}
-                    onClick={() => openLightbox(index)}
-                    className="aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary relative"
-                  >
-                    <img
-                      src={item.thumbnail}
-                      alt={item.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                    {item.type === "video" && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-                          <div className="w-0 h-0 border-l-[16px] border-l-white border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1" />
-                        </div>
+                  {/* Fotos */}
+                  {photos.length > 0 && (
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-secondary mb-3">Fotos ({photos.length})</h3>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4">
+                        {photos.map((item, index) => (
+                          <button
+                            key={index}
+                            onClick={() => openLightbox(photos, index)}
+                            className="aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary"
+                          >
+                            <img
+                              src={item.thumbnail}
+                              alt={item.alt}
+                              loading="lazy"
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
                       </div>
-                    )}
-                  </button>
-                ))}
-              </div>
+                    </div>
+                  )}
 
-              {currentItems.length === 0 && (
-                <p className="text-foreground text-center py-12">
-                  No hay {currentMediaType === "image" ? "fotos" : "videos"} en esta categoría.
-                </p>
-              )}
-            </main>
+                  {/* Videos */}
+                  {videos.length > 0 && (
+                    <div>
+                      <h3 className="text-lg font-semibold text-accent mb-3">Videos ({videos.length})</h3>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4">
+                        {videos.map((item, index) => (
+                          <button
+                            key={index}
+                            onClick={() => openLightbox(videos, index)}
+                            className="aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary relative"
+                          >
+                            <img
+                              src={item.thumbnail}
+                              alt={item.alt}
+                              loading="lazy"
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                              <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                                <div className="w-0 h-0 border-l-[16px] border-l-white border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1" />
+                              </div>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -347,10 +316,10 @@ const Galeria = () => {
           </Button>
 
           {/* Contenido: Imagen o Video */}
-          {currentItems[currentItemIndex]?.type === "video" ? (
+          {lightboxItems[currentItemIndex]?.type === "video" ? (
             <iframe
-              src={`https://www.youtube.com/embed/${currentItems[currentItemIndex]?.videoId}?autoplay=1`}
-              title={currentItems[currentItemIndex]?.alt}
+              src={`https://www.youtube.com/embed/${lightboxItems[currentItemIndex]?.videoId}?autoplay=1`}
+              title={lightboxItems[currentItemIndex]?.alt}
               className="w-[90vw] h-[50.625vw] max-h-[90vh] max-w-[160vh]"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -358,8 +327,8 @@ const Galeria = () => {
             />
           ) : (
             <img
-              src={currentItems[currentItemIndex]?.full}
-              alt={currentItems[currentItemIndex]?.alt}
+              src={lightboxItems[currentItemIndex]?.full}
+              alt={lightboxItems[currentItemIndex]?.alt}
               className="max-h-[90vh] max-w-[90vw] object-contain"
               onClick={(e) => e.stopPropagation()}
             />
@@ -380,7 +349,7 @@ const Galeria = () => {
 
           {/* Contador */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
-            {currentItemIndex + 1} / {currentItems.length}
+            {currentItemIndex + 1} / {lightboxItems.length}
           </div>
         </div>
       )}
