@@ -16,6 +16,10 @@ import navidad2024_1 from "@/assets/galeria/navidad-2024-1.png";
 import navidad2024_2 from "@/assets/galeria/navidad-2024-2.png";
 import navidad2024_3 from "@/assets/galeria/navidad-2024-3.png";
 import navidad2024_4 from "@/assets/galeria/navidad-2024-4.png";
+import grt2022_1 from "@/assets/galeria/grt-2022-1.jpg";
+import grt2022_2 from "@/assets/galeria/grt-2022-2.jpg";
+import grt2022_3 from "@/assets/galeria/grt-2022-3.jpg";
+import grt2022_4 from "@/assets/galeria/grt-2022-4.jpg";
 
 export interface GalleryItem {
   thumbnail: string;
@@ -168,6 +172,36 @@ export const categories: Category[] = [
         thumbnail: navidad2024_4,
         full: navidad2024_4,
         alt: "Comida Navidad 2024 - Tarta 2",
+        type: "image",
+      },
+    ],
+  },
+  {
+    id: "grt-2022",
+    name: "Ejercicio GRT 2022 desde Pico Otero",
+    items: [
+      {
+        thumbnail: grt2022_1,
+        full: grt2022_1,
+        alt: "Ejercicio GRT 2022 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: grt2022_2,
+        full: grt2022_2,
+        alt: "Ejercicio GRT 2022 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: grt2022_3,
+        full: grt2022_3,
+        alt: "Ejercicio GRT 2022 - Foto 3",
+        type: "image",
+      },
+      {
+        thumbnail: grt2022_4,
+        full: grt2022_4,
+        alt: "Ejercicio GRT 2022 - Foto 4",
         type: "image",
       },
     ],
