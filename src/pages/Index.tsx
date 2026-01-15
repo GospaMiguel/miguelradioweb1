@@ -289,20 +289,12 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+          <div className="flex justify-center">
             <button
               onClick={() => navigate("/repetidores")}
-              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
+              className="bg-white text-[#8B0000] p-4 md:p-6 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
             >
-              <h4 className="font-display text-sm md:text-base font-bold mb-1">VHF</h4>
-              <p className="text-xs opacity-80">Offset típico: -600 kHz</p>
-            </button>
-            <button
-              onClick={() => navigate("/repetidores")}
-              className="bg-white text-[#8B0000] p-3 md:p-4 rounded-lg text-center border-2 border-[#8B0000] shadow-[0_0_15px_#8B0000,0_0_30px_#8B0000] hover:shadow-[0_0_25px_#8B0000,0_0_50px_#8B0000] transition-all cursor-pointer"
-            >
-              <h4 className="font-display text-sm md:text-base font-bold mb-1">UHF</h4>
-              <p className="text-xs opacity-80">Offset típico: ±5 MHz</p>
+              <h4 className="font-display text-base md:text-lg font-bold">Conectar con Repetidores VHF/UHF</h4>
             </button>
           </div>
         </div>
