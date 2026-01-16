@@ -1,5 +1,5 @@
 
-import heroMain from "@/assets/hero-main-fixed.png";
+import heroMain from "@/assets/hero-main-new.png";
 
 export const Hero = () => {
   return (
