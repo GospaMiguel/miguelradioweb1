@@ -66,7 +66,7 @@ const Index = () => {
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Nuestra Asociación</h3>
               <p className="text-foreground leading-relaxed text-sm md:text-base">
                 La Asociación Cántabra de Radioaficionados es una comunidad apasionada por la radioafición y las telecomunicaciones. 
-                Nos dedicamos a promover y a dar a conocer la afición de la radio y conectar a entusiastas de toda Cantabria 
+                Nos dedicamos a promover y a dar a conocer el hobby de la radio y conectar a entusiastas de toda Cantabria 
                 y otros países.
               </p>
             </div>
