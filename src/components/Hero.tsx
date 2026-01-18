@@ -3,7 +3,7 @@ import heroMain from "@/assets/hero-main-new.webp";
 
 export const Hero = () => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden bg-background mt-[5rem] md:mt-[6rem] px-4 md:px-8">
+    <div className="relative flex items-center justify-center overflow-hidden bg-background mt-24 md:mt-[6rem] px-4 md:px-8">
       {/* Main Hero Image */}
       <img 
         src={heroMain} 
