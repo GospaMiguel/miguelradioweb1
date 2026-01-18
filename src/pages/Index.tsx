@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Radio, Users, Calendar, Wrench, Image as ImageIcon, Antenna, Lightbulb, BookOpen, Headphones } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { categories } from "./Galeria";
-import logoAsociacion from "@/assets/logo-asociacion.png";
+import logoAsociacion from "@/assets/logo-asociacion.webp";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 
 const tips = [
@@ -331,7 +331,7 @@ const Index = () => {
               href="https://www.fediea.org/examen/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
+              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors [text-shadow:0_0_15px_rgba(255,255,255,0.8),0_0_35px_rgba(255,255,255,0.4)] break-all text-center"
             >
               www.fediea.org/examen
             </a>
@@ -339,7 +339,7 @@ const Index = () => {
               href="https://radioclubquijotes.org/examen-radioaficionado-test-requisitos/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors drop-shadow-[0_0_20px_rgba(255,255,255,1)] [text-shadow:0_0_15px_white,0_0_30px_white] break-all text-center"
+              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors [text-shadow:0_0_15px_rgba(255,255,255,0.8),0_0_35px_rgba(255,255,255,0.4)] break-all text-center"
             >
               radioclubquijotes.org/examen
             </a>

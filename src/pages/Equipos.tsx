@@ -311,12 +311,9 @@ const Equipos = () => {
                     </nav>
                     <style>{`
                       .equipment-glow {
-                        text-shadow: 0 0 15px rgba(255, 255, 255, 1),
-                                     0 0 30px rgba(255, 255, 255, 1),
-                                     0 0 50px rgba(255, 255, 255, 1),
-                                     0 0 80px rgba(255, 255, 255, 0.9),
-                                     0 0 120px rgba(255, 255, 255, 0.8),
-                                     0 0 160px rgba(255, 255, 255, 0.6);
+                        text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                                     0 0 35px rgba(255, 255, 255, 0.6),
+                                     0 0 60px rgba(255, 255, 255, 0.3);
                       }
                     `}</style>
                   </aside>

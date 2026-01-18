@@ -50,7 +50,7 @@ const navItems: NavItem[] = [
       { id: "examenes", label: "Exámenes", path: "/#examenes" }
     ]
   },
-  { id: "tips", label: "Tips Principiantes", isPage: true, path: "/tips-principiantes", noTranslate: true },
+  { id: "tips", label: "Tips Principiantes", noTranslate: true },
   { id: "contacto", label: "Contáctanos" },
 ];
 
@@ -123,6 +123,12 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
           element: document.getElementById(item.id),
         }))
         .filter(section => section.element !== null);
+      
+      // También incluir la sección "equipos" y mapearla a "equipamientos"
+      const equiposElement = document.getElementById("equipos");
+      if (equiposElement) {
+        sections.push({ id: "equipamientos", element: equiposElement });
+      }
 
       // Encontrar la sección que está más cerca del top del viewport
       const navHeight = 96; // altura aproximada de la navegación
@@ -153,9 +159,15 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
 
     // Ejecutar al cargar para detectar hash
     const hash = location.hash.replace("#", "");
-    if (hash && navItems.find(item => item.id === hash)) {
-      setActiveItem(hash);
-      setCameFromOtherPage(false);
+    if (hash) {
+      // Si el hash es "equipos", activar "equipamientos" (el dropdown padre)
+      if (hash === "equipos") {
+        setActiveItem("equipamientos");
+        setCameFromOtherPage(false);
+      } else if (navItems.find(item => item.id === hash)) {
+        setActiveItem(hash);
+        setCameFromOtherPage(false);
+      }
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -232,9 +244,17 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center h-24">
+    <>
+      {/* Overlay oscuro para móvil */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/70 z-40 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-lg w-full max-w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 max-w-full">
+          <div className="flex items-center justify-center h-24 relative">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-center space-x-3">
             {navItems.map((item) => (
@@ -279,20 +299,14 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
             ))}
             <style>{`
               .nav-glow {
-                text-shadow: 0 0 15px rgba(255, 255, 255, 1),
-                             0 0 30px rgba(255, 255, 255, 1),
-                             0 0 50px rgba(255, 255, 255, 1),
-                             0 0 80px rgba(255, 255, 255, 0.9),
-                             0 0 120px rgba(255, 255, 255, 0.8),
-                             0 0 160px rgba(255, 255, 255, 0.6);
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                             0 0 35px rgba(255, 255, 255, 0.6),
+                             0 0 60px rgba(255, 255, 255, 0.3);
               }
               .nav-glow:hover {
                 text-shadow: 0 0 20px rgba(255, 255, 255, 1),
-                             0 0 40px rgba(255, 255, 255, 1),
-                             0 0 70px rgba(255, 255, 255, 1),
-                             0 0 100px rgba(255, 255, 255, 1),
-                             0 0 150px rgba(255, 255, 255, 0.9),
-                             0 0 200px rgba(255, 255, 255, 0.7);
+                             0 0 45px rgba(255, 255, 255, 0.7),
+                             0 0 70px rgba(255, 255, 255, 0.4);
               }
             `}</style>
           </div>
@@ -310,7 +324,7 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 space-y-2">
+          <div className="lg:hidden py-4 space-y-2 max-h-[calc(100vh-6rem)] overflow-y-auto">
             {navItems.map((item) => (
               item.hasDropdown && item.subItems ? (
                 <div key={item.id} className="space-y-1">
@@ -347,5 +361,6 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
         )}
       </div>
     </nav>
+    </>
   );
 };

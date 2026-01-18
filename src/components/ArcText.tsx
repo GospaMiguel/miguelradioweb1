@@ -14,27 +14,22 @@ export const ArcText = ({ text, className = "" }: ArcTextProps) => {
       <style>{`
         @keyframes glow-pulse {
           0%, 100% { 
-            text-shadow: 0 0 30px rgba(128, 0, 32, 1),
-                         0 0 60px rgba(128, 0, 32, 0.9),
-                         0 0 100px rgba(128, 0, 32, 0.7),
-                         0 0 140px rgba(128, 0, 32, 0.5),
-                         0 0 180px rgba(128, 0, 32, 0.3);
+            text-shadow: 0 0 25px rgba(128, 0, 32, 0.9),
+                         0 0 50px rgba(128, 0, 32, 0.6),
+                         0 0 80px rgba(128, 0, 32, 0.3);
           }
           50% { 
-            text-shadow: 0 0 50px rgba(128, 0, 32, 1),
-                         0 0 100px rgba(128, 0, 32, 1),
-                         0 0 150px rgba(128, 0, 32, 0.9),
-                         0 0 200px rgba(128, 0, 32, 0.7),
-                         0 0 250px rgba(128, 0, 32, 0.5);
+            text-shadow: 0 0 35px rgba(128, 0, 32, 1),
+                         0 0 70px rgba(128, 0, 32, 0.8),
+                         0 0 110px rgba(128, 0, 32, 0.5);
           }
         }
         
         .glow-text {
           animation: glow-pulse 3s ease-in-out infinite;
-          text-shadow: 0 0 30px rgba(128, 0, 32, 1),
-                       0 0 60px rgba(128, 0, 32, 0.9),
-                       0 0 100px rgba(128, 0, 32, 0.7),
-                       0 0 15px rgba(128, 0, 32, 1);
+          text-shadow: 0 0 25px rgba(128, 0, 32, 0.9),
+                       0 0 50px rgba(128, 0, 32, 0.6),
+                       0 0 80px rgba(128, 0, 32, 0.3);
           letter-spacing: 0.05em;
         }
       `}</style>
