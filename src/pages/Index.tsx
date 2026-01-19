@@ -326,22 +326,22 @@ const Index = () => {
           <p className="text-foreground leading-relaxed text-sm md:text-base">
             Para acceder a los test, aquí te dejamos dos enlaces a dos páginas web de radioaficionados: FEDIEA y Radio Club Quijotes.
           </p>
-          <div className="flex flex-col items-center gap-3 md:gap-4 mt-4">
+          <div className="flex flex-col items-center gap-4 md:gap-5 mt-6">
             <a 
               href="https://www.fediea.org/examen/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors [text-shadow:0_0_15px_rgba(255,255,255,0.8),0_0_35px_rgba(255,255,255,0.4)] break-all text-center"
+              className="px-6 py-3 md:px-8 md:py-4 rounded-lg bg-white/95 backdrop-blur-sm border-2 border-[#8B0032] hover:bg-white hover:border-[#A30040] text-[#8B0032] hover:text-[#A30040] font-bold text-lg md:text-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#8B0032]/30 text-center"
             >
-              www.fediea.org/examen
+              📚 FEDIEA - Test de Examen
             </a>
             <a 
               href="https://radioclubquijotes.org/examen-radioaficionado-test-requisitos/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline font-bold text-base md:text-xl transition-colors [text-shadow:0_0_15px_rgba(255,255,255,0.8),0_0_35px_rgba(255,255,255,0.4)] break-all text-center"
+              className="px-6 py-3 md:px-8 md:py-4 rounded-lg bg-white/95 backdrop-blur-sm border-2 border-[#8B0032] hover:bg-white hover:border-[#A30040] text-[#8B0032] hover:text-[#A30040] font-bold text-lg md:text-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#8B0032]/30 text-center"
             >
-              radioclubquijotes.org/examen
+              📖 Radio Club Quijotes - Test
             </a>
           </div>
         </div>
