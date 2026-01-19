@@ -1,5 +1,5 @@
 
-import heroMain from "@/assets/hero-main-new.webp";
+import heroMain from "@/assets/hero-main-new.jpg";
 
 export const Hero = () => {
   return (
