@@ -49,85 +49,7 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  {
-    id: "renedo-valencia-2025",
-    name: "Virgen de Valencia Renedo 2025",
-    items: [
-      {
-        thumbnail: renedo2025_1,
-        full: renedo2025_1,
-        alt: "Virgen de Valencia Renedo 2025 - Foto 1",
-        type: "image",
-      },
-      {
-        thumbnail: renedo2025_2,
-        full: renedo2025_2,
-        alt: "Virgen de Valencia Renedo 2025 - Foto 2",
-        type: "image",
-      },
-      {
-        thumbnail: renedo2025_3,
-        full: renedo2025_3,
-        alt: "Virgen de Valencia Renedo 2025 - Foto 3",
-        type: "image",
-      },
-    ],
-  },
-  {
-    id: "muslera-2025",
-    name: "Activacion Fiestas Virgen de Muslera 2025",
-    items: [
-      {
-        thumbnail: muslera2025_1,
-        full: muslera2025_1,
-        alt: "Activacion Virgen de Muslera 2025 - Foto 1",
-        type: "image",
-      },
-      {
-        thumbnail: muslera2025_2,
-        full: muslera2025_2,
-        alt: "Activacion Virgen de Muslera 2025 - Foto 2",
-        type: "image",
-      },
-      {
-        thumbnail: muslera2025_3,
-        full: muslera2025_3,
-        alt: "Activacion Virgen de Muslera 2025 - Foto 3",
-        type: "image",
-      },
-      {
-        thumbnail: muslera2025_4,
-        full: muslera2025_4,
-        alt: "Activacion Virgen de Muslera 2025 - Foto 4",
-        type: "image",
-      },
-      {
-        thumbnail: muslera2025_5,
-        full: muslera2025_5,
-        alt: "Activacion Virgen de Muslera 2025 - Foto 5",
-        type: "image",
-      },
-    ],
-  },
-  {
-    id: "actividad-astillero-2025",
-    name: "Actividad estraescolares Astillero Agosto 2025",
-    items: [
-      {
-        thumbnail: actividadAstillero2025,
-        full: actividadAstillero2025,
-        alt: "Actividad extraescolares Astillero 2025",
-        type: "image",
-      },
-      {
-        thumbnail: actividadAstillero2025,
-        full: "",
-        alt: "Video Actividad Astillero 2025",
-        type: "video",
-        videoId: "vkJiSSEt6WE",
-      },
-    ],
-  },
+  // 2025 - Diciembre
   {
     id: "reunion-anual-2025",
     name: "Comida anual de amigos de esta asociación de Cantabria 2025",
@@ -201,6 +123,89 @@ export const categories: Category[] = [
       },
     ],
   },
+  // 2025 - Septiembre
+  {
+    id: "renedo-valencia-2025",
+    name: "Virgen de Valencia Renedo 2025",
+    items: [
+      {
+        thumbnail: renedo2025_1,
+        full: renedo2025_1,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_2,
+        full: renedo2025_2,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_3,
+        full: renedo2025_3,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 3",
+        type: "image",
+      },
+    ],
+  },
+  // 2025 - Agosto
+  {
+    id: "muslera-2025",
+    name: "Activacion Fiestas Virgen de Muslera 2025",
+    items: [
+      {
+        thumbnail: muslera2025_1,
+        full: muslera2025_1,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_2,
+        full: muslera2025_2,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_3,
+        full: muslera2025_3,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 3",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_4,
+        full: muslera2025_4,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 4",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_5,
+        full: muslera2025_5,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 5",
+        type: "image",
+      },
+    ],
+  },
+  // 2025 - Agosto
+  {
+    id: "actividad-astillero-2025",
+    name: "Actividad estraescolares Astillero Agosto 2025",
+    items: [
+      {
+        thumbnail: actividadAstillero2025,
+        full: actividadAstillero2025,
+        alt: "Actividad extraescolares Astillero 2025",
+        type: "image",
+      },
+      {
+        thumbnail: actividadAstillero2025,
+        full: "",
+        alt: "Video Actividad Astillero 2025",
+        type: "video",
+        videoId: "vkJiSSEt6WE",
+      },
+    ],
+  },
+  // 2024 - Diciembre
   {
     id: "navidad-2024",
     name: "Comida Navidad 2024",
@@ -231,6 +236,7 @@ export const categories: Category[] = [
       },
     ],
   },
+  // 2024 - Mayo
   {
     id: "mercado-asturiano-2024",
     name: "Radioaficionados Santander mercado Asturiano 2024",
@@ -243,6 +249,7 @@ export const categories: Category[] = [
       },
     ],
   },
+  // 2022
   {
     id: "grt-2022",
     name: "Ejercicio GRT 2022 desde Pico Otero",
@@ -273,6 +280,7 @@ export const categories: Category[] = [
       },
     ],
   },
+  // 2021
   {
     id: "ermita-2021",
     name: "Año 2021 Activación en Ermita Santa Marina, Valdeprado del Rio",
@@ -291,6 +299,7 @@ export const categories: Category[] = [
       },
     ],
   },
+  // 2021
   {
     id: "renedo-2021",
     name: "Dia de convivencia en monte en Renedo 2021",
