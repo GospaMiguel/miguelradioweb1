@@ -33,6 +33,7 @@ import renedo2021_4 from "@/assets/galeria/renedo-2021-4.jpg";
 import renedo2025_1 from "@/assets/galeria/renedo-2025-1.jpg";
 import renedo2025_2 from "@/assets/galeria/renedo-2025-2.jpg";
 import renedo2025_3 from "@/assets/galeria/renedo-2025-3.jpg";
+import mercadoAsturiano2024_1 from "@/assets/galeria/mercado-asturiano-2024-1.jpg";
 export interface GalleryItem {
   thumbnail: string;
   full: string;
@@ -226,6 +227,18 @@ export const categories: Category[] = [
         thumbnail: navidad2024_4,
         full: navidad2024_4,
         alt: "Comida Navidad 2024 - Tarta 2",
+        type: "image",
+      },
+    ],
+  },
+  {
+    id: "mercado-asturiano-2024",
+    name: "Radioaficionados Santander mercado Asturiano 2024",
+    items: [
+      {
+        thumbnail: mercadoAsturiano2024_1,
+        full: mercadoAsturiano2024_1,
+        alt: "Radioaficionados Santander mercado Asturiano 2024 - Foto 1",
         type: "image",
       },
     ],
