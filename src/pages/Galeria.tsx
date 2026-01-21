@@ -13,6 +13,9 @@ import comida2025Mesa5 from "@/assets/galeria/comida-2025-mesa5.jpg";
 import actividadAstillero2025 from "@/assets/galeria/actividad-astillero-2025.png";
 import muslera2025_1 from "@/assets/galeria/muslera-2025-1.jpg";
 import muslera2025_2 from "@/assets/galeria/muslera-2025-2.jpg";
+import muslera2025_3 from "@/assets/galeria/muslera-2025-3.jpg";
+import muslera2025_4 from "@/assets/galeria/muslera-2025-4.jpg";
+import muslera2025_5 from "@/assets/galeria/muslera-2025-5.jpg";
 import navidad2024_1 from "@/assets/galeria/navidad-2024-1.png";
 import navidad2024_2 from "@/assets/galeria/navidad-2024-2.png";
 import navidad2024_3 from "@/assets/galeria/navidad-2024-3.png";
@@ -83,6 +86,24 @@ export const categories: Category[] = [
         thumbnail: muslera2025_2,
         full: muslera2025_2,
         alt: "Activacion Virgen de Muslera 2025 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_3,
+        full: muslera2025_3,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 3",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_4,
+        full: muslera2025_4,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 4",
+        type: "image",
+      },
+      {
+        thumbnail: muslera2025_5,
+        full: muslera2025_5,
+        alt: "Activacion Virgen de Muslera 2025 - Foto 5",
         type: "image",
       },
     ],
