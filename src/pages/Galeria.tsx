@@ -27,7 +27,9 @@ import renedo2021_1 from "@/assets/galeria/renedo-2021-1.jpg";
 import renedo2021_2 from "@/assets/galeria/renedo-2021-2.jpg";
 import renedo2021_3 from "@/assets/galeria/renedo-2021-3.jpg";
 import renedo2021_4 from "@/assets/galeria/renedo-2021-4.jpg";
-
+import renedo2025_1 from "@/assets/galeria/renedo-2025-1.jpg";
+import renedo2025_2 from "@/assets/galeria/renedo-2025-2.jpg";
+import renedo2025_3 from "@/assets/galeria/renedo-2025-3.jpg";
 export interface GalleryItem {
   thumbnail: string;
   full: string;
@@ -43,6 +45,30 @@ export interface Category {
 }
 
 export const categories: Category[] = [
+  {
+    id: "renedo-valencia-2025",
+    name: "Virgen de Valencia Renedo 2025",
+    items: [
+      {
+        thumbnail: renedo2025_1,
+        full: renedo2025_1,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 1",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_2,
+        full: renedo2025_2,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 2",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_3,
+        full: renedo2025_3,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 3",
+        type: "image",
+      },
+    ],
+  },
   {
     id: "muslera-2025",
     name: "Activacion Fiestas Virgen de Muslera 2025",
