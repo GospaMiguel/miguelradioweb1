@@ -64,7 +64,7 @@ const Index = () => {
             <Users className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Nuestra Asociación</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 La Asociación Cántabra de Radioaficionados es una comunidad apasionada por la radioafición y las telecomunicaciones. 
                 Nos dedicamos a promover y a dar a conocer el hobby de la radio y conectar a entusiastas de toda Cantabria 
                 y otros países.
@@ -76,7 +76,7 @@ const Index = () => {
             <Radio className="w-6 h-6 md:w-8 md:h-8 text-accent flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Nuestra Misión</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 Fomentar el desarrollo técnico y social de la radioafición, proporcionar formación continua a nuestros miembros, 
                 y servir como punto de encuentro para compartir experiencias y conocimientos en el fascinante mundo de las 
                 comunicaciones por radio.
@@ -86,7 +86,7 @@ const Index = () => {
 
           <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border/30">
             <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-center">Historia de nuestra Asociación</h3>
-            <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
+            <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base text-justify">
               <p>
                 Nuestros primeros pasos empezaron por el año 2013, cuando a nivel local estaba vacía la banda de los 27 MHz y no estaba abierta la propagación debido a un ciclo solar que afectó a la banda de los 27 MHz y no se escuchaba nadie. La gente que volvía a desempolvar los equipos después del boom que fueron los 27 MHz de los años 90, algunos compañeros nos contaron que tiraron los equipos a la basura creyendo que estaban estropeados porque no se escuchaba nada.
               </p>
@@ -108,7 +108,7 @@ const Index = () => {
       <Section id="que-ofrecemos" title="Qué ofrecemos">
         <div className="space-y-4 md:space-y-6">
           <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ TE OFRECEMOS HACIÉNDOTE SOCIO</h3>
-          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
+          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base text-justify">
             <p>
               Al formar parte de nuestra asociación, te asesoramos y ayudamos en la presentación a los exámenes para la obtención de la licencia de radioaficionado.
             </p>
@@ -131,7 +131,7 @@ const Index = () => {
       <Section id="actividades" title="Actividades">
         <div className="space-y-4 md:space-y-6">
           <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
-          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
+          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base text-justify">
             <p>
               Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria. Participamos en eventos deportivos como la Media Maratón del Pas, que se celebra a mediados del mes de septiembre en Puente Arce, y nos situamos en diferentes puntos kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
             </p>
@@ -160,7 +160,7 @@ const Index = () => {
             <Calendar className="w-6 h-6 md:w-8 md:h-8 text-warning flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3 notranslate" translate="no">REUNION ORDINARIA MENSUAL</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 Celebramos reuniones mensuales donde compartimos experiencias, aprendemos sobre nuevas tecnologías, 
                 discutimos proyectos y planificamos actividades. Un espacio ideal para conocer a otros radioaficionados 
                 y fortalecer los lazos de nuestra comunidad.
@@ -196,7 +196,7 @@ const Index = () => {
             <ImageIcon className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Galería de Eventos</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 Descubre nuestras últimas actividades, encuentros y eventos a través de nuestra galería de fotos y videos. 
                 Compartimos los mejores momentos de nuestra comunidad radioaficionada.
               </p>
@@ -242,7 +242,7 @@ const Index = () => {
             <Wrench className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Equipamiento y Tecnología</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 Información sobre equipos de radio, antenas, accesorios y tecnología utilizada por nuestros miembros. 
                 Compartimos experiencias sobre configuraciones, mantenimiento y optimización de equipos para diferentes 
                 modos y bandas de operación.
@@ -282,7 +282,7 @@ const Index = () => {
             <Antenna className="w-6 h-6 md:w-8 md:h-8 text-secondary flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">Cómo conectarte a los repetidores</h3>
-              <p className="text-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
                 Aprende a conectarte a los repetidores de VHF y UHF. Necesitas conocer la frecuencia de entrada (RX), 
                 salida (TX), el desplazamiento (offset) y el subtono CTCSS o código DTMF para activarlos.
               </p>

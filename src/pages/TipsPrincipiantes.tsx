@@ -49,7 +49,7 @@ const TipsPrincipiantes = () => {
                   </div>
                   <h3 className="text-sm md:text-base font-bold text-white">{tip.title}</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-xs md:text-sm flex-grow">{tip.description}</p>
+                <p className="text-gray-300 leading-relaxed text-xs md:text-sm flex-grow text-justify">{tip.description}</p>
               </div>
             ))}
           </div>
@@ -59,7 +59,7 @@ const TipsPrincipiantes = () => {
               <Lightbulb className="h-4 w-4 md:h-5 md:w-5" />
               Consejo del día
             </h3>
-            <p className="text-gray-300 text-sm md:text-base">
+            <p className="text-gray-300 text-sm md:text-base text-justify">
               La paciencia es clave en la radioafición. No te desanimes si al principio no consigues contactos. 
               Practica tu técnica, mejora tu antena y verás cómo los resultados llegan.
             </p>
