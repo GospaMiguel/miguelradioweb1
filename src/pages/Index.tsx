@@ -105,24 +105,24 @@ const Index = () => {
         </Section>
       </div>
 
-      <Section id="que-ofrecemos" title="Que ofrecemos">
+      <Section id="que-ofrecemos" title="Qué ofrecemos">
         <div className="space-y-4 md:space-y-6">
-          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUE TE OFRECEMOS HACIÉNDOTE SOCIO</h3>
+          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ TE OFRECEMOS HACIÉNDOTE SOCIO</h3>
           <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
             <p>
-              Al formar parte de nuestra asociación te asesoramos y ayudamos en la presentación a los exámenes para la obtención de la licencia de radioaficionado.
+              Al formar parte de nuestra asociación, te asesoramos y ayudamos en la presentación a los exámenes para la obtención de la licencia de radioaficionado.
             </p>
             <p>
-              Asesoramiento sobre el montaje de tu estación de radioaficionado en tu casa o vehículo que equipos y antenas según lo que quieras invertir te convienen incluso te montamos la instalación.
+              Asesoramiento sobre el montaje de tu estación de radioaficionado en tu casa o vehículo: qué equipos y antenas, según lo que quieras invertir, te convienen. Incluso te montamos la instalación.
             </p>
             <p>
-              Programación de los equipos todo el banco de memorias sobre frecuencias bandas y en caso de digital repetidores analógico y digitales con todos sus datos que tenemos en Cantabria y provincias limítrofes para que con solo dar un botón lo tengas todo a tu alcance.
+              Programación de los equipos: todo el banco de memorias sobre frecuencias, bandas y, en caso de digital, repetidores analógicos y digitales con todos sus datos que tenemos en Cantabria y provincias limítrofes, para que con solo dar un botón lo tengas todo a tu alcance.
             </p>
             <p>
-              Reunirte todos los segundos viernes de cada Mes con nuestros compañeros Muy veteranos en el mundo de la radio algunos con 50 años de experiencia y otros recién incorporados intercambiamos experiencias con antenas y equipos y tratamos temas sobre la asociación y mantenimiento de nuestros repetidores.
+              Reunirte todos los segundos viernes de cada mes con nuestros compañeros muy veteranos en el mundo de la radio, algunos con 50 años de experiencia, y otros recién incorporados. Intercambiamos experiencias con antenas y equipos, y tratamos temas sobre la asociación y mantenimiento de nuestros repetidores.
             </p>
             <p>
-              En primavera y verano hacemos varias salidas al campo a hacer diversas actividades en las cuales puedes como socio participar.
+              En primavera y verano hacemos varias salidas al campo a hacer diversas actividades, en las cuales puedes, como socio, participar.
             </p>
           </div>
         </div>
@@ -130,25 +130,25 @@ const Index = () => {
 
       <Section id="actividades" title="Actividades">
         <div className="space-y-4 md:space-y-6">
-          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUE ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
+          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
           <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
             <p>
-              Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria. Participamos en eventos deportivos como la Media Maratón del Pas, que se celebra cada mediados del mes de septiembre en Puente Arce, y nos ponemos en diferentes puntos kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
+              Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria. Participamos en eventos deportivos como la Media Maratón del Pas, que se celebra a mediados del mes de septiembre en Puente Arce, y nos situamos en diferentes puntos kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
             </p>
             <p>
-              Otra actividad en la que participamos es en Guarnizo, cada 15 de agosto, en la Festividad de la Virgen de Muslera. Con motivo de las fiestas, instalamos nuestras emisoras y antenas, y otorgamos tarjeta QSL especial a un solo contacto en la banda de 40 metros, contactando con estaciones de toda España.
+              Otra actividad en la que participamos es en Guarnizo, cada 15 de agosto, en la Festividad de la Virgen de Muslera. Con motivo de las fiestas, instalamos nuestras emisoras y antenas, y otorgamos tarjeta QSL especial a cada contacto en la banda de 40 metros, contactando con estaciones de toda España.
             </p>
             <p>
-              Otra actividad en la que hemos participado este año, también en Guarnizo, es en la feria de extraescolares, en la cual se presentan todas las asociaciones de este ayuntamiento con la idea de dar a conocer lo que hacemos y a lo que nos dedicamos a la gente que acude a vernos.
+              Otra actividad en la que hemos participado, también en Guarnizo, es en la feria de extraescolares, en la cual se presentan todas las asociaciones de este ayuntamiento con la idea de dar a conocer lo que hacemos y a lo que nos dedicamos a la gente que acude a vernos.
             </p>
             <p>
-              Otra actividad más en la que participamos es en las fiestas de la Virgen de Valencia en Renedo de Piélagos, cada 27 de septiembre. Activamos con indicativo especial las fiestas, otorgando tarjeta QSL a todas las estaciones que nos contactan desde cualquier lugar en la banda de HF 40 metros.
+              Otra actividad más en la que participamos es en las fiestas de la Virgen de Valencia en Renedo de Piélagos, cada 27 de septiembre. Activamos con indicativo especial las fiestas, otorgando tarjeta QSL a todas las estaciones que nos contactan desde cualquier lugar en la banda de HF de 40 metros.
             </p>
             <p>
-              Luego, otro evento en el que nos reunimos y asistimos es una Feria de Radioaficionados que se celebra en Ávila cada año el 15 de septiembre, a la cual solemos asistir todos los radioaficionados de esta asociación que nos podemos desplazar hasta allí. Vemos la feria, comemos por Ávila, pasamos la noche y vuelta para Santander.
+              Luego, otro evento en el que nos reunimos y asistimos es una Feria de Radioaficionados que se celebra en Ávila cada año, el 15 de septiembre, a la cual solemos asistir todos los radioaficionados de esta asociación que nos podemos desplazar hasta allí. Vemos la feria, comemos por Ávila, pasamos la noche y vuelta para Santander.
             </p>
             <p>
-              Otro evento al que solemos anualmente asistir es al Merca Astur Radio, cada 10 de mayo en Oviedo, en el cual se compra y vende todo tipo de emisoras y antenas nuevas y de segunda mano. Dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo, pasamos el día por allí y volvemos a Santander.
+              Otro evento al que solemos asistir anualmente es al Merca Astur Radio, cada 10 de mayo en Oviedo, en el cual se compra y vende todo tipo de emisoras y antenas nuevas y de segunda mano. Dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo, pasamos el día por allí y volvemos a Santander.
             </p>
           </div>
         </div>

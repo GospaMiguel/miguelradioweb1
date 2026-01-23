@@ -151,7 +151,7 @@ export const categories: Category[] = [
   // 2025 - Agosto
   {
     id: "muslera-2025",
-    name: "Activacion Fiestas Virgen de Muslera 2025",
+    name: "Activación Fiestas Virgen de Muslera 2025",
     items: [
       {
         thumbnail: muslera2025_1,
@@ -188,7 +188,7 @@ export const categories: Category[] = [
   // 2025 - Agosto
   {
     id: "actividad-astillero-2025",
-    name: "Actividad estraescolares Astillero Agosto 2025",
+    name: "Actividad extraescolares Astillero Agosto 2025",
     items: [
       {
         thumbnail: actividadAstillero2025,
@@ -283,7 +283,7 @@ export const categories: Category[] = [
   // 2021
   {
     id: "ermita-2021",
-    name: "Año 2021 Activación en Ermita Santa Marina, Valdeprado del Rio",
+    name: "Año 2021 Activación en Ermita Santa Marina, Valdeprado del Río",
     items: [
       {
         thumbnail: ermita2021_1,
@@ -302,7 +302,7 @@ export const categories: Category[] = [
   // 2021
   {
     id: "renedo-2021",
-    name: "Dia de convivencia en monte en Renedo 2021",
+    name: "Día de convivencia en monte en Renedo 2021",
     items: [
       {
         thumbnail: renedo2021_1,
