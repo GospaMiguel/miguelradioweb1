@@ -303,7 +303,7 @@ const Index = () => {
       <Section id="sobre-radio" title="Sobre la Radio">
         <div className="space-y-4 md:space-y-6">
           <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">¿QUÉ ES LA RADIOAFICIÓN?</h3>
-          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base">
+          <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base text-justify">
             <p>
               Aunque la Radioafición es un hobby que hoy en día, con las nuevas tecnologías más modernas, mucha gente joven no lo ve atractivo, no lo entiende o no lo encuentra útil, como los que vivimos esos años en que no había internet ni teléfonos móviles, y la única comunicación con otra persona que estuviera fuera de su domicilio era el teléfono con cable, el cual era fijo y era lo único que existía para comunicarse con otras personas.
             </p>
@@ -320,10 +320,10 @@ const Index = () => {
       <Section id="examenes" title="REQUISITOS PARA LA OBTENCION DE LICENCIA DE RADIOAFICIONADO">
         <div className="space-y-4 md:space-y-6">
           <h3 className="font-display text-base md:text-2xl font-bold text-foreground text-center">PASOS PARA OBTENER TU DISTINTIVO DE LLAMADA</h3>
-          <p className="text-foreground leading-relaxed text-sm md:text-base">
+          <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
             Para obtener tu licencia solo tienes que superar un test que consta de dos partes: uno de Normativa y otro de Electrónica. Una vez superada esta prueba, el Ministerio de Telecomunicaciones te otorga un distintivo de llamada, lo que nosotros familiarmente llamamos "las letras". Y ya pasas a formar parte de nuestra gran familia radiofónica.
           </p>
-          <p className="text-foreground leading-relaxed text-sm md:text-base">
+          <p className="text-foreground leading-relaxed text-sm md:text-base text-justify">
             Para acceder a los test, aquí te dejamos dos enlaces a dos páginas web de radioaficionados: FEDIEA y Radio Club Quijotes.
           </p>
           <div className="flex flex-col items-center gap-4 md:gap-5 mt-6">
