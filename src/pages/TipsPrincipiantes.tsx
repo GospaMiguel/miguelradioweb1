@@ -30,6 +30,22 @@ const tips = [
   }
 ];
 
+const consejosDelDia = [
+  "La paciencia es clave en la radioafición. No te desanimes si al principio no consigues contactos. Practica tu técnica, mejora tu antena y verás cómo los resultados llegan.",
+  "Mantén un cuaderno de guardia o log digital. Registrar tus contactos te ayudará a mejorar y a solicitar diplomas y certificados.",
+  "Experimenta con diferentes tipos de antenas. Una buena antena puede marcar más diferencia que un equipo caro.",
+  "Participa en concursos de radioafición. Son una excelente forma de mejorar tus habilidades operativas y conocer nuevos colegas.",
+  "Aprende sobre propagación. Entender cómo viajan las ondas de radio te ayudará a elegir las mejores bandas y horarios para comunicarte.",
+  "Respeta siempre las normas de operación y la etiqueta en el aire. La cortesía es fundamental en nuestra comunidad.",
+  "No tengas miedo de pedir ayuda. La comunidad radioaficionada es muy acogedora con los principiantes."
+];
+
+const getConsejoDelDia = () => {
+  const today = new Date();
+  const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+  return consejosDelDia[dayOfYear % consejosDelDia.length];
+};
+
 const TipsPrincipiantes = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -60,8 +76,7 @@ const TipsPrincipiantes = () => {
               Consejo del día
             </h3>
             <p className="text-gray-300 text-sm md:text-base text-justify">
-              La paciencia es clave en la radioafición. No te desanimes si al principio no consigues contactos. 
-              Practica tu técnica, mejora tu antena y verás cómo los resultados llegan.
+              {getConsejoDelDia()}
             </p>
           </div>
         </Section>
