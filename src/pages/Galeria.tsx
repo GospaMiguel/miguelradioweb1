@@ -150,6 +150,30 @@ export const categories: Category[] = [
         alt: "Virgen de Valencia Renedo 2025 - Foto 3",
         type: "image",
       },
+      {
+        thumbnail: renedo2025_4,
+        full: renedo2025_4,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 4",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_5,
+        full: renedo2025_5,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 5",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_6,
+        full: renedo2025_6,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 6",
+        type: "image",
+      },
+      {
+        thumbnail: renedo2025_7,
+        full: renedo2025_7,
+        alt: "Virgen de Valencia Renedo 2025 - Foto 7",
+        type: "image",
+      },
     ],
   },
   // 2025 - Agosto
