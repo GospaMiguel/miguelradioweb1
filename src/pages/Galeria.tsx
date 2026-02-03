@@ -33,6 +33,10 @@ import renedo2021_4 from "@/assets/galeria/renedo-2021-4.jpg";
 import renedo2025_1 from "@/assets/galeria/renedo-2025-1.jpg";
 import renedo2025_2 from "@/assets/galeria/renedo-2025-2.jpg";
 import renedo2025_3 from "@/assets/galeria/renedo-2025-3.jpg";
+import renedo2025_4 from "@/assets/galeria/renedo-2025-4.jpg";
+import renedo2025_5 from "@/assets/galeria/renedo-2025-5.jpg";
+import renedo2025_6 from "@/assets/galeria/renedo-2025-6.jpg";
+import renedo2025_7 from "@/assets/galeria/renedo-2025-7.jpg";
 import mercadoAsturiano2024_1 from "@/assets/galeria/mercado-asturiano-2024-1.jpg";
 export interface GalleryItem {
   thumbnail: string;
