@@ -130,7 +130,7 @@ const Index = () => {
 
       <Section id="actividades" title="Actividades">
         <div className="space-y-4 md:space-y-6">
-          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ ACTIVIDADES HACEMOS EN LA ASOCIACIÓN</h3>
+          <h3 className="font-display text-lg md:text-2xl font-bold text-foreground text-center">QUÉ ACTIVIDADES REALIZAMOS EN LA ASOCIACIÓN</h3>
           <div className="space-y-3 md:space-y-4 text-foreground leading-relaxed text-sm md:text-base text-justify">
             <p>
               Como asociación cultural, colaboramos desinteresadamente con diferentes ayuntamientos de Cantabria. Participamos en eventos deportivos como la Media Maratón del Pas, que se celebra a mediados del mes de septiembre en Puente Arce, y nos situamos en diferentes puntos kilométricos con nuestras emisoras para ir comunicando al coordinador de la carrera los dorsales de los participantes que van llegando por los diferentes puntos kilométricos.
