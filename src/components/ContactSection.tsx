@@ -56,7 +56,7 @@ export const ContactSection = () => {
     <div className="space-y-6 md:space-y-8">
       <div className="grid md:grid-cols-2 gap-6 md:gap-8">
         <div className="space-y-4 md:space-y-6">
-          <h3 className="font-display text-xl md:text-2xl text-primary font-bold">Información de Contacto</h3>
+          <h3 className="font-display text-xl md:text-2xl text-red-500 font-bold">Información de Contacto</h3>
           
           <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
             <Mail className="w-5 h-5 md:w-6 md:h-6 text-secondary mt-1 flex-shrink-0" />
@@ -92,7 +92,7 @@ export const ContactSection = () => {
         </div>
 
         <div className="space-y-4 md:space-y-6">
-          <h3 className="font-display text-xl md:text-2xl text-primary font-bold">Envíanos un Mensaje</h3>
+          <h3 className="font-display text-xl md:text-2xl text-red-500 font-bold">Envíanos un Mensaje</h3>
           
           <form
             name="contact"
