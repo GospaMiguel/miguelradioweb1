@@ -6,6 +6,7 @@ import { Radio, Users, Calendar, Wrench, Image as ImageIcon, Antenna, Lightbulb,
 import { useNavigate } from "react-router-dom";
 import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.webp";
+import infografiaAsociacion from "@/assets/nuestra-asociacion-infografia.png.asset.json";
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 
 const tips = [
