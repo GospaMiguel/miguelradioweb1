@@ -160,14 +160,6 @@ const Index = () => {
               Otro evento al que solemos asistir anualmente es al Merca Astur Radio, cada 10 de mayo en Oviedo, en el cual se compra y vende todo tipo de emisoras y antenas nuevas y de segunda mano. Dan charlas sobre tecnologías nuevas de nuestro hobby. Comemos por Oviedo, pasamos el día por allí y volvemos a Santander.
             </p>
           </div>
-
-          <div className="flex justify-center mt-6 md:mt-8">
-            <img
-              src={infografiaAsociacion.url}
-              alt="Infografía: Beneficios de ser socio y camino hacia la licencia de radioaficionado"
-              className="rounded-lg shadow-lg w-full max-w-4xl h-auto"
-            />
-          </div>
         </div>
       </Section>
 
