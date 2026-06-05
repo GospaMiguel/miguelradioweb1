@@ -102,6 +102,14 @@ const Index = () => {
               </p>
             </div>
           </div>
+
+          <div className="flex justify-center mt-6 md:mt-8">
+            <img
+              src={infografiaAsociacion.url}
+              alt="Infografía: Beneficios de ser socio y camino hacia la licencia de radioaficionado"
+              className="rounded-lg shadow-lg w-full max-w-4xl h-auto"
+            />
+          </div>
         </div>
         </Section>
       </div>
