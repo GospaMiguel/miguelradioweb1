@@ -37,11 +37,11 @@ import renedo2025_4 from "@/assets/galeria/renedo-2025-4.jpg";
 import renedo2025_5 from "@/assets/galeria/renedo-2025-5.jpg";
 import renedo2025_6 from "@/assets/galeria/renedo-2025-6.jpg";
 import renedo2025_7 from "@/assets/galeria/renedo-2025-7.jpg";
-import renedo2025_8 from "@/assets/galeria/renedo-2025-8.jpg.asset.json";
-import renedo2025_9 from "@/assets/galeria/renedo-2025-9.jpg.asset.json";
-import renedo2025_10 from "@/assets/galeria/renedo-2025-10.jpg.asset.json";
-import renedo2025_11 from "@/assets/galeria/renedo-2025-11.jpg.asset.json";
-import renedo2025_12 from "@/assets/galeria/renedo-2025-12.jpg.asset.json";
+import renedo2025_8 from "@/assets/galeria/renedo-2025-8.jpg";
+import renedo2025_9 from "@/assets/galeria/renedo-2025-9.jpg";
+import renedo2025_10 from "@/assets/galeria/renedo-2025-10.jpg";
+import renedo2025_11 from "@/assets/galeria/renedo-2025-11.jpg";
+import renedo2025_12 from "@/assets/galeria/renedo-2025-12.jpg";
 import mercadoAsturiano2024_1 from "@/assets/galeria/mercado-asturiano-2024-1.jpg";
 export interface GalleryItem {
   thumbnail: string;
@@ -180,32 +180,32 @@ export const categories: Category[] = [
         type: "image",
       },
       {
-        thumbnail: renedo2025_8.url,
-        full: renedo2025_8.url,
+        thumbnail: renedo2025_8,
+        full: renedo2025_8,
         alt: "Virgen de Valencia Renedo 2025 - Foto 8",
         type: "image",
       },
       {
-        thumbnail: renedo2025_9.url,
-        full: renedo2025_9.url,
+        thumbnail: renedo2025_9,
+        full: renedo2025_9,
         alt: "Virgen de Valencia Renedo 2025 - Foto 9",
         type: "image",
       },
       {
-        thumbnail: renedo2025_10.url,
-        full: renedo2025_10.url,
+        thumbnail: renedo2025_10,
+        full: renedo2025_10,
         alt: "Virgen de Valencia Renedo 2025 - Foto 10",
         type: "image",
       },
       {
-        thumbnail: renedo2025_11.url,
-        full: renedo2025_11.url,
+        thumbnail: renedo2025_11,
+        full: renedo2025_11,
         alt: "Virgen de Valencia Renedo 2025 - Foto 11",
         type: "image",
       },
       {
-        thumbnail: renedo2025_12.url,
-        full: renedo2025_12.url,
+        thumbnail: renedo2025_12,
+        full: renedo2025_12,
         alt: "Virgen de Valencia Renedo 2025 - Foto 12",
         type: "image",
       },
