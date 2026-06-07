@@ -27,10 +27,17 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { id: "inicio", label: "Inicio", isPage: true, path: "/" },
-  { id: "sobre-nosotros", label: "Sobre Nosotros" },
-  { id: "que-ofrecemos", label: "Qué ofrecemos" },
-  { id: "actividades", label: "Actividades" },
-  { id: "reuniones", label: "Reuniones" },
+  {
+    id: "sobre-nosotros",
+    label: "Sobre Nosotros",
+    hasDropdown: true,
+    subItems: [
+      { id: "sobre-nosotros", label: "Sobre Nosotros", path: "/#sobre-nosotros" },
+      { id: "que-ofrecemos", label: "Qué ofrecemos", path: "/#que-ofrecemos" },
+      { id: "actividades", label: "Actividades", path: "/#actividades" },
+      { id: "reuniones", label: "Reuniones", path: "/#reuniones" },
+    ],
+  },
   { id: "galeria", label: "Galería" },
   { 
     id: "equipamientos", 
