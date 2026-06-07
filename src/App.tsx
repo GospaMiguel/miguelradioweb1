@@ -10,6 +10,7 @@ import Equipos from "./pages/Equipos";
 import Repetidores from "./pages/Repetidores";
 import TipsPrincipiantes from "./pages/TipsPrincipiantes";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
