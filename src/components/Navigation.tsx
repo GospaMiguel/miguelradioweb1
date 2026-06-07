@@ -58,6 +58,7 @@ const navItems: NavItem[] = [
     ]
   },
   { id: "tips", label: "Tips Principiantes", noTranslate: true },
+  { id: "blog", label: "Blog", isPage: true, path: "/blog" },
   { id: "contacto", label: "Contáctanos" },
 ];
 
@@ -96,6 +97,10 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/tips-principiantes") {
       setActiveItem("tips");
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
+    } else if (location.pathname.startsWith("/blog")) {
+      setActiveItem("blog");
       setCameFromOtherPage(false);
       prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/" && prevPathnameRef.current !== "/") {
