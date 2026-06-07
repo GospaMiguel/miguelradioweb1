@@ -99,6 +99,10 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
       setActiveItem("tips");
       setCameFromOtherPage(false);
       prevPathnameRef.current = location.pathname;
+    } else if (location.pathname.startsWith("/blog")) {
+      setActiveItem("blog");
+      setCameFromOtherPage(false);
+      prevPathnameRef.current = location.pathname;
     } else if (location.pathname === "/" && prevPathnameRef.current !== "/") {
       setCameFromOtherPage(true);
       setActiveItem("inicio");
