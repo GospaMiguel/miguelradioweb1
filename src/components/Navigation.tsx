@@ -58,6 +58,7 @@ const navItems: NavItem[] = [
     ]
   },
   { id: "tips", label: "Tips Principiantes", noTranslate: true },
+  { id: "blog", label: "Blog", isPage: true, path: "/blog" },
   { id: "contacto", label: "Contáctanos" },
 ];
 
