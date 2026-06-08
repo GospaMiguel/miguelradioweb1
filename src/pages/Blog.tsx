@@ -34,14 +34,6 @@ const Blog = () => {
                   to={`/blog/${article.slug}`}
                   className="group flex flex-col bg-card rounded-xl overflow-hidden border border-border shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 hover:border-primary/50"
                 >
-                  <div className="aspect-[16/10] overflow-hidden bg-muted">
-                    <img
-                      src={article.coverImage}
-                      alt={article.coverAlt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
 
                   <div className="flex flex-col flex-1 p-5 md:p-6">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
