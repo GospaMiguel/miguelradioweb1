@@ -44,8 +44,6 @@ Sin embargo, no puede:
 
 La transmisión sin autorización constituye una infracción de la normativa española sobre telecomunicaciones.
 
-![Transceptor HF de radioafición con dial frontal y micrófono listo para escucha de bandas](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80)
-
 ## Multa radioaficionado sin licencia: ¿qué consecuencias existen?
 
 Una de las dudas más frecuentes es si existe una **multa radioaficionado sin licencia**.
@@ -95,8 +93,6 @@ La espera para obtener la autorización puede aprovecharse para adquirir experie
 
 Esta formación previa facilita enormemente los primeros contactos una vez obtenida la licencia.
 
-![Antena dipolo instalada al aire libre para prácticas de radioafición y experimentación](https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=1400&q=80)
-
 ## Ventajas de obtener la licencia oficial
 
 Contar con autorización permite:
@@ -132,17 +128,6 @@ Sí. La compra y posesión de equipos de radio no implica necesariamente dispone
 Ser un **radioaficionado sin licencia** permite aprender, escuchar y prepararse para entrar en el apasionante mundo de las comunicaciones por radio, pero no autoriza a transmitir. Obtener la licencia es el paso necesario para operar legalmente, realizar contactos DX y disfrutar plenamente de la radioafición.
 
 Si quieres iniciarte correctamente, resolver dudas sobre equipos, antenas o preparación del examen, te invitamos a contactar con una asociación local, hacerte socio o acercarte a la Radioafición de Cantabria. Allí podrás recibir asesoramiento personalizado, conocer a otros colegas y disfrutar de este hobby en compañía.`,
-  },
-  {
-    slug: "bienvenida-al-blog",
-    title: "Bienvenidos al Blog de la Asociación Cántabra de Radioaficionados",
-    date: "2026-06-06",
-    excerpt:
-      "Inauguramos un nuevo espacio para compartir noticias, experiencias y conocimiento sobre el mundo de la radioafición en Cantabria.",
-    coverImage:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    coverAlt:
-      "Equipamiento de radioaficionado en Cantabria para el blog de la Asociación Cántabra de Radioaficionados",
   },
 ];
 
