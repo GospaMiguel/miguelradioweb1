@@ -41,7 +41,7 @@ const Blog = () => {
                       <time dateTime={article.date}>{formatDate(article.date)}</time>
                     </div>
 
-                    <h2 className="font-display text-lg md:text-xl text-foreground leading-snug mb-3 group-hover:text-primary transition-colors">
+                    <h2 className="font-display text-lg md:text-xl text-primary leading-snug mb-3 transition-colors">
                       {article.title}
                     </h2>
 
