@@ -57,13 +57,6 @@ const BlogPost = () => {
             Volver al blog
           </Link>
 
-          <div className="rounded-xl overflow-hidden mb-8 shadow-lg">
-            <img
-              src={article.coverImage}
-              alt={article.coverAlt}
-              className="w-full h-auto object-cover"
-            />
-          </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
             <Calendar className="w-4 h-4" />
