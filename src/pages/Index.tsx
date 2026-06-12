@@ -7,7 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.webp";
 const infografiaAsociacion = { url: "/nuestra-asociacion-infografia.png" };
-import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
+import cafeteriaDonLucasAsset from "@/assets/cafeteria-don-lucas.jpg.asset.json";
+const cafeteriaDonLucas = cafeteriaDonLucasAsset.url;
 
 const tips = [
   {
