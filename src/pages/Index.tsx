@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.webp";
 const infografiaAsociacion = { url: "/nuestra-asociacion-infografia.png" };
-import cafeteriaDonLucasAsset from "@/assets/cafeteria-don-lucas.png.asset.json";
-const cafeteriaDonLucas = cafeteriaDonLucasAsset.url;
+import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
 
 const tips = [
   {
@@ -193,7 +192,7 @@ const Index = () => {
           <div className="flex justify-center">
             <img 
               src={cafeteriaDonLucas} 
-              alt="Cafetería Don Lucas en Revilla de Camargo, lugar de reunión de la Asociación Cántabra de Radioaficionados" 
+              alt="Cafetería Don Lucas - Lugar de reunión" 
               className="rounded-lg shadow-lg max-w-xs md:max-w-md w-full object-cover"
             />
           </div>
