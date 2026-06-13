@@ -193,7 +193,7 @@ const Index = () => {
             <img 
               src={cafeteriaDonLucas} 
               alt="Cafetería Don Lucas - Lugar de reunión" 
-              className="rounded-lg shadow-lg max-w-xs md:max-w-md w-full object-cover"
+              className="rounded-lg shadow-lg max-w-xs md:max-w-md w-full h-auto object-contain"
             />
           </div>
         </div>
