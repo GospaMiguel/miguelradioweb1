@@ -12,6 +12,274 @@ export interface BlogArticle {
 // Los nuevos artículos se añaden aquí. Se ordenan automáticamente por fecha (más recientes primero).
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "vhf-o-uhf-que-banda-elegir-radioaficion-guia-baofeng-uv-5r",
+    title: "VHF o UHF: ¿Qué banda elegir para radioafición? Guía completa con la Baofeng UV-5R",
+    date: "2026-07-06",
+    excerpt:
+      "Elegir entre VHF o UHF es una de las primeras dudas que tiene cualquier persona que empieza en la radioafición. Descubre cuándo utilizar cada banda, cómo influye el terreno y por qué la Baofeng UV-5R es tan popular.",
+    metaDescription:
+      "VHF o UHF: descubre las diferencias, ventajas, alcance y cuál elegir para radioafición. Guía completa con la Baofeng UV-5R y consejos prácticos.",
+    coverImage:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&q=80",
+    coverAlt:
+      "Guía VHF o UHF para radioafición en Cantabria con transceptor Baofeng UV-5R",
+    content: `Elegir entre **VHF o UHF** es una de las primeras dudas que tiene cualquier persona que empieza en la radioafición. Aunque ambas bandas tienen características diferentes, conocer sus ventajas e inconvenientes te permitirá sacar el máximo partido a tu estación y a tu equipo.
+
+En esta guía descubrirás cuándo utilizar cada banda, cómo influye el terreno en las comunicaciones, qué papel desempeñan los repetidores y por qué la **Baofeng UV-5R** sigue siendo uno de los transceptores portátiles más populares entre radioaficionados de todo el mundo.
+
+## ¿Qué significa VHF y UHF?
+
+Las siglas hacen referencia a dos rangos diferentes del espectro radioeléctrico.
+
+| Banda | Significado | Frecuencia aproximada |
+|--------|-------------|----------------------|
+| VHF | Very High Frequency | 30-300 MHz |
+| UHF | Ultra High Frequency | 300-3000 MHz |
+
+En radioafición, las bandas más utilizadas son:
+
+- **VHF:** 144-146 MHz (banda de 2 metros)
+- **UHF:** 430-440 MHz (banda de 70 centímetros)
+
+Ambas permiten realizar comunicaciones locales, utilizar repetidores y participar en actividades de emergencia, concursos y ruedas de radio.
+
+# ¿Qué diferencias existen entre VHF o UHF?
+
+Aunque puedan parecer similares, presentan diferencias importantes.
+
+| Característica | VHF | UHF |
+|----------------|-----|-----|
+| Alcance en campo abierto | Excelente | Bueno |
+| Penetración en edificios | Media | Muy alta |
+| Uso en montaña | Muy recomendable | Bueno |
+| Uso en ciudad | Bueno | Excelente |
+| Sensibilidad a obstáculos | Baja | Mayor |
+| Longitud de antena | Mayor | Menor |
+
+En términos generales:
+
+- **VHF** ofrece un mayor alcance cuando existe visión directa.
+- **UHF** funciona mejor en ciudades y dentro de edificios.
+
+## Ventajas de utilizar VHF
+
+La banda de VHF es muy apreciada por los radioaficionados debido a su excelente comportamiento en exteriores.
+
+Sus principales ventajas son:
+
+- Mayor alcance en espacios abiertos.
+- Mejor comportamiento en zonas rurales.
+- Excelente para comunicaciones entre montañas.
+- Muy utilizada por asociaciones de protección civil y radioaficionados.
+- Ideal para actividades SOTA y POTA.
+
+Cuando existe una buena ubicación y una antena correctamente instalada, es posible cubrir decenas de kilómetros incluso en simplex.
+
+## Ventajas de utilizar UHF
+
+La banda UHF destaca cuando existen obstáculos entre las estaciones.
+
+Es especialmente útil para:
+
+- Comunicaciones urbanas.
+- Interior de edificios.
+- Garajes.
+- Polígonos industriales.
+- Eventos deportivos.
+- Comunicaciones de corta distancia.
+
+Gracias a su menor longitud de onda, la señal atraviesa mejor ventanas, paredes y estructuras metálicas.
+
+# ¿Qué banda ofrece mayor alcance?
+
+Esta es probablemente la pregunta más frecuente.
+
+La respuesta depende del entorno.
+
+### En campo abierto
+
+La **VHF** suele proporcionar mayor cobertura.
+
+Es habitual establecer contactos simplex superiores a 40 kilómetros utilizando una buena antena instalada en altura.
+
+### En ciudad
+
+La **UHF** suele comportarse mejor.
+
+La señal rebota entre edificios y consigue llegar a lugares donde la VHF pierde intensidad.
+
+## La importancia de la altura de la antena
+
+Uno de los factores más importantes no es la potencia del equipo, sino la altura de instalación.
+
+Una antena instalada en el tejado puede multiplicar varias veces el alcance respecto a otra situada dentro de una vivienda.
+
+Por ello muchos radioaficionados instalan antenas verticales sobre mástiles elevados para aprovechar al máximo la cobertura.
+
+# Repetidores: el gran aliado de VHF y UHF
+
+Los repetidores permiten ampliar enormemente la cobertura de un transceptor portátil.
+
+Funcionan recibiendo la señal desde una estación y retransmitiéndola desde una ubicación elevada.
+
+Gracias a ellos es posible comunicar estaciones separadas por más de 100 kilómetros utilizando únicamente un walkie portátil.
+
+Los repetidores son especialmente populares en:
+
+- VHF
+- UHF
+- Redes de emergencia
+- Activaciones de montaña
+- Comunicaciones regionales
+
+## ¿Qué es el modo simplex?
+
+El modo simplex consiste en transmitir directamente entre dos estaciones sin utilizar un repetidor.
+
+Es la forma más sencilla de comunicación.
+
+Su alcance depende de:
+
+- Altura de ambas estaciones.
+- Potencia utilizada.
+- Calidad de las antenas.
+- Obstáculos existentes.
+- Condiciones atmosféricas.
+
+# La Baofeng UV-5R: una excelente opción para comenzar
+
+La **Baofeng UV-5R** es uno de los transceptores portátiles más vendidos del mundo.
+
+Sus principales características son:
+
+- Doble banda VHF/UHF.
+- Programación mediante teclado o software.
+- Compatible con antenas externas.
+- Muy económica.
+- Gran comunidad de usuarios.
+
+Gracias a su versatilidad resulta perfecta para aprender el funcionamiento de ambas bandas.
+
+## ¿Puede hacerse DX en VHF o UHF?
+
+Sí.
+
+Aunque el DX suele asociarse a las bandas de HF, también es posible realizar contactos a larga distancia en VHF y UHF.
+
+Esto puede suceder mediante fenómenos como:
+
+- Propagación troposférica.
+- Conductos troposféricos.
+- Reflexión lunar (EME).
+- Meteor Scatter.
+- Auroras.
+
+Estos modos permiten realizar contactos de cientos e incluso miles de kilómetros en circunstancias excepcionales.
+
+# Antenas recomendadas
+
+La antena influye mucho más que aumentar algunos vatios de potencia.
+
+Las opciones más habituales son:
+
+## Antena vertical
+
+Ideal para:
+
+- Repetidores.
+- Comunicaciones locales.
+- Uso diario.
+
+## Antena Yagi
+
+Perfecta para:
+
+- DX.
+- Concursos.
+- Enlaces de larga distancia.
+
+Su elevada ganancia permite mejorar notablemente las señales recibidas.
+
+## Antena dipolo
+
+Una solución sencilla, económica y muy eficiente para numerosas aplicaciones.
+
+Es una excelente opción para quienes desean experimentar con distintas configuraciones.
+
+# QRM y otros factores que afectan a la comunicación
+
+No todo depende del equipo.
+
+Existen numerosos factores que influyen en la calidad de una transmisión.
+
+Entre ellos destacan:
+
+- **QRM:** interferencias producidas por otras estaciones.
+- **QRN:** ruido atmosférico.
+- Obstáculos naturales.
+- Edificios.
+- Vegetación.
+- Condiciones meteorológicas.
+- Calidad del cable coaxial.
+- Relación de ondas estacionarias (ROE).
+
+Reducir estos factores mejora considerablemente el rendimiento de cualquier instalación.
+
+# ¿Qué banda elegir?
+
+La respuesta depende del uso previsto.
+
+| Si necesitas... | La mejor opción |
+|-----------------|-----------------|
+| Montaña | VHF |
+| Campo abierto | VHF |
+| Ciudad | UHF |
+| Interior de edificios | UHF |
+| Uso general | Equipo bibanda |
+| Repetidores | Ambas |
+
+Si solo vas a adquirir un equipo, lo más recomendable es optar por un transceptor bibanda.
+
+Así podrás aprovechar las ventajas de ambas bandas.
+
+# Consejos para obtener mejores resultados
+
+- Instala la antena lo más alta posible.
+- Utiliza cable coaxial de baja pérdida.
+- Mantén una ROE adecuada.
+- Programa correctamente los repetidores.
+- Evita transmitir cerca de fuentes de ruido eléctrico.
+- Aprende los procedimientos operativos habituales de la radioafición.
+
+# Preguntas frecuentes (FAQ)
+
+## ¿Qué es mejor, VHF o UHF?
+
+Depende del entorno. VHF suele ofrecer mayor alcance en espacios abiertos y zonas rurales, mientras que UHF proporciona un mejor rendimiento en ciudades e interiores gracias a su mayor capacidad para atravesar obstáculos.
+
+## ¿La Baofeng UV-5R funciona tanto en VHF como en UHF?
+
+Sí. La Baofeng UV-5R es un transceptor bibanda que permite trabajar en las bandas de 2 metros (VHF) y 70 centímetros (UHF), siendo una excelente opción para iniciarse en la radioafición.
+
+## ¿Qué banda utilizan la mayoría de repetidores?
+
+Existen repetidores tanto en VHF como en UHF. En muchas zonas predominan los de UHF debido a su excelente comportamiento en entornos urbanos, aunque VHF sigue siendo muy utilizada para cubrir grandes áreas.
+
+## ¿Se puede hacer DX en VHF?
+
+Sí. Aunque no es lo habitual, determinados fenómenos de propagación permiten realizar contactos a cientos o incluso miles de kilómetros utilizando estaciones de VHF correctamente equipadas.
+
+## ¿Es necesaria una licencia para utilizar una Baofeng UV-5R?
+
+Para transmitir en las bandas de radioafición sí es necesario disponer de la correspondiente autorización y licencia de radioaficionado conforme a la normativa vigente de cada país.
+
+# Conclusión
+
+Elegir entre **VHF o UHF** dependerá del entorno donde vayas a operar y del tipo de comunicaciones que quieras realizar. Si buscas la máxima versatilidad, un transceptor bibanda como la **Baofeng UV-5R** te permitirá experimentar con ambas bandas y descubrir cuál se adapta mejor a tus necesidades.
+
+Si quieres aprender más sobre radioafición, conocer a otros colegas, recibir asesoramiento para montar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con la asociación de radioaficionados de Cantabria. Podrás resolver tus dudas, participar en actividades, compartir experiencias y disfrutar de la radio en compañía de otros aficionados.`,
+  },
+  {
     slug: "antenas-de-radio-guia-completa-hf-multibanda",
     title: "Antenas de Radio: Guía Completa para Elegir la Mejor Antena HF Multibanda para tu Estación",
     date: "2026-06-09",
