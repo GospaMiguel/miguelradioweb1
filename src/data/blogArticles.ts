@@ -12,6 +12,274 @@ export interface BlogArticle {
 // Los nuevos artículos se añaden aquí. Se ordenan automáticamente por fecha (más recientes primero).
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "propagacion-radioaficion-guia-completa-ondas-radio",
+    title: "Propagación en Radioafición: Guía Completa para Entender Cómo Viajan las Ondas de Radio",
+    date: "2026-07-19",
+    excerpt:
+      "La propagación es uno de los factores más importantes en la radioafición. Descubre cómo se comportan las ondas de radio, qué fenómenos afectan la ionosfera y cómo mejorar tus contactos DX.",
+    metaDescription:
+      "Aprende todo sobre la propagación en radioafición: tipos, actividad solar, ionosfera, bandas HF y VHF, consejos prácticos para mejorar tus contactos DX.",
+    coverImage:
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80",
+    coverAlt:
+      "Antena de radioaficionado en Cantabria estudiando la propagación de ondas de radio",
+    content: `# Propagación en Radioafición: Guía Completa para Entender Cómo Viajan las Ondas de Radio
+
+La **propagación** es uno de los factores más importantes en la radioafición. Comprender cómo se comportan las ondas de radio te permitirá realizar mejores contactos DX, elegir la banda adecuada y sacar el máximo rendimiento a tus antenas y transceptores.
+
+En esta guía descubrirás qué es la **propagación**, qué fenómenos la afectan, cómo interpretar las condiciones de la ionosfera y qué herramientas utilizan los radioaficionados para mejorar sus comunicaciones en HF, VHF y UHF.
+
+---
+
+# ¿Qué es la propagación en radioafición?
+
+La **propagación** es el proceso mediante el cual las ondas electromagnéticas viajan desde una estación transmisora hasta una receptora. Dependiendo de la frecuencia utilizada y de las condiciones atmosféricas, la señal podrá recorrer desde unos pocos kilómetros hasta miles de kilómetros alrededor del planeta.
+
+La calidad de la propagación determina aspectos tan importantes como:
+
+- Alcance de una comunicación.
+- Intensidad de la señal recibida.
+- Posibilidad de realizar contactos **DX**.
+- Nivel de ruido (**QRM** y **QRN**).
+- Banda más adecuada para operar.
+
+En radioafición, conocer la propagación puede marcar la diferencia entre escuchar únicamente estaciones locales o conseguir un nuevo país para el diploma DXCC.
+
+## ¿Cómo se propagan las ondas de radio?
+
+Las ondas de radio pueden desplazarse mediante diferentes mecanismos físicos. Cada uno tiene características específicas y resulta más eficaz en determinadas bandas de frecuencia.
+
+### Propagación por onda de superficie
+
+La **onda de superficie** sigue la curvatura terrestre y resulta especialmente eficaz en frecuencias bajas (LF y MF).
+
+Sus principales características son:
+
+- Buena cobertura regional.
+- Poco afectada por la meteorología.
+- Muy utilizada en comunicaciones marítimas y navegación.
+
+### Propagación por onda espacial
+
+En **VHF** y **UHF**, las señales suelen propagarse prácticamente en línea recta.
+
+Factores que influyen:
+
+- Altura de las antenas.
+- Obstáculos del terreno.
+- Curvatura terrestre.
+- Ganancia de las antenas.
+
+Por este motivo son habituales las antenas **Yagi**, verticales y sistemas repetidores.
+
+### Propagación ionosférica
+
+Es la más conocida entre los aficionados al **DX**.
+
+La **ionosfera** refleja parcialmente determinadas frecuencias de HF permitiendo comunicaciones intercontinentales sin necesidad de satélites.
+
+Las capas implicadas son:
+
+| Capa | Altitud aproximada | Función |
+|------|-------------------:|---------|
+| D | 60–90 km | Absorbe señales durante el día |
+| E | 90–130 km | Reflexión ocasional y Esporádica E |
+| F1 | 150–220 km | Presente principalmente de día |
+| F2 | 220–500 km | Responsable de los grandes contactos DX |
+
+## Factores que afectan a la propagación
+
+La propagación nunca permanece constante. Existen numerosos factores que modifican el comportamiento de las ondas.
+
+### Actividad solar
+
+El Sol es el principal responsable de las condiciones de propagación en HF.
+
+Los radioaficionados suelen consultar:
+
+- **Número de manchas solares (Sunspot Number)**
+- **Flujo solar (Solar Flux Index - SFI)**
+- **Índice K**
+- **Índice A**
+
+En general:
+
+- Un **SFI elevado** favorece las bandas altas.
+- Un **Índice K bajo** indica mejores condiciones.
+
+### Hora del día
+
+Cada banda ofrece un mejor rendimiento según el momento.
+
+| Banda | Mejor horario |
+|--------|---------------|
+| 160 m | Noche |
+| 80 m | Noche |
+| 40 m | Día y noche |
+| 20 m | Todo el día |
+| 15 m | Día |
+| 10 m | Día con alta actividad solar |
+
+### Estación del año
+
+Las condiciones cambian considerablemente entre verano e invierno.
+
+Por ejemplo:
+
+- En invierno mejoran las bandas bajas.
+- En verano aparece con frecuencia la **Esporádica E**, especialmente en 6 metros.
+
+### Ciclo solar
+
+El ciclo solar tiene una duración aproximada de **11 años**.
+
+Durante el máximo solar:
+
+- Mejor apertura de 10, 12 y 15 metros.
+- Mayor probabilidad de grandes contactos DX.
+- Incremento de la actividad ionosférica.
+
+Durante el mínimo solar:
+
+- Predominan 20, 40 y 80 metros.
+- Menor apertura en bandas altas.
+
+## Tipos de propagación más utilizados por los radioaficionados
+
+### Propagación F2
+
+La más importante para comunicaciones internacionales.
+
+Permite:
+
+- Contactos entre continentes.
+- Saltos superiores a 3.000 km.
+- Operación en concursos internacionales.
+
+### Esporádica E (Es)
+
+Fenómeno muy apreciado por los operadores de:
+
+- 6 metros
+- 10 metros
+- VHF
+
+Puede producir señales extremadamente fuertes entre estaciones separadas por más de 2.000 km.
+
+### Propagación troposférica
+
+Muy utilizada en VHF y UHF.
+
+Se produce por variaciones de temperatura y humedad en la atmósfera.
+
+Resulta ideal para:
+
+- Comunicaciones costeras.
+- Enlaces de montaña.
+- Concursos VHF.
+
+### Meteor Scatter
+
+Las partículas dejadas por los meteoros permiten reflejar señales durante unos pocos segundos.
+
+Es muy utilizada en:
+
+- 50 MHz
+- 144 MHz
+
+Especialmente mediante modos digitales como **MSK144**.
+
+### Aurora
+
+Las tormentas geomagnéticas producen reflexiones sobre las auroras polares.
+
+Las señales presentan un sonido muy característico y distorsionado.
+
+## Cómo consultar la propagación antes de transmitir
+
+Antes de llamar **CQ**, muchos operadores revisan diferentes indicadores.
+
+Los más utilizados son:
+
+- Mapas MUF.
+- Índice K.
+- Índice A.
+- Solar Flux.
+- Mapas de propagación en tiempo real.
+- Redes de balizas internacionales.
+- Reverse Beacon Network.
+- DX Clusters.
+
+Estos datos ayudan a seleccionar la mejor banda y aumentar las posibilidades de éxito.
+
+## ¿Qué bandas funcionan mejor según la propagación?
+
+| Banda | Uso principal | Distancia habitual |
+|--------|---------------|-------------------:|
+| 160 m | Comunicaciones nocturnas | Local y regional |
+| 80 m | Regional | Hasta 1.000 km |
+| 40 m | Nacional e internacional | Muy versátil |
+| 20 m | DX | Mundial |
+| 15 m | DX con buena actividad solar | Mundial |
+| 10 m | DX durante máximos solares | Mundial |
+| 6 m | Esporádica E | Muy variable |
+| 2 m | Local y troposférica | Hasta cientos de km |
+
+## Consejos para aprovechar mejor la propagación
+
+Para mejorar los resultados en radioafición conviene seguir algunas recomendaciones:
+
+- Instalar una **antena dipolo** correctamente ajustada.
+- Reducir el **QRM** siempre que sea posible.
+- Utilizar un **transceptor** correctamente calibrado.
+- Consultar diariamente los índices solares.
+- Escuchar antes de transmitir.
+- Elegir la banda adecuada según la hora.
+- Aprovechar las aperturas de propagación para trabajar estaciones **DX**.
+- Registrar las condiciones de cada contacto en el libro de guardia.
+
+## La propagación y su importancia en el DX
+
+La mayoría de los grandes operadores DX dedican tanto tiempo al estudio de la propagación como al ajuste de sus equipos.
+
+Comprender cómo evolucionan las condiciones permite:
+
+- Elegir el momento óptimo para llamar CQ.
+- Trabajar entidades difíciles.
+- Aprovechar expediciones DX.
+- Mejorar el rendimiento de cualquier estación sin aumentar la potencia.
+
+En muchas ocasiones, una buena propagación ofrece mejores resultados que añadir más vatios al transmisor.
+
+## Preguntas Frecuentes (FAQ)
+
+### ¿Qué es la propagación en radioafición?
+
+La **propagación** es el comportamiento de las ondas de radio durante su desplazamiento entre dos estaciones. Dependiendo de la frecuencia utilizada y de las condiciones atmosféricas e ionosféricas, una señal puede recorrer desde unos pocos kilómetros hasta miles de kilómetros.
+
+### ¿Cuál es la mejor banda para realizar contactos DX?
+
+La banda de **20 metros** suele ofrecer el mejor equilibrio entre estabilidad y alcance durante gran parte del ciclo solar. En épocas de alta actividad solar, las bandas de 15 y 10 metros pueden proporcionar excelentes resultados para comunicaciones de larga distancia.
+
+### ¿Cómo influye la actividad solar en la propagación?
+
+La actividad solar modifica la ionización de las capas altas de la atmósfera. Un flujo solar elevado suele mejorar la propagación en bandas altas de HF, mientras que tormentas geomagnéticas intensas pueden degradar significativamente las comunicaciones durante varias horas o incluso días.
+
+### ¿Qué significa que la propagación está abierta?
+
+Cuando se dice que una banda está "abierta" significa que existen condiciones favorables para que las ondas de radio viajen eficazmente entre dos puntos. Esto facilita la realización de contactos a largas distancias con señales más fuertes y estables.
+
+### ¿Dónde puedo consultar el estado de la propagación?
+
+Existen mapas de propagación, redes de balizas, índices solares y herramientas en tiempo real que permiten conocer el estado de la ionosfera antes de operar. Consultarlas habitualmente ayuda a seleccionar la mejor banda y aumentar las posibilidades de éxito.
+
+## Conclusión
+
+La **propagación** es uno de los pilares fundamentales de la radioafición. Comprender cómo influyen la ionosfera, la actividad solar, la hora del día y las diferentes bandas te permitirá optimizar tus comunicaciones, disfrutar más de cada sesión de radio y conseguir nuevos contactos DX con mayor facilidad.
+
+Si quieres aprender más sobre propagación, mejorar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con nuestra asociación, hacerte socio o acercarte a la radioafición de Cantabria. Encontrarás asesoramiento, actividades, compañeros con experiencia y la oportunidad de disfrutar de la radio en un ambiente cercano y colaborativo.`,
+  },
+  {
     slug: "vhf-o-uhf-que-banda-elegir-radioaficion-guia-baofeng-uv-5r",
     title: "VHF o UHF: ¿Qué banda elegir para radioafición? Guía completa con la Baofeng UV-5R",
     date: "2026-07-06",
