@@ -12,6 +12,210 @@ export interface BlogArticle {
 // Los nuevos artículos se añaden aquí. Se ordenan automáticamente por fecha (más recientes primero).
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "propagacion-radioaficion-aprovechar-hf-vhf-contactos-dx",
+    title: "Propagación en Radioafición: Cómo Aprovechar la Propagación HF y VHF para Realizar Mejores Contactos DX",
+    date: "2026-07-20",
+    excerpt:
+      "Aprende a interpretar la propagación en HF y VHF, descubre qué fenómenos afectan la ionosfera y mejora tus contactos DX con estrategias prácticas para radioaficionados.",
+    metaDescription:
+      "Descubre cómo aprovechar la propagación HF y VHF en radioafición: ionosfera, actividad solar, bandas más efectivas y herramientas para mejorar tus contactos DX.",
+    coverImage:
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80",
+    coverAlt:
+      "Antena de radioaficionado en Cantabria aprovechando la propagación HF y VHF para contactos DX",
+    content: `# Propagación en Radioafición: Cómo Aprovechar la Propagación HF y VHF para Realizar Mejores Contactos DX
+
+La **propagación** es uno de los factores más importantes en la radioafición. Comprender cómo se comportan las ondas de radio te permitirá realizar contactos a mayor distancia, elegir la banda adecuada y sacar el máximo rendimiento a tu estación. Si alguna vez te has preguntado por qué un día puedes trabajar estaciones de miles de kilómetros y al siguiente apenas alcanzas la provincia vecina, en esta guía descubrirás cómo funciona la **propagación**, cuáles son las diferencias entre **HF y VHF** y qué herramientas utilizan los radioaficionados para predecir las mejores condiciones.
+
+---
+
+## ¿Qué es la propagación en radioafición?
+
+La **propagación** es el fenómeno mediante el cual una onda de radio viaja desde la antena transmisora hasta la receptora. Dependiendo de la frecuencia utilizada, las condiciones atmosféricas y la actividad solar, las señales pueden recorrer desde unos pocos kilómetros hasta dar varias vueltas al planeta.
+
+Para cualquier operador de radioafición, entender la propagación supone una ventaja importante para:
+
+- Realizar contactos **DX**.
+- Elegir la banda adecuada en cada momento.
+- Reducir pérdidas de tiempo llamando **CQ** en bandas cerradas.
+- Mejorar el rendimiento de la estación sin necesidad de aumentar la potencia.
+
+---
+
+## Cómo funciona la propagación en HF
+
+Las bandas **HF (High Frequency)**, comprendidas aproximadamente entre **3 y 30 MHz**, son las preferidas para comunicaciones de larga distancia. La clave está en la **ionosfera**, una capa de la atmósfera que puede reflejar parcialmente las ondas de radio y permitir que estas alcancen miles de kilómetros.
+
+### La ionosfera y su influencia
+
+La ionosfera está formada por distintas capas:
+
+- **Capa D**
+- **Capa E**
+- **Capas F1 y F2**
+
+Cada una afecta de forma distinta según:
+
+- Hora del día.
+- Estación del año.
+- Actividad solar.
+- Ciclo solar.
+- Índice K y A.
+- Número de manchas solares.
+
+Cuando las condiciones son favorables, una señal emitida desde un sencillo **transceptor** con una **antena dipolo** puede cruzar continentes.
+
+### Bandas HF más utilizadas
+
+| Banda | Frecuencia | Uso habitual |
+|--------|------------|--------------|
+| 160 m | 1.8 MHz | DX nocturno |
+| 80 m | 3.5 MHz | Comunicaciones regionales |
+| 40 m | 7 MHz | Nacional e internacional |
+| 20 m | 14 MHz | La banda DX por excelencia |
+| 17 m | 18 MHz | Excelente durante alta actividad solar |
+| 15 m | 21 MHz | Muy dependiente del ciclo solar |
+| 10 m | 28 MHz | Grandes aperturas cuando el Sol acompaña |
+
+---
+
+## Cómo funciona la propagación en VHF
+
+Las bandas **VHF (Very High Frequency)**, especialmente los **144 MHz**, se comportan de forma completamente diferente. En condiciones normales, la comunicación se realiza por **visión directa**, limitada por la curvatura terrestre. Sin embargo, existen fenómenos que permiten alcanzar distancias sorprendentes.
+
+### Tipos de propagación en VHF
+
+#### Propagación troposférica
+
+La más habitual. Se produce debido a cambios de temperatura y humedad en la troposfera. Permite alcanzar estaciones situadas entre 300 y más de 1.000 kilómetros.
+
+#### Ductos troposféricos
+
+En determinadas condiciones meteorológicas aparecen auténticos "túneles" atmosféricos que guían la señal durante cientos o incluso miles de kilómetros. Son especialmente frecuentes cerca del mar.
+
+#### Esporádica E (Sporadic-E)
+
+Uno de los fenómenos favoritos de muchos operadores. La capa E de la ionosfera refleja frecuencias de VHF permitiendo contactos de entre:
+
+- 800 km
+- 2.500 km
+
+Especialmente habitual durante:
+
+- Mayo
+- Junio
+- Julio
+- Diciembre
+
+#### Reflexión lunar (EME)
+
+La modalidad **Earth-Moon-Earth (EME)** utiliza la Luna como reflector natural. Requiere:
+
+- Antenas de alta ganancia.
+- Previos de bajo ruido.
+- Excelente sincronización.
+
+Es una de las modalidades técnicas más avanzadas de la radioafición.
+
+#### Meteor Scatter
+
+Los meteoros dejan estelas ionizadas que reflejan las señales durante fracciones de segundo. Gracias a modos digitales como **MSK144**, es posible realizar contactos a más de 2.000 kilómetros.
+
+---
+
+## Factores que afectan a la propagación
+
+La propagación nunca permanece constante. Los factores más importantes son:
+
+- **Actividad solar.**
+- **Número de manchas solares.**
+- **Índice K.**
+- **Índice A.**
+- **Flujo Solar (SFI).**
+- **Hora local.**
+- **Época del año.**
+- **Altura de la antena.**
+- **Ganancia de la antena.**
+- **Ruido eléctrico (QRM).**
+
+Todos ellos influyen directamente en las posibilidades de realizar un buen contacto.
+
+---
+
+## Herramientas para predecir la propagación
+
+Los radioaficionados utilizan diferentes recursos antes de comenzar una sesión de DX. Entre los más conocidos destacan:
+
+- Mapas de propagación.
+- Balizas internacionales.
+- Reverse Beacon Network (RBN).
+- Clústeres DX.
+- Predicciones solares.
+- PSK Reporter.
+- WSPRnet.
+
+Consultar estas herramientas permite elegir la banda más adecuada en cada momento.
+
+---
+
+## Consejos para aprovechar mejor la propagación
+
+Algunas recomendaciones prácticas pueden marcar una gran diferencia.
+
+- Escucha antes de transmitir.
+- Comprueba los mapas de propagación.
+- Mantén la antena correctamente ajustada.
+- Evita transmitir con una **ROE** elevada.
+- Reduce el **QRM** dentro de tu instalación.
+- Aprovecha los cambios entre amanecer y atardecer (**Grey Line**).
+- Aprende el comportamiento de cada banda según la estación del año.
+
+La experiencia demuestra que muchas veces una buena propagación es más efectiva que aumentar la potencia del transmisor.
+
+---
+
+## Propagación y DX: la combinación perfecta
+
+La mayoría de los grandes contactos **DX** no dependen exclusivamente del equipo. Incluso estaciones con potencias modestas de 100 W y una sencilla **antena dipolo** pueden trabajar países muy lejanos cuando la propagación acompaña.
+
+Por este motivo, los operadores experimentados dedican tiempo a estudiar las condiciones antes de comenzar una actividad. Conocer la propagación permite trabajar más estaciones, participar con éxito en concursos y disfrutar mucho más de la radioafición.
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+### ¿Qué es la propagación en radioafición?
+
+La **propagación** es el comportamiento que siguen las ondas de radio desde el transmisor hasta el receptor. Está influenciada por la ionosfera, la meteorología, la frecuencia utilizada y la actividad solar, determinando el alcance y la calidad de las comunicaciones.
+
+### ¿Cuál es la diferencia entre la propagación HF y VHF?
+
+En **HF**, las señales suelen reflejarse en la ionosfera y permiten comunicaciones intercontinentales. En **VHF**, normalmente se propagan por visión directa, aunque fenómenos como la propagación troposférica o la Esporádica E permiten alcanzar distancias mucho mayores.
+
+### ¿Cómo puedo saber si habrá buena propagación?
+
+Consulta diariamente indicadores como el **Índice K**, el **Flujo Solar (SFI)**, el número de manchas solares y los mapas de propagación. También resulta útil observar balizas y redes como Reverse Beacon Network o WSPR para conocer las condiciones reales.
+
+### ¿Qué banda HF ofrece mejores posibilidades para hacer DX?
+
+La banda de **20 metros (14 MHz)** suele ofrecer las condiciones más estables para realizar contactos DX durante gran parte del ciclo solar. No obstante, bandas como 15 y 10 metros pueden proporcionar resultados espectaculares cuando la actividad solar es elevada.
+
+---
+
+## Conclusión
+
+Comprender la **propagación** es uno de los conocimientos más valiosos para cualquier radioaficionado. Dominar el comportamiento de las bandas **HF y VHF**, interpretar los indicadores solares y conocer los distintos tipos de propagación te permitirá realizar mejores contactos, optimizar tu estación y disfrutar mucho más de cada jornada de radio.
+
+Si quieres seguir aprendiendo, resolver dudas técnicas o compartir experiencias con otros operadores, te invitamos a contactar con nuestra asociación, hacerte socio y acercarte a la radioafición de Cantabria. Encontrarás asesoramiento personalizado, actividades, compañeros con los que disfrutar del hobby y un excelente ambiente para seguir creciendo como radioaficionado.
+
+---
+
+## Meta descripción
+
+Descubre cómo funciona la **propagación** en radioafición, aprende las diferencias entre HF y VHF y mejora tus contactos DX con consejos y técnicas prácticas.
+`,
+  },
+  {
     slug: "propagacion-radioaficion-guia-completa-ondas-radio",
     title: "Propagación en Radioafición: Guía Completa para Entender Cómo Viajan las Ondas de Radio",
     date: "2026-07-19",
@@ -229,7 +433,7 @@ Estos datos ayudan a seleccionar la mejor banda y aumentar las posibilidades de 
 
 Para mejorar los resultados en radioafición conviene seguir algunas recomendaciones:
 
-- Instalar una **antena dipolo** correctamente ajustada.
+- Instalar una **antena dipole** correctamente ajustada.
 - Reducir el **QRM** siempre que sea posible.
 - Utilizar un **transceptor** correctamente calibrado.
 - Consultar diariamente los índices solares.
@@ -277,7 +481,8 @@ Existen mapas de propagación, redes de balizas, índices solares y herramientas
 
 La **propagación** es uno de los pilares fundamentales de la radioafición. Comprender cómo influyen la ionosfera, la actividad solar, la hora del día y las diferentes bandas te permitirá optimizar tus comunicaciones, disfrutar más de cada sesión de radio y conseguir nuevos contactos DX con mayor facilidad.
 
-Si quieres aprender más sobre propagación, mejorar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con nuestra asociación, hacerte socio o acercarte a la radioafición de Cantabria. Encontrarás asesoramiento, actividades, compañeros con experiencia y la oportunidad de disfrutar de la radio en un ambiente cercano y colaborativo.`,
+Si quieres aprender más sobre propagación, mejorar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con nuestra asociación, hacerte socio o acercarte a la radioafición de Cantabria. Encontrarás asesoramiento, actividades, compañeros con experiencia y la oportunidad de disfrutar de la radio en un ambiente cercano y colaborativo.
+`,
   },
   {
     slug: "vhf-o-uhf-que-banda-elegir-radioaficion-guia-baofeng-uv-5r",
@@ -545,7 +750,8 @@ Para transmitir en las bandas de radioafición sí es necesario disponer de la c
 
 Elegir entre **VHF o UHF** dependerá del entorno donde vayas a operar y del tipo de comunicaciones que quieras realizar. Si buscas la máxima versatilidad, un transceptor bibanda como la **Baofeng UV-5R** te permitirá experimentar con ambas bandas y descubrir cuál se adapta mejor a tus necesidades.
 
-Si quieres aprender más sobre radioafición, conocer a otros colegas, recibir asesoramiento para montar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con la asociación de radioaficionados de Cantabria. Podrás resolver tus dudas, participar en actividades, compartir experiencias y disfrutar de la radio en compañía de otros aficionados.`,
+Si quieres aprender más sobre radioafición, conocer a otros colegas, recibir asesoramiento para montar tu estación o iniciarte en este apasionante mundo, te invitamos a contactar con la asociación de radioaficionados de Cantabria. Podrás resolver tus dudas, participar en actividades, compartir experiencias y disfrutar de la radio en compañía de otros aficionados.
+`,
   },
   {
     slug: "antenas-de-radio-guia-completa-hf-multibanda",
@@ -769,7 +975,8 @@ Las **antenas de radio** son el verdadero corazón de cualquier estación de rad
 
 ### ¿Quieres dar el siguiente paso en la radioafición?
 
-Te invitamos a contactar con nuestra asociación, hacerte socio y visitar la comunidad de radioaficionados de Cantabria. Podrás recibir asesoramiento personalizado, conocer a otros colegas, participar en actividades de radio y disfrutar de la radioafición en grupo mientras sigues aprendiendo y mejorando tu estación.`,
+Te invitamos a contactar con nuestra asociación, hacerte socio y visitar la comunidad de radioaficionados de Cantabria. Podrás recibir asesoramiento personalizado, conocer a otros colegas, participar en actividades de radio y disfrutar de la radioafición en grupo mientras sigues aprendiendo y mejorando tu estación.
+`,
   },
   {
     slug: "radioaficionado-sin-licencia",
@@ -887,7 +1094,8 @@ Sí. La compra y posesión de equipos de radio no implica necesariamente dispone
 
 Ser un **radioaficionado sin licencia** permite aprender, escuchar y prepararse para entrar en el apasionante mundo de las comunicaciones por radio, pero no autoriza a transmitir. Obtener la licencia es el paso necesario para operar legalmente, realizar contactos DX y disfrutar plenamente de la radioafición.
 
-Si quieres iniciarte correctamente, resolver dudas sobre equipos, antenas o preparación del examen, te invitamos a contactar con una asociación local, hacerte socio o acercarte a la Radioafición de Cantabria. Allí podrás recibir asesoramiento personalizado, conocer a otros colegas y disfrutar de este hobby en compañía.`,
+Si quieres iniciarte correctamente, resolver dudas sobre equipos, antenas o preparación del examen, te invitamos a contactar con una asociación local, hacerte socio o acercarte a la Radioafición de Cantabria. Allí podrás recibir asesoramiento personalizado, conocer a otros colegas y disfrutar de este hobby en compañía.
+`,
   },
 ];
 
