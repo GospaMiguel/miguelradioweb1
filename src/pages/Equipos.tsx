@@ -169,7 +169,31 @@ Peso: 248 gr.`,
 const equipmentData: Record<EquipmentCategory, Equipment[]> = {
   hf: [], // HF ahora usa subcategorías
   "vhf-uhf": [], // VHF/UHF ahora usa subcategorías
-  digital: [],
+  digital: [], // Digital usa subcategorías
+};
+
+// Datos de Digital organizados por subcategoría
+const digitalEquipmentData: Record<SubcategoryType, Equipment[]> = {
+  emisoras: [
+    {
+      id: "anytone-d878uvii",
+      name: "Anytone AT-D878UVII Plus",
+      noTranslate: true,
+      image: "/placeholder.svg",
+      details: `El Anytone AT-D878UVII Plus es un walkie talkie bibanda VHF/UHF con tecnología digital DMR (Dual Slot) y analógica, ideal para iniciarse en los modos digitales de radioafición.`,
+      characteristics: `• Doble banda VHF/UHF (144-146 MHz / 430-440 MHz)
+• Modo digital DMR Tier I y Tier II (dual slot)
+• Modo analógico FM tradicional
+• GPS integrado y Bluetooth opcional
+• Pantalla a color
+• 4000 canales de memoria
+• Batería de 3100 mAh
+• Programable mediante software para PC`,
+      comments: `El D878UVII Plus es uno de los equipos más populares entre los radioaficionados que quieren experimentar con el modo digital DMR. Es versátil, compacto y permite comunicarse tanto a través de repetidores DMR como en analógico, lo que facilita la transición desde el modo FM convencional.`,
+    },
+  ],
+  antenas: [],
+  acopladores: [],
 };
 
 const subcategories = [
@@ -204,6 +228,9 @@ const Equipos = () => {
     }
     if (selectedCategory === "vhf-uhf") {
       return vhfUhfEquipmentData[selectedSubcategory] || [];
+    }
+    if (selectedCategory === "digital") {
+      return digitalEquipmentData[selectedSubcategory] || [];
     }
     return equipmentData[selectedCategory] || [];
   };
@@ -263,8 +290,8 @@ const Equipos = () => {
             ))}
           </div>
 
-          {/* Subcategorías de HF y VHF/UHF */}
-          {(selectedCategory === "hf" || selectedCategory === "vhf-uhf") && (
+          {/* Subcategorías de HF, VHF/UHF y Digital */}
+          {(selectedCategory === "hf" || selectedCategory === "vhf-uhf" || selectedCategory === "digital") && (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
               {subcategories.map((subcategory) => (
                 <button
