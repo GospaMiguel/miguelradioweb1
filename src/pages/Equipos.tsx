@@ -290,8 +290,8 @@ const Equipos = () => {
             ))}
           </div>
 
-          {/* Subcategorías de HF y VHF/UHF */}
-          {(selectedCategory === "hf" || selectedCategory === "vhf-uhf") && (
+          {/* Subcategorías de HF, VHF/UHF y Digital */}
+          {(selectedCategory === "hf" || selectedCategory === "vhf-uhf" || selectedCategory === "digital") && (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
               {subcategories.map((subcategory) => (
                 <button
