@@ -5,6 +5,7 @@ import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 import yaesuFt991a from "@/assets/equipos/yaesu-ft991a.png";
 import diamondX200n from "@/assets/equipos/diamond-x200n.png";
 import teamPr2500 from "@/assets/equipos/team-pr2500.png";
+import anytoneAtD878uvIIPlus from "@/assets/equipos/anytone-at-d878uvii-plus.jpg.asset.json";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type SubcategoryType = "emisoras" | "antenas" | "acopladores";
@@ -174,7 +175,22 @@ const equipmentData: Record<EquipmentCategory, Equipment[]> = {
 
 // Datos de Digital organizados por subcategoría
 const digitalEquipmentData: Record<SubcategoryType, Equipment[]> = {
-  emisoras: [],
+  emisoras: [
+    {
+      id: "anytone-at-d878uvii-plus",
+      name: "Walkie DMR bi-banda\nAnytone AT-D878UV II plus",
+      image: anytoneAtD878uvIIPlus.url,
+      comments: `El Anytone AT-D878UV II Plus es un walkie DMR (Digital Mobile Radio) bibanda VHF/UHF, ideal para quienes quieren empezar en los modos digitales sin renunciar a la comunicación analógica. Incorpora GPS, Bluetooth y capacidad para doble ranura temporal (TDMA), lo que permite hacer dos llamadas simultáneas en un mismo canal. Su pantalla a color y su teclado completo facilitan la programación y el uso cotidiano.`,
+      characteristics: `• DMR digital Tier I / Tier II y analógico FM
+• Banda dual VHF/UHF (144-146 MHz / 430-440 MHz)
+• GPS integrado y Bluetooth opcional
+• Pantalla TFT a color
+• 4.000 canales y 10.000 contactos
+• Potencia de salida: 5 W / 1 W
+• Batería de ion-litio 2100 mAh
+• Modos de trabajo: Simplex, repetidor, doble ranura`,
+    },
+  ],
   antenas: [],
   acopladores: [],
 };
