@@ -5,6 +5,7 @@ import anytoneAt5888uv from "@/assets/equipos/anytone-at5888uv.png";
 import yaesuFt991a from "@/assets/equipos/yaesu-ft991a.png";
 import diamondX200n from "@/assets/equipos/diamond-x200n.png";
 import teamPr2500 from "@/assets/equipos/team-pr2500.png";
+import anytoneAtD878uvIIPlus from "@/assets/equipos/anytone-at-d878uvii-plus.jpg.asset.json";
 
 type EquipmentCategory = "hf" | "vhf-uhf" | "digital";
 type SubcategoryType = "emisoras" | "antenas" | "acopladores";
