@@ -174,24 +174,7 @@ const equipmentData: Record<EquipmentCategory, Equipment[]> = {
 
 // Datos de Digital organizados por subcategoría
 const digitalEquipmentData: Record<SubcategoryType, Equipment[]> = {
-  emisoras: [
-    {
-      id: "anytone-d878uvii",
-      name: "Anytone AT-D878UVII Plus",
-      noTranslate: true,
-      image: "/placeholder.svg",
-      details: `El Anytone AT-D878UVII Plus es un walkie talkie bibanda VHF/UHF con tecnología digital DMR (Dual Slot) y analógica, ideal para iniciarse en los modos digitales de radioafición.`,
-      characteristics: `• Doble banda VHF/UHF (144-146 MHz / 430-440 MHz)
-• Modo digital DMR Tier I y Tier II (dual slot)
-• Modo analógico FM tradicional
-• GPS integrado y Bluetooth opcional
-• Pantalla a color
-• 4000 canales de memoria
-• Batería de 3100 mAh
-• Programable mediante software para PC`,
-      comments: `El D878UVII Plus es uno de los equipos más populares entre los radioaficionados que quieren experimentar con el modo digital DMR. Es versátil, compacto y permite comunicarse tanto a través de repetidores DMR como en analógico, lo que facilita la transición desde el modo FM convencional.`,
-    },
-  ],
+  emisoras: [],
   antenas: [],
   acopladores: [],
 };
