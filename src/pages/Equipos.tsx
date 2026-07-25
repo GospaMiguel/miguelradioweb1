@@ -229,6 +229,9 @@ const Equipos = () => {
     if (selectedCategory === "vhf-uhf") {
       return vhfUhfEquipmentData[selectedSubcategory] || [];
     }
+    if (selectedCategory === "digital") {
+      return digitalEquipmentData[selectedSubcategory] || [];
+    }
     return equipmentData[selectedCategory] || [];
   };
 
