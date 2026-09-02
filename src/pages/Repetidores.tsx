@@ -13,7 +13,7 @@ const Repetidores = () => {
           
           <div className="max-w-4xl mx-auto">
             <ol className="text-lg text-muted-foreground text-center space-y-2 mb-12">
-              <li>1. Como conectarte a los repetidores de VHF y UHF</li>
+              <li>1. COMO CONECTARTE A LOS REPETIDORES DE VHF Y UHF</li>
               <li>2. REPETIDORES DE CANTABRIA</li>
             </ol>
 
