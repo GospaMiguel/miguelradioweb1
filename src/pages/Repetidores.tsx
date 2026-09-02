@@ -62,7 +62,7 @@ const Repetidores = () => {
                     <p className="ml-4 text-black">Necesitas una licencia de radioaficionado para usar repetidores.</p>
                   </div>
                   <div>
-                    <p className="font-semibold">Etiqueta (Netiqueta):</p>
+                    <p className="font-semibold">Etiqueta:</p>
                     <p className="ml-4 text-black">Habla brevemente, deja pausas para que otros se unan y usa tu indicativo.</p>
                   </div>
                 </div>
