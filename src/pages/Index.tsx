@@ -8,6 +8,7 @@ import { categories } from "./Galeria";
 import logoAsociacion from "@/assets/logo-asociacion.webp";
 const infografiaAsociacion = { url: "/nuestra-asociacion-infografia.png" };
 import cafeteriaDonLucas from "@/assets/cafeteria-don-lucas.jpg";
+import saleskitSK164 from "@/assets/saleskit-sk-164-equipo-cb.jpg";
 
 const tips = [
   {
