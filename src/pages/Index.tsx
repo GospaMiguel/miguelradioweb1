@@ -111,6 +111,17 @@ const Index = () => {
               className="rounded-lg shadow-lg w-full max-w-4xl h-auto"
             />
           </div>
+
+          <div className="mt-10 md:mt-14">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-center">Kit transceptor de los 70 casa Saleskit</h3>
+            <div className="flex justify-center">
+              <img
+                src={saleskitSK164}
+                alt="Kit transceptor Saleskit SK164 de los años 70 para radioafición"
+                className="rounded-lg shadow-lg w-full max-w-4xl h-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
         </Section>
       </div>
