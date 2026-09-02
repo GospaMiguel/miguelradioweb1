@@ -118,7 +118,73 @@ const Repetidores = () => {
                 </p>
               </div>
             </div>
+
+            {/* Repetidores de Cantabria */}
+            <div className="bg-card border border-border rounded-lg p-8 mt-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+                REPETIDORES DE CANTABRIA
+              </h2>
+
+              {/* VHF */}
+              <h3 className="text-xl font-bold text-primary mb-1">VHF</h3>
+              <p className="text-black mb-4">Banda <strong>144.000 a 146.000 MHz</strong></p>
+
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="text-black font-bold">ED1YAM · R-3 · Analógico</p>
+                  <ul className="text-black list-disc list-inside space-y-0.5">
+                    <li><span className="font-semibold">Ubicación:</span> Puente Arce</li>
+                    <li><span className="font-semibold">Pertenece a:</span> URE Santander</li>
+                    <li><span className="font-semibold">Entrada:</span> 145.075 MHz · <span className="font-semibold">Salida:</span> 145.675 MHz</li>
+                    <li><span className="font-semibold">Subtono:</span> NO</li>
+                  </ul>
+                </div>
+
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="text-black font-bold">ED1YAQ · R-4 · Analógico</p>
+                  <ul className="text-black list-disc list-inside space-y-0.5">
+                    <li><span className="font-semibold">Ubicación:</span> Brañavieja</li>
+                    <li><span className="font-semibold">Pertenece a:</span> Radioclub Montañés</li>
+                    <li><span className="font-semibold">Entrada:</span> 145.100 MHz · <span className="font-semibold">Salida:</span> 145.700 MHz</li>
+                    <li><span className="font-semibold">Subtono:</span> NO</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* UHF */}
+              <h3 className="text-xl font-bold text-primary mt-8 mb-1">UHF</h3>
+              <p className="text-black mb-4">Banda <strong>430.000 a 440.000 MHz</strong></p>
+
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="text-black font-bold">ED1YCI · U-90 · Híbrido (Analógico y Digital)</p>
+                  <ul className="text-black list-disc list-inside space-y-0.5">
+                    <li><span className="font-semibold">Ubicación:</span> El Escudo</li>
+                    <li><span className="font-semibold">Pertenece a:</span> Asociación Cántabra de Radioaficionados</li>
+                    <li><span className="font-semibold">Entrada:</span> 431.550 MHz · <span className="font-semibold">Salida:</span> 439.150 MHz</li>
+                    <li><span className="font-semibold">Subtono:</span> NO · <span className="font-semibold">Modo digital:</span> C4FM</li>
+                  </ul>
+                </div>
+
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="text-black font-bold">ED1ZAZ · Digital</p>
+                  <ul className="text-black list-disc list-inside space-y-0.5">
+                    <li><span className="font-semibold">Ubicación:</span> Isla</li>
+                    <li><span className="font-semibold">Pertenece a:</span> por confirmar</li>
+                    <li><span className="font-semibold">Entrada:</span> 430.8250 MHz · <span className="font-semibold">Salida:</span> 438.4250 MHz</li>
+                    <li><span className="font-semibold">Subtono:</span> NO · <span className="font-semibold">Modo digital:</span> DMR, Slot 1, Color CC1</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-4 border-t border-border">
+                <p className="text-black">
+                  <span className="font-bold text-primary">Nota:</span> Los repetidores de la banda de <strong>VHF</strong> llevan un desplazamiento de <strong>−600 kHz</strong>. Los repetidores de la banda de <strong>UHF</strong> llevan un desplazamiento de <strong>−7.600 MHz</strong>.
+                </p>
+              </div>
+            </div>
           </div>
+
         </div>
       </main>
     </div>
