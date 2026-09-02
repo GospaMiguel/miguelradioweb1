@@ -12,12 +12,10 @@ const Repetidores = () => {
           </h1>
           
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground text-center mb-4">
-              Como conectarte a los repetidores de VHF y UHF
-            </p>
-            <p className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
-              REPETIDORES DE CANTABRIA:
-            </p>
+            <ol className="text-lg text-muted-foreground text-center space-y-2 mb-12">
+              <li>1. Como conectarte a los repetidores de VHF y UHF</li>
+              <li>2. REPETIDORES DE CANTABRIA</li>
+            </ol>
 
             <div className="bg-card border border-border rounded-lg p-8 space-y-2">
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
