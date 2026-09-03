@@ -122,8 +122,8 @@ const Index = () => {
               />
             </div>
             <p className="text-foreground leading-relaxed text-sm md:text-base text-justify max-w-4xl mx-auto">
-              Vintage de la época de los años 70, cuando no existían los equipos comerciales de la banda de los 11 metros
-              y los que sabíamos de electrónica nos los construíamos con estos kits que vendían de la casa Saleskit.
+              &ldquo;<span className="text-xl md:text-2xl font-semibold">V</span>intage de la época de los años 70, cuando no existían los equipos comerciales de la banda de los 11 metros
+              y los que sabíamos de electrónica nos los construíamos con estos kits que vendían de la casa Saleskit.&rdquo;
             </p>
           </div>
         </div>
