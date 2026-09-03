@@ -307,7 +307,7 @@ const Equipos = () => {
                   }}
                   className={`flex items-center justify-center text-center transition-all border-2 ${
                     selectedCategory === "digital"
-                      ? "rounded-full w-32 h-32 md:w-40 md:h-40 p-4"
+                      ? "rounded-full w-24 h-24 md:w-28 md:h-28 p-3"
                       : "rounded-lg p-3 md:p-4"
                   } ${
                     selectedSubcategory === subcategory.id
