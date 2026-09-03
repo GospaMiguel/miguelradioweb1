@@ -295,15 +295,19 @@ const Equipos = () => {
 
           {/* Subcategorías de HF, VHF/UHF y Digital */}
           {(selectedCategory === "hf" || selectedCategory === "vhf-uhf" || selectedCategory === "digital") && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
-              {subcategories.map((subcategory) => (
+            <div className={`grid gap-3 md:gap-4 mb-8 md:mb-12 ${
+              selectedCategory === "digital" ? "grid-cols-1 place-items-center" : "grid-cols-1 sm:grid-cols-3"
+            }`}>
+              {(selectedCategory === "digital" ? digitalSubcategories : subcategories).map((subcategory) => (
                 <button
                   key={subcategory.id}
                   onClick={() => {
                     setSelectedSubcategory(subcategory.id);
                     scrollToContent();
                   }}
-                  className={`p-3 md:p-4 rounded-lg text-center transition-all border-2 ${
+                  className={`p-3 md:p-4 text-center transition-all border-2 ${
+                    selectedCategory === "digital" ? "rounded-full px-8 md:px-12" : "rounded-lg"
+                  } ${
                     selectedSubcategory === subcategory.id
                       ? "bg-[#006400] text-white border-[#00FF00]"
                       : "bg-white text-[#006400] border-[#00FF00]/70 hover:bg-gray-50"
