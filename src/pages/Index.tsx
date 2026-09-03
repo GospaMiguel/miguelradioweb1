@@ -114,13 +114,17 @@ const Index = () => {
 
           <div className="mt-10 md:mt-14">
             <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-center">Kit transceptor de los 70 casa Saleskit</h3>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-4 md:mb-6">
               <img
                 src={saleskitSK164}
                 alt="Kit transceptor Saleskit SK164 de los años 70 para radioafición"
                 className="rounded-lg shadow-lg w-full max-w-4xl h-auto object-contain"
               />
             </div>
+            <p className="text-foreground leading-relaxed text-sm md:text-base text-justify max-w-4xl mx-auto">
+              Vintage de la época de los años 70, cuando no existían los equipos comerciales de la banda de los 11 metros
+              y los que sabíamos de electrónica nos los construíamos con estos kits que vendían de la casa Saleskit.
+            </p>
           </div>
         </div>
         </Section>
