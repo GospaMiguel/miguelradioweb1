@@ -201,6 +201,10 @@ const subcategories = [
   { id: "acopladores" as SubcategoryType, label: "Acopladores/Medidores de estacionarias" },
 ];
 
+const digitalSubcategories = [
+  { id: "emisoras" as SubcategoryType, label: "Emisoras" },
+];
+
 const Equipos = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get("category") as EquipmentCategory | null;
