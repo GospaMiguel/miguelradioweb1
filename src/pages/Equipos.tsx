@@ -305,15 +305,17 @@ const Equipos = () => {
                     setSelectedSubcategory(subcategory.id);
                     scrollToContent();
                   }}
-                  className={`p-3 md:p-4 text-center transition-all border-2 ${
-                    selectedCategory === "digital" ? "rounded-full px-8 md:px-12" : "rounded-lg"
+                  className={`flex items-center justify-center text-center transition-all border-2 ${
+                    selectedCategory === "digital"
+                      ? "rounded-full w-32 h-32 md:w-40 md:h-40 p-4"
+                      : "rounded-lg p-3 md:p-4"
                   } ${
                     selectedSubcategory === subcategory.id
                       ? "bg-[#006400] text-white border-[#00FF00]"
                       : "bg-white text-[#006400] border-[#00FF00]/70 hover:bg-gray-50"
                   }`}
                 >
-                  <h5 className="font-display text-sm md:text-base font-semibold">{subcategory.label}</h5>
+                  <h5 className={`font-display font-semibold ${selectedCategory === "digital" ? "text-base md:text-lg" : "text-sm md:text-base"}`}>{subcategory.label}</h5>
                 </button>
               ))}
             </div>
